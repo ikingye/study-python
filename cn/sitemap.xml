@@ -3,44 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/cn/categories/</loc>
+    <loc>https://ikingye.github.io/study-python/cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="https://ikingye.github.io/study-python/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/categories/"
+                href="https://ikingye.github.io/study-python/cn/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/</loc>
+    <loc>https://ikingye.github.io/study-python/cn/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/"
+                href="https://ikingye.github.io/study-python/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/"
+                href="https://ikingye.github.io/study-python/cn/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/cn/tags/</loc>
+    <loc>https://ikingye.github.io/study-python/cn/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="https://ikingye.github.io/study-python/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://example.com/cn/tags/"
+                href="https://ikingye.github.io/study-python/cn/tags/"
                 />
   </url>
   
