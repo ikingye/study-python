@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="编程规范"><meta property="og:title" content="编程规范" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/practice/spec/" />
-
-<title>编程规范 | Python 学习笔记</title>
+<meta name="description" content="版本管理"><meta property="og:title" content="版本管理" />
+<meta property="og:description" content="Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
+function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装：
+pyenvinstall 3.8.2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/version/manage/" />
+<meta property="article:modified_time" content="2020-03-14T14:41:58+08:00" />
+<title>版本管理 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
 
@@ -18,7 +20,6 @@
 
 <script defer src="/study-python/en.search.min.d0386e92d26823210169669d63f672907aa628be9328cca1c4e1fd834bc6c846.js" integrity="sha256-0DhuktJoIyEBaWadY/ZykHqmKL6TKMyhxOH9g0vGyEY="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/basic/practice/spec/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -115,7 +116,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-python/docs/basic/version/manage/" >
+  <a href="/study-python/docs/basic/version/manage/"  class="active">
       版本管理
   </a>
 
@@ -207,7 +208,7 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/study-python/docs/basic/practice/spec/"  class="active">
+  <a href="/study-python/docs/basic/practice/spec/" >
       编程规范
   </a>
 
@@ -218,22 +219,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  
-  <ul>
-    
-      
-        <li>
-
-  <a href="/study-python/docs/basic/practice/spec/baidu/" >
-      百度 Python 编码规范
-  </a>
-
-</li>
-      
-    
-  </ul>
-  
 
 
 
@@ -475,7 +460,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-python/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>编程规范</strong>
+  <strong>版本管理</strong>
 
   <label for="toc-control">
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -489,7 +474,15 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">编程规范</a></li>
+    <li><a href="#python-">Python 版本管理</a>
+      <ul>
+        <li><a href="#pyenv">pyenv</a>
+          <ul>
+            <li><a href="#pyenv-">pyenv 加速</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -501,7 +494,17 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="heading">编程规范</h1>
+<article class="markdown"><h1 id="python-">Python 版本管理</h1>
+<h2 id="pyenv">pyenv</h2>
+<h3 id="pyenv-">pyenv 加速</h3>
+<p>在 <code>.zshrc</code> 添加</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#66d9ef">function</span> pyenvinstall <span style="color:#f92672">{</span>
+	wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
+	pyenv install $@
+<span style="color:#f92672">}</span>
+</code></pre></div><p>执行 <code>zsh</code> 使配置生效，
+之后即可这样安装：<br>
+<code>pyenvinstall 3.8.2</code></p>
 </article>
  
       
@@ -514,9 +517,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/96c2244e301c477e6f40594b712467190e9653aa" title='Last modified by yewang | 2020-03-08' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/47d33277c34d522a75c632aed40d9bcd8da00bc0" title='Last modified by yewang | 2020-03-14' target="_blank" rel="noopener">
       <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-08</span>
+      <span>2020-03-14</span>
     </a>
   </div>
 
@@ -550,7 +553,15 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">编程规范</a></li>
+    <li><a href="#python-">Python 版本管理</a>
+      <ul>
+        <li><a href="#pyenv">pyenv</a>
+          <ul>
+            <li><a href="#pyenv-">pyenv 加速</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

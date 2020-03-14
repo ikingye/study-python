@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>首页 on Python 学习笔记</title>
-    <link>https://ikingye.github.io/study-python/</link>
-    <description>Recent content in 首页 on Python 学习笔记</description>
+    <title>版本 on Python 学习笔记</title>
+    <link>https://ikingye.github.io/study-python/docs/basic/version/</link>
+    <description>Recent content in 版本 on Python 学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://ikingye.github.io/study-python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ikingye.github.io/study-python/docs/basic/version/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>包管理</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/package/manage/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-python/docs/basic/package/manage/</guid>
-      <description>Python 包管理 pip 加速 修改 ~/.pip/pip.conf
-[global] index-url = https://pypi.tuna.tsinghua.edu.cn/simple [install] trusted-host = pypi.tuna.tsinghua.edu.cn </description>
-    </item>
-    
-    <item>
-      <title>基础</title>
-      <link>https://ikingye.github.io/study-python/docs/appendix/interview/basic/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-python/docs/appendix/interview/basic/</guid>
-      <description>基础面试题 </description>
-    </item>
     
     <item>
       <title>版本管理</title>
@@ -37,33 +18,6 @@
       <description>Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
 function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装：
 pyenvinstall 3.8.2</description>
-    </item>
-    
-    <item>
-      <title>进阶</title>
-      <link>https://ikingye.github.io/study-python/docs/appendix/interview/advanced/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-python/docs/appendix/interview/advanced/</guid>
-      <description>进阶面试题 </description>
-    </item>
-    
-    <item>
-      <title>高阶</title>
-      <link>https://ikingye.github.io/study-python/docs/appendix/interview/expert/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-python/docs/appendix/interview/expert/</guid>
-      <description>高阶面试题 </description>
-    </item>
-    
-    <item>
-      <title>百度 Python 编码规范</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/practice/spec/baidu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-python/docs/basic/practice/spec/baidu/</guid>
-      <description>百度 Python 编码规范 </description>
     </item>
     
     <item>
