@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="类"><meta property="og:title" content="类" />
-<meta property="og:description" content="类 问答 class 后面加不加 object 的区别 python 3 中已经默认就帮你加载了 object 了（即便你没有写上 object）
-   python 2.x python 2.x python 3.x python 3.x     不含 object 含 object 不含 object 含 object   __doc__ __doc__ __doc__ __doc__   __module__ __module__ __module__ __module__    __class__ __class__ __class__    __delattr__ __delattr__ __delattr__    __dict__ __dict__ __dict__    __format__ __format__ __format__    __getattribute__ __getattribute__ __getattribute__    __hash__ __hash__ __hash__    __init__ __init__ __init__    __new__ __new__ __new__    __reduce__ __reduce__ __reduce__    __reduce_ex__ __reduce_ex__ __reduce_ex__    __repr__ __repr__ __repr__    __setattr__ __setattr__ __setattr__    __sizeof__ __sizeof__ __sizeof__    __str__ __str__ __str__    __subclasshook__ __subclasshook__ __subclasshook__    __weakref__ __weakref__ __weakref__     __dir__ __dir__     __eq__ __eq__     __ge__ __ge__     __gt__ __gt__     __le__ __le__     __lt__ __lt__     __ne__ __ne__     __init_subclass__ __init_subclass__    init_subclass 类方法 __init_subclass__ 从 3." />
+<meta name="description" content="切片"><meta property="og:title" content="切片" />
+<meta property="og:description" content="切片 语法 [start:end:step] step 为负数 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+字符串反转 $ letter[::-1] " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/class/" />
-<meta property="article:modified_time" content="2020-04-10T14:08:33+08:00" />
-<title>类 | Python 学习笔记</title>
+<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/slice/" />
+<meta property="article:modified_time" content="2020-04-10T22:41:47+08:00" />
+<title>切片 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
 
@@ -115,7 +115,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-python/docs/basic/grammar/slice/" >
+  <a href="/study-python/docs/basic/grammar/slice/"  class="active">
       切片
   </a>
 
@@ -125,7 +125,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-python/docs/basic/grammar/class/"  class="active">
+  <a href="/study-python/docs/basic/grammar/class/" >
       类
   </a>
 
@@ -511,7 +511,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-python/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>类</strong>
+  <strong>切片</strong>
 
   <label for="toc-control">
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -525,19 +525,12 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">类</a>
+    <li><a href="#heading">切片</a>
       <ul>
-        <li>
+        <li><a href="#heading-1">语法</a>
           <ul>
-            <li><a href="#heading-1">问答</a>
-              <ul>
-                <li><a href="#class--object-">class 后面加不加 object 的区别</a>
-                  <ul>
-                    <li><a href="#init-subclass">init_subclass</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+            <li><a href="#step-">step 为负数</a></li>
+            <li><a href="#heading-2">字符串反转</a></li>
           </ul>
         </li>
       </ul>
@@ -553,191 +546,14 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="heading">类</h1>
-<h3 id="heading-1">问答</h3>
-<h4 id="class--object-">class 后面加不加 object 的区别</h4>
-<p>python 3 中已经默认就帮你加载了 object 了（即便你没有写上 object）</p>
-<table>
-<thead>
-<tr>
-<th>python 2.x</th>
-<th>python 2.x</th>
-<th>python 3.x</th>
-<th>python 3.x</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>不含 object</td>
-<td>含 object</td>
-<td>不含 object</td>
-<td>含 object</td>
-</tr>
-<tr>
-<td><code>__doc__</code></td>
-<td><code>__doc__</code></td>
-<td><code>__doc__</code></td>
-<td><code>__doc__</code></td>
-</tr>
-<tr>
-<td><code>__module__</code></td>
-<td><code>__module__</code></td>
-<td><code>__module__</code></td>
-<td><code>__module__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__class__</code></td>
-<td><code>__class__</code></td>
-<td><code>__class__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__delattr__</code></td>
-<td><code>__delattr__</code></td>
-<td><code>__delattr__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__dict__</code></td>
-<td><code>__dict__</code></td>
-<td><code>__dict__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__format__</code></td>
-<td><code>__format__</code></td>
-<td><code>__format__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__getattribute__</code></td>
-<td><code>__getattribute__</code></td>
-<td><code>__getattribute__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__hash__</code></td>
-<td><code>__hash__</code></td>
-<td><code>__hash__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__init__</code></td>
-<td><code>__init__</code></td>
-<td><code>__init__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__new__</code></td>
-<td><code>__new__</code></td>
-<td><code>__new__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__reduce__</code></td>
-<td><code>__reduce__</code></td>
-<td><code>__reduce__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__reduce_ex__</code></td>
-<td><code>__reduce_ex__</code></td>
-<td><code>__reduce_ex__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__repr__</code></td>
-<td><code>__repr__</code></td>
-<td><code>__repr__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__setattr__</code></td>
-<td><code>__setattr__</code></td>
-<td><code>__setattr__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__sizeof__</code></td>
-<td><code>__sizeof__</code></td>
-<td><code>__sizeof__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__str__</code></td>
-<td><code>__str__</code></td>
-<td><code>__str__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__subclasshook__</code></td>
-<td><code>__subclasshook__</code></td>
-<td><code>__subclasshook__</code></td>
-</tr>
-<tr>
-<td></td>
-<td><code>__weakref__</code></td>
-<td><code>__weakref__</code></td>
-<td><code>__weakref__</code></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>__dir__</code></td>
-<td><code>__dir__</code></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>__eq__</code></td>
-<td><code>__eq__</code></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>__ge__</code></td>
-<td><code>__ge__</code></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>__gt__</code></td>
-<td><code>__gt__</code></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>__le__</code></td>
-<td><code>__le__</code></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>__lt__</code></td>
-<td><code>__lt__</code></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>__ne__</code></td>
-<td><code>__ne__</code></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><code>__init_subclass__</code></td>
-<td><code>__init_subclass__</code></td>
-</tr>
-</tbody>
-</table>
-<h5 id="init-subclass"><strong>init_subclass</strong></h5>
-<p>类方法  <code>__init_subclass__</code>  从  <code>3.6</code> （<a href="https://docs.python.org/3.6/whatsnew/3.6.html#pep-487-simpler-customization-of-class-creation">whatsnew3.6</a>） 引入，作用是可以在不使用元类的情况下改变子类的行为。严格来说它不属于元类编程，但也能达到编辑其他类的一种手段。</p>
-<p>参考：</p>
-<ul>
-<li><a href="https://www.hongweipeng.com/index.php/archives/1872/">理解 Python 中的 <strong>init_subclass</strong></a></li>
-</ul>
-</article>
+<article class="markdown"><h1 id="heading">切片</h1>
+<h2 id="heading-1">语法</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>start:end:step<span style="color:#f92672">]</span>
+</code></pre></div><h3 id="step-">step 为负数</h3>
+<p>最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5</p>
+<h3 id="heading-2">字符串反转</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> letter[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</code></pre></div></article>
  
       
 
@@ -749,7 +565,7 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/153697a37187fd04d361a54413d01930bdc85725" title='Last modified by yewang | 2020-04-10' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/631e950169536c269836cd4929a414d30d6101e7" title='Last modified by yewang | 2020-04-10' target="_blank" rel="noopener">
       <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-04-10</span>
     </a>
@@ -785,19 +601,12 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">类</a>
+    <li><a href="#heading">切片</a>
       <ul>
-        <li>
+        <li><a href="#heading-1">语法</a>
           <ul>
-            <li><a href="#heading-1">问答</a>
-              <ul>
-                <li><a href="#class--object-">class 后面加不加 object 的区别</a>
-                  <ul>
-                    <li><a href="#init-subclass">init_subclass</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+            <li><a href="#step-">step 为负数</a></li>
+            <li><a href="#heading-2">字符串反转</a></li>
           </ul>
         </li>
       </ul>

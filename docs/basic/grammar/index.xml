@@ -10,6 +10,16 @@
     
     
     <item>
+      <title>切片</title>
+      <link>https://ikingye.github.io/study-python/docs/basic/grammar/slice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-python/docs/basic/grammar/slice/</guid>
+      <description>切片 语法 [start:end:step] step 为负数 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+字符串反转 $ letter[::-1] </description>
+    </item>
+    
+    <item>
       <title>类</title>
       <link>https://ikingye.github.io/study-python/docs/basic/grammar/class/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
