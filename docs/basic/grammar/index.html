@@ -4,15 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="3.7"><meta property="og:title" content="3.7" />
-<meta property="og:description" content="Python 3.7 安装 依赖 sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel 3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
-sudo yum install libffi-devel -y make install 若在安装前移除了 /usr/bin 下 python 的文件链接依赖，此时 yum 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接
-wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm 安装完成后重新进行 make install，结束后再次配置相关文件的软连接即可。
-解读： python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。 由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &ldquo;ModuleNotFoundError: No module named &lsquo;_ctypes&rsquo;&rdquo; 的错误。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/version/3.7/" />
-<meta property="article:modified_time" content="2020-03-16T14:00:34+08:00" />
-<title>3.7 | Python 学习笔记</title>
+<meta name="description" content="语法"><meta property="og:title" content="语法" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/" />
+
+<title>语法 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
 
@@ -21,6 +18,7 @@ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18
 
 <script defer src="/study-python/en.search.min.d1e72c60c57ebcb660787081b4df14d5d01e9ba0913623fef61488053ad681f7.js" integrity="sha256-0ecsYMV&#43;vLZgeHCBtN8U1dAem6CRNiP&#43;9hSIBTrWgfc="></script>
 
+<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/basic/grammar/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -99,7 +97,7 @@ https://github.com/alex-shpak/hugo-book
     
       
 
-  <a href="/study-python/docs/basic/grammar/" >
+  <a href="/study-python/docs/basic/grammar/"  class="active">
       语法
   </a>
 
@@ -169,7 +167,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-python/docs/basic/version/3.7/"  class="active">
+  <a href="/study-python/docs/basic/version/3.7/" >
       3.7
   </a>
 
@@ -503,7 +501,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-python/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>3.7</strong>
+  <strong>语法</strong>
 
   <label for="toc-control">
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -517,19 +515,7 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#python-37">Python 3.7</a>
-      <ul>
-        <li><a href="#heading">安装</a>
-          <ul>
-            <li><a href="#heading-1">依赖</a>
-              <ul>
-                <li><a href="#libffi-devel">libffi-devel</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="#heading">语法</a></li>
   </ul>
 </nav>
 
@@ -541,24 +527,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="python-37">Python 3.7</h1>
-<h2 id="heading">安装</h2>
-<h3 id="heading-1">依赖</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum install readline readline-devel readline-static -y
-sudo yum install openssl openssl-devel openssl-static -y
-sudo yum install sqlite-devel -y
-sudo yum install bzip2-devel bzip2-libs -y
-</code></pre></div><h4 id="libffi-devel">libffi-devel</h4>
-<p>3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum install libffi-devel -y
-make install
-</code></pre></div><p>若在安装前移除了 <code>/usr/bin</code> 下 python 的文件链接依赖，此时 <code>yum</code> 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm
-rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm
-</code></pre></div><p>安装完成后重新进行 <code>make install</code>，结束后再次配置相关文件的软连接即可。</p>
-<p>解读：
-python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。
-由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &ldquo;ModuleNotFoundError: No module named &lsquo;_ctypes&rsquo;&rdquo; 的错误。</p>
+<article class="markdown"><h1 id="heading">语法</h1>
 </article>
  
       
@@ -571,9 +540,9 @@ python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模�
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/a1b4f66534c7f9f45ef5ce69a3db7fccc2c52bf3" title='Last modified by yewang | 2020-03-16' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/153697a37187fd04d361a54413d01930bdc85725" title='Last modified by yewang | 2020-04-10' target="_blank" rel="noopener">
       <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-16</span>
+      <span>2020-04-10</span>
     </a>
   </div>
 
@@ -607,19 +576,7 @@ python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模�
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#python-37">Python 3.7</a>
-      <ul>
-        <li><a href="#heading">安装</a>
-          <ul>
-            <li><a href="#heading-1">依赖</a>
-              <ul>
-                <li><a href="#libffi-devel">libffi-devel</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="#heading">语法</a></li>
   </ul>
 </nav>
 

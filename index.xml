@@ -35,8 +35,10 @@
       
       <guid>https://ikingye.github.io/study-python/docs/basic/version/manage/</guid>
       <description>Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
-function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装：
-pyenvinstall 3.8.2</description>
+function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
+pyenv 基础命令 pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
+3.8.2 2.7.17 pyenv shell 3.8.2 2.7.17 set by PYENV_VERSION environment variable
+$ echo $PYENV_VERSION 3.8.2:2.7.17 </description>
     </item>
     
     <item>
@@ -64,6 +66,16 @@ pyenvinstall 3.8.2</description>
       
       <guid>https://ikingye.github.io/study-python/docs/basic/practice/spec/baidu/</guid>
       <description>百度 Python 编码规范 </description>
+    </item>
+    
+    <item>
+      <title>类</title>
+      <link>https://ikingye.github.io/study-python/docs/basic/grammar/class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-python/docs/basic/grammar/class/</guid>
+      <description>类 问答 class 后面加不加 object 的区别 python 3 中已经默认就帮你加载了 object 了（即便你没有写上 object）
+   python 2.x python 2.x python 3.x python 3.x     不含 object 含 object 不含 object 含 object   __doc__ __doc__ __doc__ __doc__   __module__ __module__ __module__ __module__    __class__ __class__ __class__    __delattr__ __delattr__ __delattr__    __dict__ __dict__ __dict__    __format__ __format__ __format__    __getattribute__ __getattribute__ __getattribute__    __hash__ __hash__ __hash__    __init__ __init__ __init__    __new__ __new__ __new__    __reduce__ __reduce__ __reduce__    __reduce_ex__ __reduce_ex__ __reduce_ex__    __repr__ __repr__ __repr__    __setattr__ __setattr__ __setattr__    __sizeof__ __sizeof__ __sizeof__    __str__ __str__ __str__    __subclasshook__ __subclasshook__ __subclasshook__    __weakref__ __weakref__ __weakref__     __dir__ __dir__     __eq__ __eq__     __ge__ __ge__     __gt__ __gt__     __le__ __le__     __lt__ __lt__     __ne__ __ne__     __init_subclass__ __init_subclass__    init_subclass 类方法 __init_subclass__ 从 3.</description>
     </item>
     
     <item>

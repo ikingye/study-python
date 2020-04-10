@@ -6,11 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="版本管理"><meta property="og:title" content="版本管理" />
 <meta property="og:description" content="Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
-function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装：
-pyenvinstall 3.8.2" />
+function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
+pyenv 基础命令 pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
+3.8.2 2.7.17 pyenv shell 3.8.2 2.7.17 set by PYENV_VERSION environment variable
+$ echo $PYENV_VERSION 3.8.2:2.7.17 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/version/manage/" />
-<meta property="article:modified_time" content="2020-03-16T14:00:34+08:00" />
+<meta property="article:modified_time" content="2020-04-10T14:08:33+08:00" />
 <title>版本管理 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
@@ -18,7 +20,7 @@ pyenvinstall 3.8.2" />
 <link rel="stylesheet" href="/study-python/book.min.33dd7934182d4abfe269db67d0d9821bdd866c149d8327944bc47573db5a4d82.css" integrity="sha256-M915NBgtSr/iadtn0NmCG92GbBSdgyeUS8R1c9taTYI=">
 
 
-<script defer src="/study-python/en.search.min.d0386e92d26823210169669d63f672907aa628be9328cca1c4e1fd834bc6c846.js" integrity="sha256-0DhuktJoIyEBaWadY/ZykHqmKL6TKMyhxOH9g0vGyEY="></script>
+<script defer src="/study-python/en.search.min.d1e72c60c57ebcb660787081b4df14d5d01e9ba0913623fef61488053ad681f7.js" integrity="sha256-0ecsYMV&#43;vLZgeHCBtN8U1dAem6CRNiP&#43;9hSIBTrWgfc="></script>
 
 <!--
 Made with Book Theme
@@ -90,6 +92,48 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    
+      
+        
+
+  <li >
+    
+      
+
+  <a href="/study-python/docs/basic/grammar/" >
+      语法
+  </a>
+
+
+    
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  <a href="/study-python/docs/basic/grammar/class/" >
+      类
+  </a>
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
     
       
         
@@ -479,6 +523,12 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#pyenv">pyenv</a>
           <ul>
             <li><a href="#pyenv-">pyenv 加速</a></li>
+            <li><a href="#pyenv--1">pyenv 基础命令</a>
+              <ul>
+                <li><a href="#pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</a></li>
+                <li><a href="#pyenv-shell-382-2717">pyenv shell 3.8.2 2.7.17</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -503,9 +553,19 @@ https://github.com/alex-shpak/hugo-book
 	pyenv install $@
 <span style="color:#f92672">}</span>
 </code></pre></div><p>执行 <code>zsh</code> 使配置生效，
-之后即可这样安装：<br>
+之后即可这样安装：
 <code>pyenvinstall 3.8.2</code></p>
-</article>
+<h3 id="pyenv--1">pyenv 基础命令</h3>
+<h4 id="pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</h4>
+<p>set by <code>~/.pyenv/version</code></p>
+<pre><code>3.8.2
+2.7.17
+</code></pre><h4 id="pyenv-shell-382-2717">pyenv shell 3.8.2 2.7.17</h4>
+<p>set by <code>PYENV_VERSION</code> environment variable</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo $PYENV_VERSION
+
+3.8.2:2.7.17
+</code></pre></div></article>
  
       
 
@@ -517,9 +577,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/a1b4f66534c7f9f45ef5ce69a3db7fccc2c52bf3" title='Last modified by yewang | 2020-03-16' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/153697a37187fd04d361a54413d01930bdc85725" title='Last modified by yewang | 2020-04-10' target="_blank" rel="noopener">
       <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-16</span>
+      <span>2020-04-10</span>
     </a>
   </div>
 
@@ -558,6 +618,12 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#pyenv">pyenv</a>
           <ul>
             <li><a href="#pyenv-">pyenv 加速</a></li>
+            <li><a href="#pyenv--1">pyenv 基础命令</a>
+              <ul>
+                <li><a href="#pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</a></li>
+                <li><a href="#pyenv-shell-382-2717">pyenv shell 3.8.2 2.7.17</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
