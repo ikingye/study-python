@@ -74,8 +74,9 @@ $ echo $PYENV_VERSION 3.8.2:2.7.17 </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-python/docs/basic/grammar/slice/</guid>
-      <description>切片 语法 [start:end:step] step 为负数 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
-字符串反转 $ letter[::-1] </description>
+      <description>切片 语法 [start:end:step] 遍历 a = [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;d&amp;#34;] # index &amp;amp; value for i in xrange(len(a)): print i, a[i] # iterate with index for i, el in enumerate(a): print i, el step 为负数 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+字符串反转 letter[::-1] 参考：
+ Python list error: [::-1] step on [:-1] slice  </description>
     </item>
     
     <item>

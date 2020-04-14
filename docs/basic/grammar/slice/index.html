@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="切片"><meta property="og:title" content="切片" />
-<meta property="og:description" content="切片 语法 [start:end:step] step 为负数 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
-字符串反转 $ letter[::-1] " />
+<meta property="og:description" content="切片 语法 [start:end:step] 遍历 a = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;] # index &amp; value for i in xrange(len(a)): print i, a[i] # iterate with index for i, el in enumerate(a): print i, el step 为负数 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+字符串反转 letter[::-1] 参考：
+ Python list error: [::-1] step on [:-1] slice  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/slice/" />
 <meta property="article:modified_time" content="2020-04-10T22:41:47+08:00" />
@@ -17,7 +18,7 @@
 <link rel="stylesheet" href="/study-python/book.min.66d2f6926159dd697150bdcd901eead56a7adc9408513ccb9ab553939262dd4c.css" integrity="sha256-ZtL2kmFZ3WlxUL3NkB7q1Wp63JQIUTzLmrVTk5Ji3Uw=">
 
 
-<script defer src="/study-python/en.search.min.b152b4e6b2fb5b31848d526b857771640193fa0e79913e756c4823f590091980.js" integrity="sha256-sVK05rL7WzGEjVJrhXdxZAGT&#43;g55kT51bEgj9ZAJGYA="></script>
+<script defer src="/study-python/en.search.min.7759e534303177ea27937f9cc8323f2f32dad6e0c55476d3e995771b365f4763.js" integrity="sha256-d1nlNDAxd&#43;onk3&#43;cyDI/LzLa1uDFVHbT6ZV3GzZfR2M="></script>
 
 <!--
 Made with Book Theme
@@ -544,8 +545,12 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#语法">语法</a>
           <ul>
-            <li><a href="#step-为负数">step 为负数</a></li>
-            <li><a href="#字符串反转">字符串反转</a></li>
+            <li><a href="#遍历">遍历</a></li>
+            <li><a href="#step-为负数">step 为负数</a>
+              <ul>
+                <li><a href="#字符串反转">字符串反转</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -563,11 +568,25 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown"><h1 id="切片">切片</h1>
 <h2 id="语法">语法</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>start:end:step<span style="color:#f92672">]</span>
+</code></pre></div><h3 id="遍历">遍历</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>]
+
+<span style="color:#75715e"># index &amp; value</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> xrange(len(a)):
+    <span style="color:#66d9ef">print</span> i, a[i]
+
+<span style="color:#75715e"># iterate with index</span>
+<span style="color:#66d9ef">for</span> i, el <span style="color:#f92672">in</span> enumerate(a):
+    <span style="color:#66d9ef">print</span> i, el
 </code></pre></div><h3 id="step-为负数">step 为负数</h3>
 <p>最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5</p>
-<h3 id="字符串反转">字符串反转</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> letter[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</code></pre></div></article>
+<h4 id="字符串反转">字符串反转</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">letter[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</code></pre></div><p>参考：</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/41430791/python-list-error-1-step-on-1-slice">Python list error: [::-1] step on [:-1] slice</a></li>
+</ul>
+</article>
  
 
       <footer class="book-footer">
@@ -616,8 +635,12 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#语法">语法</a>
           <ul>
-            <li><a href="#step-为负数">step 为负数</a></li>
-            <li><a href="#字符串反转">字符串反转</a></li>
+            <li><a href="#遍历">遍历</a></li>
+            <li><a href="#step-为负数">step 为负数</a>
+              <ul>
+                <li><a href="#字符串反转">字符串反转</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
