@@ -476,8 +476,8 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="pyenv-加速">pyenv 加速</h3>
 <p>在 <code>.zshrc</code> 添加</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#66d9ef">function</span> pyenvinstall <span style="color:#f92672">{</span>
-	wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
-	pyenv install $@
+    wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
+    pyenv install $@
 <span style="color:#f92672">}</span>
 </code></pre></div><p>执行 <code>zsh</code> 使配置生效，
 之后即可这样安装：
