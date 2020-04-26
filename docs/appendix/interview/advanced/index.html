@@ -9,22 +9,18 @@
   这个词原来为 Guerrilla Patch，杂牌军、游击队，说明这部分不是原装的，在英文里 guerilla 发音和 gorllia (猩猩) 相似，再后来就写了 monkey (猴子)。
   还有一种解释是说由于这种方式将原来的代码弄乱了 (messing with it)，在英文里叫 monkeying about (顽皮的)，所以叫做 Monkey Patch。
   猴子补丁的叫法有些莫名其妙，只要和 “模块运行时替换的功能” 对应就行了。
-运行时动态替换模块 gevent Python 通过 yield 提供了对协程的基本支持，但是不完全。而第三方的 gevent 为 Python 提供了比较完善的协程支持。
-gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：
-当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。
-由于切换是在 IO 操作时自动完成，所以 gevent 需要修改 Python 自带的一些标准库，这一过程在启动时通过 monkey patch 完成："><meta property="og:title" content="进阶" />
+ujson import json import ujson def monkey_patch_json(): json.__name__ = &#39;ujson&#39; json.dumps = ujson.dumps json.loads = ujson.loads monkey_patch_json() 参考：
+ Python 猴子补丁 python 面试题精讲 ——monkey patch（猴子补丁）  "><meta property="og:title" content="进阶" />
 <meta property="og:description" content="进阶面试题 猴子补丁 属性在运行时的动态替换，叫做猴子补丁（Monkey Patch）。
 为什么叫猴子补丁 属性的运行时替换和猴子也没什么关系，关于猴子补丁的由来网上查到两种说法：
   这个词原来为 Guerrilla Patch，杂牌军、游击队，说明这部分不是原装的，在英文里 guerilla 发音和 gorllia (猩猩) 相似，再后来就写了 monkey (猴子)。
   还有一种解释是说由于这种方式将原来的代码弄乱了 (messing with it)，在英文里叫 monkeying about (顽皮的)，所以叫做 Monkey Patch。
   猴子补丁的叫法有些莫名其妙，只要和 “模块运行时替换的功能” 对应就行了。
-运行时动态替换模块 gevent Python 通过 yield 提供了对协程的基本支持，但是不完全。而第三方的 gevent 为 Python 提供了比较完善的协程支持。
-gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：
-当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。
-由于切换是在 IO 操作时自动完成，所以 gevent 需要修改 Python 自带的一些标准库，这一过程在启动时通过 monkey patch 完成：" />
+ujson import json import ujson def monkey_patch_json(): json.__name__ = &#39;ujson&#39; json.dumps = ujson.dumps json.loads = ujson.loads monkey_patch_json() 参考：
+ Python 猴子补丁 python 面试题精讲 ——monkey patch（猴子补丁）  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/appendix/interview/advanced/" />
-<meta property="article:modified_time" content="2020-04-17T00:52:32+08:00" />
+<meta property="article:modified_time" content="2020-04-26T22:56:04+08:00" />
 <title>进阶 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
@@ -32,7 +28,7 @@ gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：
 <link rel="stylesheet" href="/study-python/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-python/en.search.min.c29340896cac7cdd0d76018af07850ab03a68cc35756a6def69a7d27d473f2a8.js" integrity="sha256-wpNAiWysfN0NdgGK8HhQqwOmjMNXVqbe9pp9J9Rz8qg="></script>
+<script defer src="/study-python/en.search.min.8bc0b33f28a035480a1abd3030b9c3f5a967ccc00bb3f3540f13e71118053a52.js" integrity="sha256-i8CzPyigNUgKGr0wMLnD9alnzMALs/NUDxPnERgFOlI="></script>
 
 <!--
 Made with Book Theme
@@ -478,13 +474,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#猴子补丁">猴子补丁</a>
           <ul>
             <li><a href="#为什么叫猴子补丁">为什么叫猴子补丁</a></li>
-            <li><a href="#运行时动态替换模块">运行时动态替换模块</a>
-              <ul>
-                <li><a href="#gevent">gevent</a></li>
-                <li><a href="#ujson">ujson</a></li>
-              </ul>
-            </li>
-            <li><a href="#运行时动态增加模块">运行时动态增加模块</a></li>
+            <li><a href="#ujson">ujson</a></li>
           </ul>
         </li>
       </ul>
@@ -514,26 +504,7 @@ https://github.com/alex-shpak/hugo-book
 </li>
 </ol>
 <p>猴子补丁的叫法有些莫名其妙，只要和 “模块运行时替换的功能” 对应就行了。</p>
-<h3 id="运行时动态替换模块">运行时动态替换模块</h3>
-<h4 id="gevent">gevent</h4>
-<p>Python 通过 yield 提供了对协程的基本支持，但是不完全。而第三方的 gevent 为 Python 提供了比较完善的协程支持。</p>
-<p>gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：</p>
-<p>当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。</p>
-<p>由于切换是在 IO 操作时自动完成，所以 gevent 需要修改 Python 自带的一些标准库，这一过程在启动时通过 <code>monkey patch</code> 完成：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> gevent <span style="color:#f92672">import</span> monkey; monkey<span style="color:#f92672">.</span>patch_socket()
-<span style="color:#f92672">import</span> gevent
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(n):
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
-        <span style="color:#66d9ef">print</span> gevent<span style="color:#f92672">.</span>getcurrent(), i
-
-g1 <span style="color:#f92672">=</span> gevent<span style="color:#f92672">.</span>spawn(f, <span style="color:#ae81ff">5</span>)
-g2 <span style="color:#f92672">=</span> gevent<span style="color:#f92672">.</span>spawn(f, <span style="color:#ae81ff">5</span>)
-g3 <span style="color:#f92672">=</span> gevent<span style="color:#f92672">.</span>spawn(f, <span style="color:#ae81ff">5</span>)
-g1<span style="color:#f92672">.</span>join()
-g2<span style="color:#f92672">.</span>join()
-g3<span style="color:#f92672">.</span>join()
-</code></pre></div><h4 id="ujson">ujson</h4>
+<h3 id="ujson">ujson</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> json
 <span style="color:#f92672">import</span> ujson
 
@@ -543,8 +514,7 @@ g3<span style="color:#f92672">.</span>join()
     json<span style="color:#f92672">.</span>loads <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads
 
 monkey_patch_json()
-</code></pre></div><h3 id="运行时动态增加模块">运行时动态增加模块</h3>
-<p>参考：</p>
+</code></pre></div><p>参考：</p>
 <ul>
 <li><a href="https://www.jianshu.com/p/f1c1eb495f47">Python 猴子补丁</a></li>
 <li><a href="https://cloud.tencent.com/developer/article/1441252">python 面试题精讲 ——monkey patch（猴子补丁）</a></li>
@@ -561,9 +531,9 @@ monkey_patch_json()
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/ef316807d560b24fdb7cabca2335824537993220" title='Last modified by yewang | 2020-04-17' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/453f523bb0f724101f23b9eb754bc3d203899400" title='Last modified by yewang | 2020-04-26' target="_blank" rel="noopener">
       <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-17</span>
+      <span>2020-04-26</span>
     </a>
   </div>
 
@@ -603,13 +573,7 @@ monkey_patch_json()
         <li><a href="#猴子补丁">猴子补丁</a>
           <ul>
             <li><a href="#为什么叫猴子补丁">为什么叫猴子补丁</a></li>
-            <li><a href="#运行时动态替换模块">运行时动态替换模块</a>
-              <ul>
-                <li><a href="#gevent">gevent</a></li>
-                <li><a href="#ujson">ujson</a></li>
-              </ul>
-            </li>
-            <li><a href="#运行时动态增加模块">运行时动态增加模块</a></li>
+            <li><a href="#ujson">ujson</a></li>
           </ul>
         </li>
       </ul>
