@@ -4,12 +4,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="面试题 基础题 进阶题 高阶题 "><meta property="og:title" content="面试题" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-python/docs/appendix/interview/" />
+<meta name="description" content="生成器 iterable 可迭代的 Everything you can use &ldquo;for&hellip; in&hellip;&rdquo; on is an iterable; lists, strings, files&hellip;
+iterable 包括：
+ list tuple string dictionary file enumerate object  iterator 迭代器  iter() 函数用来生成迭代器。 iter(object[, sentinel])  object：支持迭代的集合对象 sentinel  如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object      迭代器只能迭代一次
+a kind of iterable you can only iterate over once.
+generator Generators are iterators, a kind of iterable you can only iterate over once."><meta property="og:title" content="生成器" />
+<meta property="og:description" content="生成器 iterable 可迭代的 Everything you can use &ldquo;for&hellip; in&hellip;&rdquo; on is an iterable; lists, strings, files&hellip;
+iterable 包括：
+ list tuple string dictionary file enumerate object  iterator 迭代器  iter() 函数用来生成迭代器。 iter(object[, sentinel])  object：支持迭代的集合对象 sentinel  如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object      迭代器只能迭代一次
+a kind of iterable you can only iterate over once.
+generator Generators are iterators, a kind of iterable you can only iterate over once." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/generator/" />
 
-<title>面试题 | Python 学习笔记</title>
+<title>生成器 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
 
@@ -18,7 +26,6 @@
 
 <script defer src="/study-python/en.search.min.c29340896cac7cdd0d76018af07850ab03a68cc35756a6def69a7d27d473f2a8.js" integrity="sha256-wpNAiWysfN0NdgGK8HhQqwOmjMNXVqbe9pp9J9Rz8qg="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/appendix/interview/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -108,6 +115,85 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/study-python/docs/basic/grammar/builtin/" class="">内建函数</a>
+  
+
+</li>
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-python/docs/basic/grammar/function/" class="collapsed ">函数</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-python/docs/basic/grammar/slice/" class="">切片</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-python/docs/basic/grammar/dict/" class="">字典</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-python/docs/basic/grammar/generator/" class="active">生成器</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-python/docs/basic/grammar/class/" class="">类</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
 
 
 
@@ -308,7 +394,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/study-python/docs/appendix/interview/" class="collapsed active">面试题</a>
+  <a href="/study-python/docs/appendix/interview/" class="collapsed ">面试题</a>
   
 
 
@@ -316,42 +402,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  
-  <ul>
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/basic/" class="">基础</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/advanced/" class="">进阶</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/expert/" class="">高阶</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
 
 
 
@@ -444,7 +494,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-python/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>面试题</strong>
+  <strong>生成器</strong>
 
   <label for="toc-control">
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -458,11 +508,18 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#面试题">面试题</a>
+    <li><a href="#生成器">生成器</a>
       <ul>
-        <li><a href="#基础题">基础题</a></li>
-        <li><a href="#进阶题">进阶题</a></li>
-        <li><a href="#高阶题">高阶题</a></li>
+        <li><a href="#iterable-可迭代的">iterable 可迭代的</a></li>
+        <li><a href="#iterator-迭代器">iterator 迭代器</a></li>
+        <li><a href="#generator">generator</a></li>
+        <li><a href="#yield">yield</a>
+          <ul>
+            <li><a href="#next">next</a></li>
+            <li><a href="#send">send</a></li>
+            <li><a href="#close">close</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -476,10 +533,55 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="面试题">面试题</h1>
-<h2 id="基础题">基础题</h2>
-<h2 id="进阶题">进阶题</h2>
-<h2 id="高阶题">高阶题</h2>
+  <article class="markdown"><h1 id="生成器">生成器</h1>
+<h2 id="iterable-可迭代的">iterable 可迭代的</h2>
+<p>Everything you can use &ldquo;for&hellip; in&hellip;&rdquo; on is an iterable; lists, strings, files&hellip;</p>
+<p>iterable 包括：</p>
+<ul>
+<li>list</li>
+<li>tuple</li>
+<li>string</li>
+<li>dictionary</li>
+<li>file</li>
+<li><code>enumerate object</code></li>
+</ul>
+<h2 id="iterator-迭代器">iterator 迭代器</h2>
+<ul>
+<li>iter() 函数用来生成迭代器。</li>
+<li><code>iter(object[, sentinel])</code>
+<ul>
+<li>object：支持迭代的集合对象</li>
+<li>sentinel
+<ul>
+<li>如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象</li>
+<li>每次调用这个迭代器对象的 <code>__next__()</code> 方法时，都会调用 object</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>迭代器只能迭代一次</p>
+<p>a kind of iterable you can only iterate over once.</p>
+<h2 id="generator">generator</h2>
+<p>Generators are iterators, a kind of iterable you can only iterate over once.
+Generators do not store all the values in memory, they generate the values on the fly.</p>
+<p>带有 yield 的函数在 Python 中被称之为 <code>generator</code>（生成器）函数</p>
+<h2 id="yield">yield</h2>
+<ol>
+<li>执行带有 <code>yield</code> 的函数返回一个 <code>generator</code>（生成器）</li>
+<li><code>next(g)</code> 开始执行这个 <code>generator</code>，执行完 <code>yield</code> 语句，就返回</li>
+<li>第二次 <code>next(g)</code> 从 <code>yield</code> 语句后开始执行（比如 <code>yield</code> 语句的赋值操作），再遇到 <code>yield</code> 语句也是一样，执行完就返回</li>
+<li>send</li>
+</ol>
+<p>参考：</p>
+<ul>
+<li><a href="https://blog.csdn.net/mieleizhi0522/article/details/82142856">python 中 yield 的用法详解 —— 最简单，最清晰的解释</a></li>
+<li><a href="https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do">What does the “yield” keyword do?</a></li>
+<li><a href="https://stackoverflow.com/questions/19302530/python-generator-send-function-purpose">python generator “send” function purpose?</a></li>
+</ul>
+<h3 id="next">next</h3>
+<h3 id="send">send</h3>
+<h3 id="close">close</h3>
 </article>
  
       
@@ -489,14 +591,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/0d73a1e47036fb0b2aa52c075aac89cd912ba3c0" title='Last modified by yewang | 2020-04-16' target="_blank" rel="noopener">
-      <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-16</span>
-    </a>
-  </div>
 
 
 
@@ -529,11 +623,18 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#面试题">面试题</a>
+    <li><a href="#生成器">生成器</a>
       <ul>
-        <li><a href="#基础题">基础题</a></li>
-        <li><a href="#进阶题">进阶题</a></li>
-        <li><a href="#高阶题">高阶题</a></li>
+        <li><a href="#iterable-可迭代的">iterable 可迭代的</a></li>
+        <li><a href="#iterator-迭代器">iterator 迭代器</a></li>
+        <li><a href="#generator">generator</a></li>
+        <li><a href="#yield">yield</a>
+          <ul>
+            <li><a href="#next">next</a></li>
+            <li><a href="#send">send</a></li>
+            <li><a href="#close">close</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

@@ -4,12 +4,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="面试题 基础题 进阶题 高阶题 "><meta property="og:title" content="面试题" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-python/docs/appendix/interview/" />
+<meta name="description" content="Python 协程  执行效率高  子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。 不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了    因为协程是一个线程执行，那怎么利用多核 CPU 呢？ 最简单的方法是多进程 &#43; 协程，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。
+子程序就是协程的一种特例 Donald Knuth 的一句话总结协程的特点：
+“子程序就是协程的一种特例。”
+参考：
+ Python 协程   "><meta property="og:title" content="协程" />
+<meta property="og:description" content="Python 协程  执行效率高  子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。 不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了    因为协程是一个线程执行，那怎么利用多核 CPU 呢？ 最简单的方法是多进程 &#43; 协程，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。
+子程序就是协程的一种特例 Donald Knuth 的一句话总结协程的特点：
+“子程序就是协程的一种特例。”
+参考：
+ Python 协程   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/practice/coroutine/" />
 
-<title>面试题 | Python 学习笔记</title>
+<title>协程 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
 
@@ -18,7 +26,6 @@
 
 <script defer src="/study-python/en.search.min.c29340896cac7cdd0d76018af07850ab03a68cc35756a6def69a7d27d473f2a8.js" integrity="sha256-wpNAiWysfN0NdgGK8HhQqwOmjMNXVqbe9pp9J9Rz8qg="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/appendix/interview/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -178,6 +185,45 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-python/docs/basic/practice/spec/" class="collapsed ">编程规范</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-python/docs/basic/practice/coroutine/" class="active">协程</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
 
 
   </li>
@@ -308,7 +354,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/study-python/docs/appendix/interview/" class="collapsed active">面试题</a>
+  <a href="/study-python/docs/appendix/interview/" class="collapsed ">面试题</a>
   
 
 
@@ -316,42 +362,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  
-  <ul>
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/basic/" class="">基础</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/advanced/" class="">进阶</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/expert/" class="">高阶</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
 
 
 
@@ -444,7 +454,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-python/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>面试题</strong>
+  <strong>协程</strong>
 
   <label for="toc-control">
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -458,11 +468,13 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#面试题">面试题</a>
+    <li><a href="#python-协程">Python 协程</a>
       <ul>
-        <li><a href="#基础题">基础题</a></li>
-        <li><a href="#进阶题">进阶题</a></li>
-        <li><a href="#高阶题">高阶题</a></li>
+        <li>
+          <ul>
+            <li><a href="#子程序就是协程的一种特例">子程序就是协程的一种特例</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -476,10 +488,25 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="面试题">面试题</h1>
-<h2 id="基础题">基础题</h2>
-<h2 id="进阶题">进阶题</h2>
-<h2 id="高阶题">高阶题</h2>
+  <article class="markdown"><h1 id="python-协程">Python 协程</h1>
+<ul>
+<li>执行效率高
+<ul>
+<li>子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。</li>
+<li>不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了</li>
+</ul>
+</li>
+</ul>
+<p>因为协程是一个线程执行，那怎么利用多核 CPU 呢？
+最简单的方法是<strong>多进程 + 协程</strong>，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。</p>
+<h3 id="子程序就是协程的一种特例">子程序就是协程的一种特例</h3>
+<p>Donald Knuth 的一句话总结协程的特点：</p>
+<p>“子程序就是协程的一种特例。”</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.liaoxuefeng.com/wiki/897692888725344/923057403198272">Python 协程</a></li>
+</ul>
+<hr>
 </article>
  
       
@@ -489,14 +516,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/0d73a1e47036fb0b2aa52c075aac89cd912ba3c0" title='Last modified by yewang | 2020-04-16' target="_blank" rel="noopener">
-      <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-16</span>
-    </a>
-  </div>
 
 
 
@@ -529,11 +548,13 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#面试题">面试题</a>
+    <li><a href="#python-协程">Python 协程</a>
       <ul>
-        <li><a href="#基础题">基础题</a></li>
-        <li><a href="#进阶题">进阶题</a></li>
-        <li><a href="#高阶题">高阶题</a></li>
+        <li>
+          <ul>
+            <li><a href="#子程序就是协程的一种特例">子程序就是协程的一种特例</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

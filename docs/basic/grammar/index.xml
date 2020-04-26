@@ -10,6 +10,26 @@
     
     
     <item>
+      <title>内建函数</title>
+      <link>https://ikingye.github.io/study-python/docs/basic/grammar/builtin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-python/docs/basic/grammar/builtin/</guid>
+      <description>内建函数 all 判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
+any 判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
+元素除了是 0、空、FALSE 外都算 TRUE。
+basestring isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
+python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate 将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
+enumerate(sequence, [start=0])
+eval 执行一个字符串表达式，并返回表达式的值
+eval(&amp;#39;3 * x&amp;#39;) eval(&amp;#39;pow(2,2)&amp;#39;) isinstance 判断一个对象是否是一个已知的类型
+isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow pow(x, y[, z])
+等效于 pow (x, y) % z
+staticmethod 静态方法无需实例化，也可以实例化后调用
+ord 以一个字符（长度为 1 的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值，</description>
+    </item>
+    
+    <item>
       <title>切片</title>
       <link>https://ikingye.github.io/study-python/docs/basic/grammar/slice/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -26,7 +46,21 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-python/docs/basic/grammar/dict/</guid>
-      <description>字典 遍历 iteritems d = {&amp;#39;a&amp;#39;: 1, &amp;#39;c&amp;#39;: 3, &amp;#39;b&amp;#39;: 2, &amp;#39;d&amp;#39;: 4} # d.viewitems() for k, v in d.iteritems(): print k, v viewitems </description>
+      <description>字典 遍历 for key in d: # For Python 3.x: for key, value in d.items(): # For Python 2.x: for key, value in d.iteritems(): items The operation items() will work for both 2 and 3, but in 2 it will return a list of the dictionary&amp;rsquo;s (key, value) pairs, which will not reflect changes to the dict that happen after the items() call.
+If you want the 2.x behavior in 3.</description>
+    </item>
+    
+    <item>
+      <title>生成器</title>
+      <link>https://ikingye.github.io/study-python/docs/basic/grammar/generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-python/docs/basic/grammar/generator/</guid>
+      <description>生成器 iterable 可迭代的 Everything you can use &amp;ldquo;for&amp;hellip; in&amp;hellip;&amp;rdquo; on is an iterable; lists, strings, files&amp;hellip;
+iterable 包括：
+ list tuple string dictionary file enumerate object  iterator 迭代器  iter() 函数用来生成迭代器。 iter(object[, sentinel])  object：支持迭代的集合对象 sentinel  如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object      迭代器只能迭代一次
+a kind of iterable you can only iterate over once.
+generator Generators are iterators, a kind of iterable you can only iterate over once.</description>
     </item>
     
     <item>

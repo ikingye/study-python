@@ -4,14 +4,34 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="字典 遍历 for key in d: # For Python 3.x: for key, value in d.items(): # For Python 2.x: for key, value in d.iteritems(): items The operation items() will work for both 2 and 3, but in 2 it will return a list of the dictionary&rsquo;s (key, value) pairs, which will not reflect changes to the dict that happen after the items() call.
-If you want the 2.x behavior in 3."><meta property="og:title" content="字典" />
-<meta property="og:description" content="字典 遍历 for key in d: # For Python 3.x: for key, value in d.items(): # For Python 2.x: for key, value in d.iteritems(): items The operation items() will work for both 2 and 3, but in 2 it will return a list of the dictionary&rsquo;s (key, value) pairs, which will not reflect changes to the dict that happen after the items() call.
-If you want the 2.x behavior in 3." />
+<meta name="description" content="内建函数 all 判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
+any 判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
+元素除了是 0、空、FALSE 外都算 TRUE。
+basestring isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
+python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate 将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
+enumerate(sequence, [start=0])
+eval 执行一个字符串表达式，并返回表达式的值
+eval(&#39;3 * x&#39;) eval(&#39;pow(2,2)&#39;) isinstance 判断一个对象是否是一个已知的类型
+isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow pow(x, y[, z])
+等效于 pow (x, y) % z
+staticmethod 静态方法无需实例化，也可以实例化后调用
+ord 以一个字符（长度为 1 的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值，"><meta property="og:title" content="内建函数" />
+<meta property="og:description" content="内建函数 all 判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
+any 判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
+元素除了是 0、空、FALSE 外都算 TRUE。
+basestring isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
+python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate 将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
+enumerate(sequence, [start=0])
+eval 执行一个字符串表达式，并返回表达式的值
+eval(&#39;3 * x&#39;) eval(&#39;pow(2,2)&#39;) isinstance 判断一个对象是否是一个已知的类型
+isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow pow(x, y[, z])
+等效于 pow (x, y) % z
+staticmethod 静态方法无需实例化，也可以实例化后调用
+ord 以一个字符（长度为 1 的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/dict/" />
-<meta property="article:modified_time" content="2020-04-16T22:37:23+08:00" />
-<title>字典 | Python 学习笔记</title>
+<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/builtin/" />
+
+<title>内建函数 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
 
@@ -117,7 +137,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
 
   
-  <a href="/study-python/docs/basic/grammar/builtin/" class="">内建函数</a>
+  <a href="/study-python/docs/basic/grammar/builtin/" class="active">内建函数</a>
   
 
 </li>
@@ -160,7 +180,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
 
   
-  <a href="/study-python/docs/basic/grammar/dict/" class="active">字典</a>
+  <a href="/study-python/docs/basic/grammar/dict/" class="">字典</a>
   
 
 </li>
@@ -488,7 +508,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-python/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>字典</strong>
+  <strong>内建函数</strong>
 
   <label for="toc-control">
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -502,15 +522,17 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#字典">字典</a>
+    <li><a href="#内建函数">内建函数</a>
       <ul>
-        <li><a href="#遍历">遍历</a>
-          <ul>
-            <li><a href="#items">items</a></li>
-            <li><a href="#iteritems">iteritems</a></li>
-            <li><a href="#viewitems">viewitems</a></li>
-          </ul>
-        </li>
+        <li><a href="#all">all</a></li>
+        <li><a href="#any">any</a></li>
+        <li><a href="#basestring">basestring</a></li>
+        <li><a href="#enumerate">enumerate</a></li>
+        <li><a href="#eval">eval</a></li>
+        <li><a href="#isinstance">isinstance</a></li>
+        <li><a href="#pow">pow</a></li>
+        <li><a href="#staticmethod">staticmethod</a></li>
+        <li><a href="#ord">ord</a></li>
       </ul>
     </li>
   </ul>
@@ -524,40 +546,45 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="字典">字典</h1>
-<h2 id="遍历">遍历</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> key <span style="color:#f92672">in</span> d:
-
-<span style="color:#75715e"># For Python 3.x:</span>
-<span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> d<span style="color:#f92672">.</span>items():
-
-<span style="color:#75715e"># For Python 2.x:</span>
-<span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> d<span style="color:#f92672">.</span>iteritems():
-</code></pre></div><h3 id="items">items</h3>
-<p>The operation items() will work for both 2 and 3,
-but in 2 it will return a list of the dictionary&rsquo;s (key, value) pairs,
-which will <strong>not</strong> reflect changes to the dict that happen after the items() call.</p>
-<p>If you want the 2.x behavior in 3.x, you can call <code>list(d.items())</code></p>
-<h3 id="iteritems">iteritems</h3>
-<p>返回 iterator 对象</p>
-<p><code>dictionary-itemiterator object</code></p>
+  <article class="markdown"><h1 id="内建函数">内建函数</h1>
+<h2 id="all">all</h2>
+<p>判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE</p>
+<h2 id="any">any</h2>
+<p>判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True</p>
+<p>元素除了是 0、空、FALSE 外都算 TRUE。</p>
+<h2 id="basestring">basestring</h2>
+<p><code>isinstance(obj, basestring)</code> 等价于 <code>isinstance(obj, (str, unicode))</code></p>
 <blockquote class="book-hint warning">
-  python3 没有 <code>iteritems</code>
+  python3 已经没有 basestring 类型，用 str 代替了 basestring
 </blockquote>
 
-<h3 id="viewitems">viewitems</h3>
-<p>Summary (with a little backstory): view* methods are a live view into the data (that will update as it updates), whereas iter* and just-plain * are more like snapshots.</p>
-<blockquote class="book-hint warning">
-  python3 没有 <code>viewitems</code>，items 等同于 python2 的 viewitems
-</blockquote>
+<h2 id="enumerate">enumerate</h2>
+<p>将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标</p>
+<p><code>enumerate(sequence, [start=0])</code></p>
+<h2 id="eval">eval</h2>
+<p>执行一个字符串表达式，并返回表达式的值</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">eval(<span style="color:#e6db74">&#39;3 * x&#39;</span>)
+eval(<span style="color:#e6db74">&#39;pow(2,2)&#39;</span>)
+</code></pre></div><h2 id="isinstance">isinstance</h2>
+<p>判断一个对象是否是一个已知的类型</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">isinstance<span style="color:#f92672">()</span> 与 type<span style="color:#f92672">()</span> 区别：
 
-<p>The objects returned by <code>dict.viewkeys()</code>, <code>dict.viewvalues()</code> and <code>dict.viewitems()</code> are view objects.
-They provide a <strong>dynamic</strong> view on the dictionary’s entries, which means that when the dictionary changes, the view reflects these changes.</p>
-<p>参考：</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/21783763/in-python-2-what-are-the-performance-trade-offs-for-viewvalues-viewitems-ov">In Python 2, what are the performance trade-offs for viewvalues()/viewitems() over itervalues()/iteritems()?</a></li>
-</ul>
-</article>
+type<span style="color:#f92672">()</span> 不会认为子类是一种父类类型，不考虑继承关系。
+
+isinstance<span style="color:#f92672">()</span> 会认为子类是一种父类类型，考虑继承关系。
+
+如果要判断两个类型是否相同推荐使用 isinstance<span style="color:#f92672">()</span>。
+</code></pre></div><h2 id="pow">pow</h2>
+<p><code>pow(x, y[, z])</code></p>
+<p>等效于 <code>pow (x, y) % z</code></p>
+<h2 id="staticmethod">staticmethod</h2>
+<p>静态方法无需实例化，也可以实例化后调用</p>
+<h2 id="ord">ord</h2>
+<p>以一个字符（长度为 1 的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值，</p>
+<p>如果所给的 Unicode 字符超出了你的 Python 定义范围，则会引发一个 TypeError 的异常。</p>
+<p><code>ord</code>() 函数是 <code>chr</code>() 函数（对于 8 位的 ASCII 字符串）或 <code>unichr</code>() 函数（对于 Unicode 对象）的配对函数</p>
+<pre><code>
+</code></pre></article>
  
       
 
@@ -566,14 +593,6 @@ They provide a <strong>dynamic</strong> view on the dictionary’s entries, whic
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/b18c66d875d05c87d63e995e30fac394cc069e48" title='Last modified by yewang | 2020-04-16' target="_blank" rel="noopener">
-      <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-16</span>
-    </a>
-  </div>
 
 
 
@@ -606,15 +625,17 @@ They provide a <strong>dynamic</strong> view on the dictionary’s entries, whic
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#字典">字典</a>
+    <li><a href="#内建函数">内建函数</a>
       <ul>
-        <li><a href="#遍历">遍历</a>
-          <ul>
-            <li><a href="#items">items</a></li>
-            <li><a href="#iteritems">iteritems</a></li>
-            <li><a href="#viewitems">viewitems</a></li>
-          </ul>
-        </li>
+        <li><a href="#all">all</a></li>
+        <li><a href="#any">any</a></li>
+        <li><a href="#basestring">basestring</a></li>
+        <li><a href="#enumerate">enumerate</a></li>
+        <li><a href="#eval">eval</a></li>
+        <li><a href="#isinstance">isinstance</a></li>
+        <li><a href="#pow">pow</a></li>
+        <li><a href="#staticmethod">staticmethod</a></li>
+        <li><a href="#ord">ord</a></li>
       </ul>
     </li>
   </ul>
