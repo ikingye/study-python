@@ -4,13 +4,10 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="函数 Partial function 偏函数 functools.partial 的作用就是，把一个函数的某些参数给固定住（也就是设置默认值），返回一个新的函数
-当函数的参数个数太多，需要简化时，使用 functools.partial 可以创建一个新的函数，这个新函数可以固定住原函数的部分参数，从而在调用时更简单。
-柯里化 Currying 柯里化（Currying）是把接受多个参数的函数变换成接受一个单一参数 (最初函数的第一个参数) 的函数，并且返回接受余下的参数且返回结果的新函数
-柯里化（Currying）是由 Christopher Strachey 以逻辑学家 Haskell Curry 命名的，尽管它是 Moses Schnfinkel 和 Gottlob Frege 发明的。
-从纯粹的语义上，curry 化就是 lambda 表达式的一个糖
-参考：
- 柯里化在工程中有什么好处？ 柯里化对函数式编程有何意义？  "><meta property="og:title" content="函数" />
+<meta name="description" content="函数 __init__ vs __new__ __new__ 最先被调用，通常用于控制生成一个新实例的过程。 它是类级别的方法。
+__new__ 方法主要是当你继承一些不可变的 class 时 (比如 int, str, tuple)， 提供给你一个自定义这些类的实例化过程的途径。还有就是实现自定义的 metaclass。
+__init__ 方法通常用在初始化一个类实例的时候调用。
+class PositiveInteger(int): def __init__(self, value): super(PositiveInteger, self).__init__(self, abs(value)) i = PositiveInteger(-3) print i # -3 # 对于 int 这种 不可变的对象，我们只有重载它的 __new__ 方法才能起到自定义的作用 class PositiveInteger(int): def __new__(cls, value): return super(PositiveInteger, cls).__new__(cls, abs(value)) i = PositiveInteger(-3) print i # 3 用 __new__ 来实现单例 class Singleton(object): def __new__(cls): # 关键在于这，每一次实例化的时候，我们都只会返回这同一个instance对象 if not hasattr(cls, &#39;instance&#39;): cls."><meta property="og:title" content="函数" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/function/" />
@@ -22,7 +19,7 @@
 <link rel="stylesheet" href="/study-python/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-python/en.search.min.8123e22730d69b674cf3be2584bf8a8a8f9170443a19dbf6282561f47958ec28.js" integrity="sha256-gSPiJzDWm2dM874lhL&#43;Kio&#43;RcEQ6Gdv2KCVh9HlY7Cg="></script>
+<script defer src="/study-python/en.search.min.0ac925b4292b627ef76dc2ce715613541c4742da371211274b0b773966cccd8c.js" integrity="sha256-CskltCkrYn73bcLOcVYTVBxHQto3EhEnSwt3OWbMzYw="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/basic/grammar/function/index.xml" title="Python 学习笔记" />
 <!--
@@ -525,6 +522,12 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#函数">函数</a>
       <ul>
+        <li><a href="#__init__-vs-__new__"><code>__init__</code> vs <code>__new__</code></a>
+          <ul>
+            <li><a href="#用-__new__-来实现单例">用 <code>__new__</code> 来实现单例</a></li>
+          </ul>
+        </li>
+        <li><a href="#metaclass-vs-__new__">metaclass vs <code>__new__</code></a></li>
         <li><a href="#partial-function-偏函数">Partial function 偏函数</a>
           <ul>
             <li><a href="#柯里化-currying">柯里化 Currying</a></li>
@@ -544,6 +547,41 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="函数">函数</h1>
+<h2 id="__init__-vs-__new__"><code>__init__</code> vs <code>__new__</code></h2>
+<p><code>__new__</code> 最先被调用，通常用于控制生成一个新实例的过程。
+它是类级别的方法。</p>
+<p><code>__new__</code> 方法主要是当你继承一些不可变的 class 时 (比如 int, str, tuple)， 提供给你一个自定义这些类的实例化过程的途径。还有就是实现自定义的 metaclass。</p>
+<p><code>__init__</code> 方法通常用在初始化一个类实例的时候调用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PositiveInteger</span>(int):
+    <span style="color:#66d9ef">def</span> __init__(self, value):
+        super(PositiveInteger, self)<span style="color:#f92672">.</span>__init__(self, abs(value))
+
+i <span style="color:#f92672">=</span> PositiveInteger(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>)
+<span style="color:#66d9ef">print</span> i <span style="color:#75715e"># -3</span>
+
+<span style="color:#75715e"># 对于 int 这种 不可变的对象，我们只有重载它的 __new__ 方法才能起到自定义的作用</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PositiveInteger</span>(int):
+    <span style="color:#66d9ef">def</span> __new__(cls, value):
+        <span style="color:#66d9ef">return</span> super(PositiveInteger, cls)<span style="color:#f92672">.</span>__new__(cls, abs(value))
+
+i <span style="color:#f92672">=</span> PositiveInteger(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>)
+<span style="color:#66d9ef">print</span> i <span style="color:#75715e"># 3</span>
+</code></pre></div><h3 id="用-__new__-来实现单例">用 <code>__new__</code> 来实现单例</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Singleton</span>(object):
+    <span style="color:#66d9ef">def</span> __new__(cls):
+        <span style="color:#75715e"># 关键在于这，每一次实例化的时候，我们都只会返回这同一个instance对象</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> hasattr(cls, <span style="color:#e6db74">&#39;instance&#39;</span>):
+            cls<span style="color:#f92672">.</span>instance <span style="color:#f92672">=</span> super(Singleton, cls)<span style="color:#f92672">.</span>__new__(cls)
+        <span style="color:#66d9ef">return</span> cls<span style="color:#f92672">.</span>instance
+
+obj1 <span style="color:#f92672">=</span> Singleton()
+obj2 <span style="color:#f92672">=</span> Singleton()
+
+obj1<span style="color:#f92672">.</span>attr1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;value1&#39;</span>
+<span style="color:#66d9ef">print</span> obj1<span style="color:#f92672">.</span>attr1, obj2<span style="color:#f92672">.</span>attr1 <span style="color:#75715e"># value1 value1</span>
+<span style="color:#66d9ef">print</span> obj1 <span style="color:#f92672">is</span> obj2 <span style="color:#75715e"># True</span>
+</code></pre></div><h2 id="metaclass-vs-__new__">metaclass vs <code>__new__</code></h2>
+<hr>
 <h2 id="partial-function-偏函数">Partial function 偏函数</h2>
 <p>functools.partial 的作用就是，把一个函数的某些参数给固定住（也就是设置默认值），返回一个新的函数</p>
 <p>当函数的参数个数太多，需要简化时，使用 functools.partial 可以创建一个新的函数，这个新函数可以固定住原函数的部分参数，从而在调用时更简单。</p>
@@ -607,6 +645,12 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#函数">函数</a>
       <ul>
+        <li><a href="#__init__-vs-__new__"><code>__init__</code> vs <code>__new__</code></a>
+          <ul>
+            <li><a href="#用-__new__-来实现单例">用 <code>__new__</code> 来实现单例</a></li>
+          </ul>
+        </li>
+        <li><a href="#metaclass-vs-__new__">metaclass vs <code>__new__</code></a></li>
         <li><a href="#partial-function-偏函数">Partial function 偏函数</a>
           <ul>
             <li><a href="#柯里化-currying">柯里化 Currying</a></li>
