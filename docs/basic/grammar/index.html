@@ -6,7 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="语法 range vs xrange range 是直接返回一个保存全量数据的 list, 空间复杂度是 O(n),
 而 xrange 是在遍历中不断生成的，遍历的效率更高，而且空间复杂度是 O(1)
-python3 取消了 xrange，range 就是 xrange  &lt;type &lsquo;xrange&#39;&gt;  iteritems vs viewitems &lt;type &lsquo;dict_items&#39;&gt; &lt;type &lsquo;dictionary-valueiterator&#39;&gt;  参考  Python 语言参考 Python 标准库  "><meta property="og:title" content="语法" />
+python3 取消了 xrange，range 就是 xrange  &lt;type &lsquo;xrange&#39;&gt;  iteritems vs viewitems &lt;type &lsquo;dict_items&#39;&gt; &lt;type &lsquo;dictionary-valueiterator&#39;&gt;  变量 全局变量 a = 3 def func(): print(a) func() 在 Python 中，a=3 定义了全局变量 a，作用域从定义处到代码结束，在 a=3 以下的函数中是可以引用全局变量 a 的。
+但如果要修改函数中与全局变量同名的变量，则函数中的该变量就会变成局部变量， 在修改之前对该变量的引用自然会出现未分配或未定义的错误了。
+a = 3 def func(): # 如果确定要引用并修改全局变量必须加上 global 关键字 global a print (a) a=a&#43;1 func()  参考  Python 语言参考 Python 标准库  "><meta property="og:title" content="语法" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/" />
@@ -18,7 +20,7 @@ python3 取消了 xrange，range 就是 xrange  &lt;type &lsquo;xrange&#39;&gt; 
 <link rel="stylesheet" href="/study-python/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-python/en.search.min.0ac925b4292b627ef76dc2ce715613541c4742da371211274b0b773966cccd8c.js" integrity="sha256-CskltCkrYn73bcLOcVYTVBxHQto3EhEnSwt3OWbMzYw="></script>
+<script defer src="/study-python/en.search.min.ca8582549d58ce623b3d304aa8138c37d623daf6a9939663711b39ddb35c5afe.js" integrity="sha256-yoWCVJ1YzmI7PTBKqBOMN9Yj2vapk5ZjcRs53bNcWv4="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/basic/grammar/index.xml" title="Python 学习笔记" />
 <!--
@@ -516,6 +518,11 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#type-dictionary-valueiterator">&lt;type &lsquo;dictionary-valueiterator'&gt;</a></li>
           </ul>
         </li>
+        <li><a href="#变量">变量</a>
+          <ul>
+            <li><a href="#全局变量">全局变量</a></li>
+          </ul>
+        </li>
         <li><a href="#参考">参考</a></li>
       </ul>
     </li>
@@ -544,6 +551,23 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="type-dict_items">&lt;type &lsquo;dict_items'&gt;</h3>
 <h3 id="type-dictionary-valueiterator">&lt;type &lsquo;dictionary-valueiterator'&gt;</h3>
 <hr>
+<h2 id="变量">变量</h2>
+<h3 id="全局变量">全局变量</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>():
+    <span style="color:#66d9ef">print</span>(a)
+func()
+</code></pre></div><p>在 Python 中，a=3 定义了全局变量 a，作用域从定义处到代码结束，在 a=3 以下的函数中是可以引用全局变量 a 的。</p>
+<p>但如果要修改函数中与全局变量同名的变量，则函数中的该变量就会变成局部变量，
+在修改之前对该变量的引用自然会出现未分配或未定义的错误了。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>():
+    <span style="color:#75715e"># 如果确定要引用并修改全局变量必须加上 global 关键字</span>
+    <span style="color:#66d9ef">global</span> a
+    <span style="color:#66d9ef">print</span> (a)
+    a<span style="color:#f92672">=</span>a<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+func()
+</code></pre></div><hr>
 <h2 id="参考">参考</h2>
 <ul>
 <li><a href="https://docs.python.org/zh-cn/3/reference/index.html">Python 语言参考</a></li>
@@ -609,6 +633,11 @@ https://github.com/alex-shpak/hugo-book
           <ul>
             <li><a href="#type-dict_items">&lt;type &lsquo;dict_items'&gt;</a></li>
             <li><a href="#type-dictionary-valueiterator">&lt;type &lsquo;dictionary-valueiterator'&gt;</a></li>
+          </ul>
+        </li>
+        <li><a href="#变量">变量</a>
+          <ul>
+            <li><a href="#全局变量">全局变量</a></li>
           </ul>
         </li>
         <li><a href="#参考">参考</a></li>
