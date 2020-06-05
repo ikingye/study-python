@@ -16,7 +16,8 @@
       
       <guid>https://ikingye.github.io/study-python/docs/appendix/attention/</guid>
       <description>关注 twisted/twisted  Event-driven networking engine written in Python. https://www.twistedmatrix.com
-gevent/gevent  Coroutine-based concurrency library for Python http://gevent.org</description>
+gevent/gevent  Coroutine-based concurrency library for Python http://gevent.org
+prompt-toolkit/python-prompt-toolkit  Library for building powerful interactive command line applications in Python https://python-prompt-toolkit.readthedocs.io/en/master/</description>
     </item>
     
   </channel>
