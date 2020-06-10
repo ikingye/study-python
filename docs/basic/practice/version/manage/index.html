@@ -4,12 +4,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="高阶面试题 "><meta property="og:title" content="高阶" />
-<meta property="og:description" content="高阶面试题 " />
+<meta name="description" content="Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
+function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
+pyenv 基础命令 pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
+3.8.2 2.7.17 pyenv shell 3.8.2 2.7.17 set by PYENV_VERSION environment variable
+$ echo $PYENV_VERSION 3.8.2:2.7.17 "><meta property="og:title" content="版本管理" />
+<meta property="og:description" content="Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
+function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
+pyenv 基础命令 pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
+3.8.2 2.7.17 pyenv shell 3.8.2 2.7.17 set by PYENV_VERSION environment variable
+$ echo $PYENV_VERSION 3.8.2:2.7.17 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-python/docs/appendix/interview/expert/" />
-<meta property="article:modified_time" content="2020-04-17T00:52:32+08:00" />
-<title>高阶 | Python 学习笔记</title>
+<meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/practice/version/manage/" />
+
+<title>版本管理 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
 
@@ -130,6 +138,94 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-python/docs/basic/practice/spec/" class="collapsed ">编程规范</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-python/docs/basic/practice/coroutine/" class="">协程</a>
+  
+
+</li>
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-python/docs/basic/practice/version/" class="collapsed ">版本</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/study-python/docs/basic/practice/version/manage/" class="active">版本管理</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-python/docs/basic/practice/version/3.7/" class="">3.7</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
 
 
 
@@ -270,42 +366,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  
-  <ul>
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/basic/" class="">基础</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/advanced/" class="">进阶</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/expert/" class="active">高阶</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
-
 
 
   </li>
@@ -397,7 +457,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-python/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>高阶</strong>
+  <strong>版本管理</strong>
 
   <label for="toc-control">
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -411,7 +471,21 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#高阶面试题">高阶面试题</a></li>
+    <li><a href="#python-版本管理">Python 版本管理</a>
+      <ul>
+        <li><a href="#pyenv">pyenv</a>
+          <ul>
+            <li><a href="#pyenv-加速">pyenv 加速</a></li>
+            <li><a href="#pyenv-基础命令">pyenv 基础命令</a>
+              <ul>
+                <li><a href="#pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</a></li>
+                <li><a href="#pyenv-shell-382-2717">pyenv shell 3.8.2 2.7.17</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -423,8 +497,28 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="高阶面试题">高阶面试题</h1>
-</article>
+  <article class="markdown"><h1 id="python-版本管理">Python 版本管理</h1>
+<h2 id="pyenv">pyenv</h2>
+<h3 id="pyenv-加速">pyenv 加速</h3>
+<p>在 <code>.zshrc</code> 添加</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#66d9ef">function</span> pyenvinstall <span style="color:#f92672">{</span>
+    wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
+    pyenv install $@
+<span style="color:#f92672">}</span>
+</code></pre></div><p>执行 <code>zsh</code> 使配置生效，
+之后即可这样安装：
+<code>pyenvinstall 3.8.2</code></p>
+<h3 id="pyenv-基础命令">pyenv 基础命令</h3>
+<h4 id="pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</h4>
+<p>set by <code>~/.pyenv/version</code></p>
+<pre><code>3.8.2
+2.7.17
+</code></pre><h4 id="pyenv-shell-382-2717">pyenv shell 3.8.2 2.7.17</h4>
+<p>set by <code>PYENV_VERSION</code> environment variable</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo $PYENV_VERSION
+
+3.8.2:2.7.17
+</code></pre></div></article>
  
       
 
@@ -433,14 +527,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/ef316807d560b24fdb7cabca2335824537993220" title='Last modified by yewang | 2020-04-17' target="_blank" rel="noopener">
-      <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-17</span>
-    </a>
-  </div>
 
 
 
@@ -473,7 +559,21 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#高阶面试题">高阶面试题</a></li>
+    <li><a href="#python-版本管理">Python 版本管理</a>
+      <ul>
+        <li><a href="#pyenv">pyenv</a>
+          <ul>
+            <li><a href="#pyenv-加速">pyenv 加速</a></li>
+            <li><a href="#pyenv-基础命令">pyenv 基础命令</a>
+              <ul>
+                <li><a href="#pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</a></li>
+                <li><a href="#pyenv-shell-382-2717">pyenv shell 3.8.2 2.7.17</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

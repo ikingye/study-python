@@ -11,10 +11,10 @@
     
     <item>
       <title>包管理</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/package/manage/</link>
+      <link>https://ikingye.github.io/study-python/docs/basic/lib/package/manage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/basic/package/manage/</guid>
+      <guid>https://ikingye.github.io/study-python/docs/basic/lib/package/manage/</guid>
       <description>Python 包管理 pip 加速 修改 ~/.pip/pip.conf
 [global] index-url = https://pypi.tuna.tsinghua.edu.cn/simple [install] trusted-host = pypi.tuna.tsinghua.edu.cn </description>
     </item>
@@ -35,10 +35,10 @@
     
     <item>
       <title>版本管理</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/version/manage/</link>
+      <link>https://ikingye.github.io/study-python/docs/basic/practice/version/manage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/basic/version/manage/</guid>
+      <guid>https://ikingye.github.io/study-python/docs/basic/practice/version/manage/</guid>
       <description>Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
 function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
 pyenv 基础命令 pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
@@ -172,10 +172,10 @@ import functools def log(text): def decorator(func): @functools.wraps(func) def 
     
     <item>
       <title>3.7</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/version/3.7/</link>
+      <link>https://ikingye.github.io/study-python/docs/basic/practice/version/3.7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/basic/version/3.7/</guid>
+      <guid>https://ikingye.github.io/study-python/docs/basic/practice/version/3.7/</guid>
       <description>Python 3.7 安装 依赖 sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel 3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
 sudo yum install libffi-devel -y make install 若在安装前移除了 /usr/bin 下 python 的文件链接依赖，此时 yum 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm 安装完成后重新进行 make install，结束后再次配置相关文件的软连接即可。

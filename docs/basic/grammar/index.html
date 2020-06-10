@@ -8,7 +8,8 @@
 而 xrange 是在遍历中不断生成的，遍历的效率更高，而且空间复杂度是 O(1)
 python3 取消了 xrange，range 就是 xrange  &lt;type &lsquo;xrange&#39;&gt;  iteritems vs viewitems &lt;type &lsquo;dict_items&#39;&gt; &lt;type &lsquo;dictionary-valueiterator&#39;&gt;  变量 全局变量 a = 3 def func(): print(a) func() 在 Python 中，a=3 定义了全局变量 a，作用域从定义处到代码结束，在 a=3 以下的函数中是可以引用全局变量 a 的。
 但如果要修改函数中与全局变量同名的变量，则函数中的该变量就会变成局部变量， 在修改之前对该变量的引用自然会出现未分配或未定义的错误了。
-a = 3 def func(): # 如果确定要引用并修改全局变量必须加上 global 关键字 global a print (a) a=a&#43;1 func()  参考  Python 语言参考 Python 标准库  "><meta property="og:title" content="语法" />
+a = 3 def func(): # 如果确定要引用并修改全局变量必须加上 global 关键字 global a print (a) a=a&#43;1 func()  尾递归 Python 解释器不支持尾递归优化
+参考："><meta property="og:title" content="语法" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/" />
@@ -20,7 +21,7 @@ a = 3 def func(): # 如果确定要引用并修改全局变量必须加上 globa
 <link rel="stylesheet" href="/study-python/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-python/en.search.min.847ffab8c4d42d2c0b85324d669dfec46c163cda6f7e38c29a2c175fc7a45bfd.js" integrity="sha256-hH/6uMTULSwLhTJNZp3&#43;xGwWPNpvfjjCmiwXX8ekW/0="></script>
+<script defer src="/study-python/en.search.min.60042e6454a3441c1cf7369eaf2fcefe95ab9ca23b6e2d0e0f3f6499d99ff18e.js" integrity="sha256-YAQuZFSjRBwc9zaery/O/pWrnKI7bi0ODz9kmdmf8Y4="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/basic/grammar/index.xml" title="Python 学习笔记" />
 <!--
@@ -191,52 +192,6 @@ https://github.com/alex-shpak/hugo-book
     
   </ul>
   
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/version/" class="collapsed ">版本</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/package/" class="collapsed ">Package</a>
-  
-
-
-    
-
-
-
 
 
 
@@ -523,6 +478,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#全局变量">全局变量</a></li>
           </ul>
         </li>
+        <li><a href="#尾递归">尾递归</a></li>
         <li><a href="#参考">参考</a></li>
       </ul>
     </li>
@@ -568,6 +524,14 @@ func()
     a<span style="color:#f92672">=</span>a<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
 func()
 </code></pre></div><hr>
+<h2 id="尾递归">尾递归</h2>
+<p>Python 解释器不支持尾递归优化</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/33923/what-is-tail-recursion">What is tail recursion?</a></li>
+<li><a href="https://stackoverflow.com/questions/310974/what-is-tail-call-optimization">What is tail call optimization?</a></li>
+</ul>
+<hr>
 <h2 id="参考">参考</h2>
 <ul>
 <li><a href="https://docs.python.org/zh-cn/3/reference/index.html">Python 语言参考</a></li>
@@ -640,6 +604,7 @@ func()
             <li><a href="#全局变量">全局变量</a></li>
           </ul>
         </li>
+        <li><a href="#尾递归">尾递归</a></li>
         <li><a href="#参考">参考</a></li>
       </ul>
     </li>
