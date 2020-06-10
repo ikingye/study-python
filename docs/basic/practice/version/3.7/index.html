@@ -14,7 +14,7 @@ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18
 解读： python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。 由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &ldquo;ModuleNotFoundError: No module named &lsquo;_ctypes&rsquo;&rdquo; 的错误。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/practice/version/3.7/" />
-
+<meta property="article:modified_time" content="2020-06-10T15:15:42+08:00" />
 <title>3.7 | Python 学习笔记</title>
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 
@@ -520,6 +520,14 @@ python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模�
   <div class="flex justify-between">
 
 
+
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/511791f60fc3084a5172bf09b69b282731fed182" title='Last modified by yewang | 2020-06-10' target="_blank" rel="noopener">
+      <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-06-10</span>
+    </a>
+  </div>
 
 
 
