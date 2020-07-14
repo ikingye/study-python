@@ -11,10 +11,10 @@
     
     <item>
       <title>包管理</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/lib/package/manage/</link>
+      <link>https://ikingye.github.io/study-python/docs/basic/other/package/manage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/basic/lib/package/manage/</guid>
+      <guid>https://ikingye.github.io/study-python/docs/basic/other/package/manage/</guid>
       <description>Python 包管理 pip 加速 修改 ~/.pip/pip.conf
 [global] index-url = https://pypi.tuna.tsinghua.edu.cn/simple [install] trusted-host = pypi.tuna.tsinghua.edu.cn </description>
     </item>
@@ -35,10 +35,10 @@
     
     <item>
       <title>版本管理</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/practice/version/manage/</link>
+      <link>https://ikingye.github.io/study-python/docs/basic/other/version/manage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/basic/practice/version/manage/</guid>
+      <guid>https://ikingye.github.io/study-python/docs/basic/other/version/manage/</guid>
       <description>Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
 function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
 pyenv 基础命令 pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
@@ -72,10 +72,10 @@ ujson import json import ujson def monkey_patch_json(): json.__name__ = &amp;#39
     
     <item>
       <title>百度 Python 编码规范</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/practice/spec/baidu/</link>
+      <link>https://ikingye.github.io/study-python/docs/basic/spec/baidu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/basic/practice/spec/baidu/</guid>
+      <guid>https://ikingye.github.io/study-python/docs/basic/spec/baidu/</guid>
       <description>百度 Python 编码规范 </description>
     </item>
     
@@ -112,10 +112,10 @@ ord 以一个字符（长度为 1 的字符串）作为参数，返回对应的 
     
     <item>
       <title>协程</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/practice/coroutine/</link>
+      <link>https://ikingye.github.io/study-python/docs/basic/other/coroutine/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/basic/practice/coroutine/</guid>
+      <guid>https://ikingye.github.io/study-python/docs/basic/other/coroutine/</guid>
       <description>Python 协程  执行效率高  子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。 不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了    因为协程是一个线程执行，那怎么利用多核 CPU 呢？ 最简单的方法是多进程 + 协程，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。
 子程序就是协程的一种特例 Donald Knuth 的一句话总结协程的特点：
 “子程序就是协程的一种特例。”
@@ -171,26 +171,26 @@ import functools def log(text): def decorator(func): @functools.wraps(func) def 
     </item>
     
     <item>
-      <title>3.7</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/practice/version/3.7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-python/docs/basic/practice/version/3.7/</guid>
-      <description>Python 3.7 安装 依赖 sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel 3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
-sudo yum install libffi-devel -y make install 若在安装前移除了 /usr/bin 下 python 的文件链接依赖，此时 yum 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接
-wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm 安装完成后重新进行 make install，结束后再次配置相关文件的软连接即可。
-解读： python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。 由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &amp;ldquo;ModuleNotFoundError: No module named &amp;lsquo;_ctypes&amp;rsquo;&amp;rdquo; 的错误。</description>
-    </item>
-    
-    <item>
-      <title>关注</title>
+      <title>4.3 关注项目</title>
       <link>https://ikingye.github.io/study-python/docs/appendix/attention/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-python/docs/appendix/attention/</guid>
-      <description>关注 twisted/twisted  Event-driven networking engine written in Python. https://www.twistedmatrix.com
+      <description>关注项目 twisted/twisted  Event-driven networking engine written in Python. https://www.twistedmatrix.com
 gevent/gevent  Coroutine-based concurrency library for Python http://gevent.org
 prompt-toolkit/python-prompt-toolkit  Library for building powerful interactive command line applications in Python https://python-prompt-toolkit.readthedocs.io/en/master/</description>
+    </item>
+    
+    <item>
+      <title>3.7</title>
+      <link>https://ikingye.github.io/study-python/docs/basic/other/version/3.7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-python/docs/basic/other/version/3.7/</guid>
+      <description>Python 3.7 安装 依赖 sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel 3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
+sudo yum install libffi-devel -y make install 若在安装前移除了 /usr/bin 下 python 的文件链接依赖，此时 yum 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm 安装完成后重新进行 make install，结束后再次配置相关文件的软连接即可。
+解读： python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。 由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &amp;ldquo;ModuleNotFoundError: No module named &amp;lsquo;_ctypes&amp;rsquo;&amp;rdquo; 的错误。</description>
     </item>
     
   </channel>

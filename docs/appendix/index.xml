@@ -10,12 +10,12 @@
     
     
     <item>
-      <title>关注</title>
+      <title>4.3 关注项目</title>
       <link>https://ikingye.github.io/study-python/docs/appendix/attention/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-python/docs/appendix/attention/</guid>
-      <description>关注 twisted/twisted  Event-driven networking engine written in Python. https://www.twistedmatrix.com
+      <description>关注项目 twisted/twisted  Event-driven networking engine written in Python. https://www.twistedmatrix.com
 gevent/gevent  Coroutine-based concurrency library for Python http://gevent.org
 prompt-toolkit/python-prompt-toolkit  Library for building powerful interactive command line applications in Python https://python-prompt-toolkit.readthedocs.io/en/master/</description>
     </item>

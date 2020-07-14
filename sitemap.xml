@@ -3,23 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/appendix/tutorial/</loc>
-    <lastmod>2020-04-17T00:52:32+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-python/docs/basic/</loc>
     <lastmod>2020-03-08T00:14:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/practice/spec/</loc>
-    <lastmod>2020-03-08T00:14:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/lib/package/manage/</loc>
-    <lastmod>2020-06-10T15:15:42+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/basic/other/package/manage/</loc>
   </url>
   
   <url>
@@ -28,13 +17,11 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/practice/version/manage/</loc>
-    <lastmod>2020-06-10T15:15:42+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/basic/other/version/manage/</loc>
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/design/</loc>
-    <lastmod>2020-03-08T00:14:01+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/advanced/</loc>
   </url>
   
   <url>
@@ -43,13 +30,7 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/appendix/interview/</loc>
-    <lastmod>2020-04-28T22:57:52+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-python/docs/source/</loc>
-    <lastmod>2020-03-08T00:14:01+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/code/</loc>
   </url>
   
   <url>
@@ -63,18 +44,46 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/lib/package/common/</loc>
-    <lastmod>2020-06-10T15:15:42+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/practice/spec/baidu/</loc>
-    <lastmod>2020-03-09T17:38:35+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-python/docs/basic/grammar/</loc>
     <lastmod>2020-06-10T15:15:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/advanced/pattern/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/code/type/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/appendix/tutorial/</loc>
+    <lastmod>2020-04-17T00:52:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/basic/other/package/common/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/basic/spec/baidu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/basic/std/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/advanced/algs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/code/keyword/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/appendix/interview/</loc>
+    <lastmod>2020-04-28T22:57:52+08:00</lastmod>
   </url>
   
   <url>
@@ -93,8 +102,7 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/practice/coroutine/</loc>
-    <lastmod>2020-04-28T14:51:44+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/basic/other/coroutine/</loc>
   </url>
   
   <url>
@@ -103,8 +111,7 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/practice/version/</loc>
-    <lastmod>2020-06-10T15:15:42+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/basic/other/version/</loc>
   </url>
   
   <url>
@@ -123,18 +130,15 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/practice/version/3.7/</loc>
-    <lastmod>2020-06-10T15:15:42+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/basic/spec/</loc>
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/lib/package/</loc>
-    <lastmod>2020-06-10T15:15:42+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/advanced/pkg/</loc>
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/appendix/snippet/</loc>
-    <lastmod>2020-06-07T14:16:58+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/code/runtime/</loc>
   </url>
   
   <url>
@@ -143,8 +147,31 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-python/docs/basic/practice/</loc>
-    <lastmod>2020-04-26T22:56:04+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-python/docs/basic/other/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/advanced/snippet/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/advanced/test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/basic/other/version/3.7/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/basic/other/package/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/advanced/prof/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-python/docs/advanced/frame/</loc>
   </url>
   
   <url>
