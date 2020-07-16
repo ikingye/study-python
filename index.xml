@@ -20,20 +20,6 @@
     </item>
     
     <item>
-      <title>基础</title>
-      <link>https://ikingye.github.io/study-python/docs/appendix/interview/basic/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-python/docs/appendix/interview/basic/</guid>
-      <description>基础面试题 数据结构 元组是不是真的不可变？ tuple 的每个元素，指向永远不变。
-要创建一个内容也不变的 tuple 怎么做？
-必须保证 tuple 的每一个元素本身也不能变。
-# “可变的” tuple： &amp;gt;&amp;gt;&amp;gt; t = (&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, [&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;]) &amp;gt;&amp;gt;&amp;gt; t[2][0] = &amp;#39;X&amp;#39; &amp;gt;&amp;gt;&amp;gt; t[2][1] = &amp;#39;Y&amp;#39; &amp;gt;&amp;gt;&amp;gt; t (&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, [&amp;#39;X&amp;#39;, &amp;#39;Y&amp;#39;])  迭代器 vs 生成器 迭代器 把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__()
-&amp;gt;&amp;gt;&amp;gt; list=[1,2,3,4] &amp;gt;&amp;gt;&amp;gt; it = iter(list) # 创建迭代器对象 &amp;gt;&amp;gt;&amp;gt; print (next(it)) # 输出迭代器的下一个元素 1 &amp;gt;&amp;gt;&amp;gt; print (next(it)) 2 &amp;gt;&amp;gt;&amp;gt; 生成器 在 Python 中，使用了 yield 的函数被称为生成器（generator）。
-生成器是一个返回迭代器的函数。</description>
-    </item>
-    
-    <item>
       <title>版本管理</title>
       <link>https://ikingye.github.io/study-python/docs/basic/other/version/manage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -47,27 +33,12 @@ $ echo $PYENV_VERSION 3.8.2:2.7.17 </description>
     </item>
     
     <item>
-      <title>进阶</title>
-      <link>https://ikingye.github.io/study-python/docs/appendix/interview/advanced/</link>
+      <title>4.1 教程</title>
+      <link>https://ikingye.github.io/study-python/docs/appendix/tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/appendix/interview/advanced/</guid>
-      <description>进阶面试题 猴子补丁 属性在运行时的动态替换，叫做猴子补丁（Monkey Patch）。
-为什么叫猴子补丁 属性的运行时替换和猴子也没什么关系，关于猴子补丁的由来网上查到两种说法：
-  这个词原来为 Guerrilla Patch，杂牌军、游击队，说明这部分不是原装的，在英文里 guerilla 发音和 gorllia (猩猩) 相似，再后来就写了 monkey (猴子)。
-  还有一种解释是说由于这种方式将原来的代码弄乱了 (messing with it)，在英文里叫 monkeying about (顽皮的)，所以叫做 Monkey Patch。
-  猴子补丁的叫法有些莫名其妙，只要和 “模块运行时替换的功能” 对应就行了。
-ujson import json import ujson def monkey_patch_json(): json.__name__ = &amp;#39;ujson&amp;#39; json.dumps = ujson.dumps json.loads = ujson.loads monkey_patch_json() 参考：
- Python 猴子补丁 python 面试题精讲 ——monkey patch（猴子补丁）  </description>
-    </item>
-    
-    <item>
-      <title>高阶</title>
-      <link>https://ikingye.github.io/study-python/docs/appendix/interview/expert/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-python/docs/appendix/interview/expert/</guid>
-      <description>高阶面试题 </description>
+      <guid>https://ikingye.github.io/study-python/docs/appendix/tutorial/</guid>
+      <description>教程 基础 进阶 高阶 </description>
     </item>
     
     <item>
@@ -77,6 +48,20 @@ ujson import json import ujson def monkey_patch_json(): json.__name__ = &amp;#39
       
       <guid>https://ikingye.github.io/study-python/docs/basic/spec/baidu/</guid>
       <description>百度 Python 编码规范 </description>
+    </item>
+    
+    <item>
+      <title>4.2 面试题</title>
+      <link>https://ikingye.github.io/study-python/docs/appendix/interview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-python/docs/appendix/interview/</guid>
+      <description>面试题 参考：
+ 如何面试 Python 后端工程师？  基础题 数据结构 元组是不是真的不可变？ tuple 的每个元素，指向永远不变。
+要创建一个内容也不变的 tuple 怎么做？
+必须保证 tuple 的每一个元素本身也不能变。
+# “可变的” tuple： &amp;gt;&amp;gt;&amp;gt; t = (&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, [&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;]) &amp;gt;&amp;gt;&amp;gt; t[2][0] = &amp;#39;X&amp;#39; &amp;gt;&amp;gt;&amp;gt; t[2][1] = &amp;#39;Y&amp;#39; &amp;gt;&amp;gt;&amp;gt; t (&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, [&amp;#39;X&amp;#39;, &amp;#39;Y&amp;#39;])  迭代器 vs 生成器 迭代器 把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__()
+&amp;gt;&amp;gt;&amp;gt; list=[1,2,3,4] &amp;gt;&amp;gt;&amp;gt; it = iter(list) # 创建迭代器对象 &amp;gt;&amp;gt;&amp;gt; print (next(it)) # 输出迭代器的下一个元素 1 &amp;gt;&amp;gt;&amp;gt; print (next(it)) 2 &amp;gt;&amp;gt;&amp;gt; 生成器 在 Python 中，使用了 yield 的函数被称为生成器（generator）。</description>
     </item>
     
     <item>

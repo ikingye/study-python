@@ -5,9 +5,18 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="面试题 参考：
- 如何面试 Python 后端工程师？  基础题 进阶题 高阶题 "><meta property="og:title" content="4.2 面试题" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
+ 如何面试 Python 后端工程师？  基础题 数据结构 元组是不是真的不可变？ tuple 的每个元素，指向永远不变。
+要创建一个内容也不变的 tuple 怎么做？
+必须保证 tuple 的每一个元素本身也不能变。
+# “可变的” tuple： &gt;&gt;&gt; t = (&#39;a&#39;, &#39;b&#39;, [&#39;A&#39;, &#39;B&#39;]) &gt;&gt;&gt; t[2][0] = &#39;X&#39; &gt;&gt;&gt; t[2][1] = &#39;Y&#39; &gt;&gt;&gt; t (&#39;a&#39;, &#39;b&#39;, [&#39;X&#39;, &#39;Y&#39;])  迭代器 vs 生成器 迭代器 把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__()
+&gt;&gt;&gt; list=[1,2,3,4] &gt;&gt;&gt; it = iter(list) # 创建迭代器对象 &gt;&gt;&gt; print (next(it)) # 输出迭代器的下一个元素 1 &gt;&gt;&gt; print (next(it)) 2 &gt;&gt;&gt; 生成器 在 Python 中，使用了 yield 的函数被称为生成器（generator）。"><meta property="og:title" content="4.2 面试题" />
+<meta property="og:description" content="面试题 参考：
+ 如何面试 Python 后端工程师？  基础题 数据结构 元组是不是真的不可变？ tuple 的每个元素，指向永远不变。
+要创建一个内容也不变的 tuple 怎么做？
+必须保证 tuple 的每一个元素本身也不能变。
+# “可变的” tuple： &gt;&gt;&gt; t = (&#39;a&#39;, &#39;b&#39;, [&#39;A&#39;, &#39;B&#39;]) &gt;&gt;&gt; t[2][0] = &#39;X&#39; &gt;&gt;&gt; t[2][1] = &#39;Y&#39; &gt;&gt;&gt; t (&#39;a&#39;, &#39;b&#39;, [&#39;X&#39;, &#39;Y&#39;])  迭代器 vs 生成器 迭代器 把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__()
+&gt;&gt;&gt; list=[1,2,3,4] &gt;&gt;&gt; it = iter(list) # 创建迭代器对象 &gt;&gt;&gt; print (next(it)) # 输出迭代器的下一个元素 1 &gt;&gt;&gt; print (next(it)) 2 &gt;&gt;&gt; 生成器 在 Python 中，使用了 yield 的函数被称为生成器（generator）。" />
+<meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/appendix/interview/" />
 
 <title>4.2 面试题 | Python 学习笔记</title>
@@ -17,9 +26,8 @@
 <link rel="stylesheet" href="/study-python/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
 
 
-<script defer src="/study-python/en.search.min.222d66f199585dd5fbcdcbf903bc12c972f29491354ff225cb5b9ea8d3441288.js" integrity="sha256-Ii1m8ZlYXdX7zcv5A7wSyXLylJE1T/Ily1ueqNNEEog="></script>
+<script defer src="/study-python/en.search.min.8b0501e151c391d8a284827021d25230a038461b3b18eeebc3b8041c036ccae1.js" integrity="sha256-iwUB4VHDkdiihIJwIdJSMKA4Rhs7GO7rw7gEHANsyuE="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/appendix/interview/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -516,52 +524,10 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     
       
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/appendix/tutorial/" class="collapsed ">4.1 教程</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/appendix/interview/" class="collapsed active">4.2 面试题</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
         <li>
 
   
-  <a href="/study-python/docs/appendix/interview/basic/" class="">基础</a>
+  <a href="/study-python/docs/appendix/tutorial/" class="">4.1 教程</a>
   
 
 </li>
@@ -571,30 +537,10 @@ https://github.com/alex-shpak/hugo-book
         <li>
 
   
-  <a href="/study-python/docs/appendix/interview/advanced/" class="">进阶</a>
+  <a href="/study-python/docs/appendix/interview/" class="active">4.2 面试题</a>
   
 
 </li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/appendix/interview/expert/" class="">高阶</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
       
     
       
@@ -678,8 +624,31 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#基础题">基础题</a></li>
-    <li><a href="#进阶题">进阶题</a></li>
+    <li><a href="#基础题">基础题</a>
+      <ul>
+        <li><a href="#数据结构">数据结构</a>
+          <ul>
+            <li><a href="#元组是不是真的不可变">元组是不是真的不可变？</a></li>
+            <li><a href="#迭代器-vs-生成器">迭代器 vs 生成器</a>
+              <ul>
+                <li><a href="#迭代器">迭代器</a></li>
+                <li><a href="#生成器">生成器</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#进阶题">进阶题</a>
+      <ul>
+        <li><a href="#猴子补丁">猴子补丁</a>
+          <ul>
+            <li><a href="#为什么叫猴子补丁">为什么叫猴子补丁</a></li>
+            <li><a href="#ujson">ujson</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#高阶题">高阶题</a></li>
   </ul>
 </nav>
@@ -698,7 +667,73 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://www.zhihu.com/question/33398583">如何面试 Python 后端工程师？</a></li>
 </ul>
 <h2 id="基础题">基础题</h2>
+<h3 id="数据结构">数据结构</h3>
+<h4 id="元组是不是真的不可变">元组是不是真的不可变？</h4>
+<p>tuple 的每个元素，指向永远不变。</p>
+<p>要创建一个内容也不变的 tuple 怎么做？</p>
+<p>必须保证 tuple 的每一个元素本身也不能变。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># “可变的” tuple：</span>
+&gt;&gt;&gt; t <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span><span style="color:#f92672">])</span>
+&gt;&gt;&gt; t<span style="color:#f92672">[</span>2<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;X&#39;</span>
+&gt;&gt;&gt; t<span style="color:#f92672">[</span>2<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Y&#39;</span>
+&gt;&gt;&gt; t
+<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;X&#39;</span>, <span style="color:#e6db74">&#39;Y&#39;</span><span style="color:#f92672">])</span>
+</code></pre></div><hr>
+<h4 id="迭代器-vs-生成器">迭代器 vs 生成器</h4>
+<h5 id="迭代器">迭代器</h5>
+<p>把一个类作为一个<strong>迭代器</strong>使用需要在类中实现两个方法 <code>__iter__()</code> 与 <code>__next__()</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;&gt;&gt; list<span style="color:#f92672">=[</span>1,2,3,4<span style="color:#f92672">]</span>
+&gt;&gt;&gt; it <span style="color:#f92672">=</span> iter<span style="color:#f92672">(</span>list<span style="color:#f92672">)</span>    <span style="color:#75715e"># 创建迭代器对象</span>
+&gt;&gt;&gt; print <span style="color:#f92672">(</span>next<span style="color:#f92672">(</span>it<span style="color:#f92672">))</span>   <span style="color:#75715e"># 输出迭代器的下一个元素</span>
+<span style="color:#ae81ff">1</span>
+&gt;&gt;&gt; print <span style="color:#f92672">(</span>next<span style="color:#f92672">(</span>it<span style="color:#f92672">))</span>
+<span style="color:#ae81ff">2</span>
+&gt;&gt;&gt;
+</code></pre></div><h5 id="生成器">生成器</h5>
+<p>在 Python 中，使用了 yield 的函数被称为生成器（generator）。</p>
+<p>生成器是一个返回迭代器的函数。</p>
+<p>python 中生成器是迭代器的一种，使用 yield 返回值函数，每次调用 yield 会暂停，而可以使用 next () 函数和 send () 函数恢复生成器。</p>
+<p>要创建一个 generator，有很多种方法，第一种方法很简单，只有把一个列表生成式的 [] 中括号改为（）小括号，就创建一个 generator</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#列表生成式</span>
+lis <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>x*x <span style="color:#66d9ef">for</span> x in range<span style="color:#f92672">(</span>10<span style="color:#f92672">)]</span>
+print<span style="color:#f92672">(</span>lis<span style="color:#f92672">)</span>
+<span style="color:#75715e">#生成器</span>
+generator_ex <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>x*x <span style="color:#66d9ef">for</span> x in range<span style="color:#f92672">(</span>10<span style="color:#f92672">))</span>
+print<span style="color:#f92672">(</span>generator_ex<span style="color:#f92672">)</span>
+
+结果：
+<span style="color:#f92672">[</span>0, 1, 4, 9, 16, 25, 36, 49, 64, 81<span style="color:#f92672">]</span>
+&lt;generator object &lt;genexpr&gt; at 0x000002A4CBF9EBA0&gt;
+</code></pre></div><hr>
 <h2 id="进阶题">进阶题</h2>
+<h3 id="猴子补丁">猴子补丁</h3>
+<p>属性在运行时的动态替换，叫做猴子补丁（Monkey Patch）。</p>
+<h4 id="为什么叫猴子补丁">为什么叫猴子补丁</h4>
+<p>属性的运行时替换和猴子也没什么关系，关于猴子补丁的由来网上查到两种说法：</p>
+<ol>
+<li>
+<p>这个词原来为 Guerrilla Patch，杂牌军、游击队，说明这部分不是原装的，在英文里 guerilla 发音和 gorllia (猩猩) 相似，再后来就写了 monkey (猴子)。</p>
+</li>
+<li>
+<p>还有一种解释是说由于这种方式将原来的代码弄乱了 (messing with it)，在英文里叫 monkeying about (顽皮的)，所以叫做 Monkey Patch。</p>
+</li>
+</ol>
+<p>猴子补丁的叫法有些莫名其妙，只要和 “模块运行时替换的功能” 对应就行了。</p>
+<h4 id="ujson">ujson</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> json
+<span style="color:#f92672">import</span> ujson
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">monkey_patch_json</span>():
+    json<span style="color:#f92672">.</span>__name__ <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ujson&#39;</span>
+    json<span style="color:#f92672">.</span>dumps <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>dumps
+    json<span style="color:#f92672">.</span>loads <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads
+
+monkey_patch_json()
+</code></pre></div><p>参考：</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/f1c1eb495f47">Python 猴子补丁</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1441252">python 面试题精讲 ——monkey patch（猴子补丁）</a></li>
+</ul>
 <h2 id="高阶题">高阶题</h2>
 </article>
  
@@ -709,14 +744,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/8633d5a203d10d4baabaeb2bb94e547b2fe5a286" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
-      <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-14</span>
-    </a>
-  </div>
 
 
 
@@ -749,8 +776,31 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#基础题">基础题</a></li>
-    <li><a href="#进阶题">进阶题</a></li>
+    <li><a href="#基础题">基础题</a>
+      <ul>
+        <li><a href="#数据结构">数据结构</a>
+          <ul>
+            <li><a href="#元组是不是真的不可变">元组是不是真的不可变？</a></li>
+            <li><a href="#迭代器-vs-生成器">迭代器 vs 生成器</a>
+              <ul>
+                <li><a href="#迭代器">迭代器</a></li>
+                <li><a href="#生成器">生成器</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#进阶题">进阶题</a>
+      <ul>
+        <li><a href="#猴子补丁">猴子补丁</a>
+          <ul>
+            <li><a href="#为什么叫猴子补丁">为什么叫猴子补丁</a></li>
+            <li><a href="#ujson">ujson</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#高阶题">高阶题</a></li>
   </ul>
 </nav>
