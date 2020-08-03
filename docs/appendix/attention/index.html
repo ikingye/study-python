@@ -4,12 +4,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="关注项目 twisted/twisted  Event-driven networking engine written in Python. https://www.twistedmatrix.com
-gevent/gevent  Coroutine-based concurrency library for Python http://gevent.org
-prompt-toolkit/python-prompt-toolkit  Library for building powerful interactive command line applications in Python https://python-prompt-toolkit.readthedocs.io/en/master/"><meta property="og:title" content="4.3 关注项目" />
-<meta property="og:description" content="关注项目 twisted/twisted  Event-driven networking engine written in Python. https://www.twistedmatrix.com
-gevent/gevent  Coroutine-based concurrency library for Python http://gevent.org
-prompt-toolkit/python-prompt-toolkit  Library for building powerful interactive command line applications in Python https://python-prompt-toolkit.readthedocs.io/en/master/" />
+<meta name="description" content="关注项目 Web pallets/flask  The Python micro framework for building web applications.
+django/django  The Web framework for perfectionists with deadlines.
+tornadoweb/tornado  Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.
+encode/django-rest-framework  Web APIs for Django
+ Machine Learning scikit-learn/scikit-learn  scikit-learn: machine learning in Python
+ Deep Learning keras-team/keras  Deep Learning for humans
+ 其他 twisted/twisted  Event-driven networking engine written in Python."><meta property="og:title" content="4.3 关注项目" />
+<meta property="og:description" content="关注项目 Web pallets/flask  The Python micro framework for building web applications.
+django/django  The Web framework for perfectionists with deadlines.
+tornadoweb/tornado  Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.
+encode/django-rest-framework  Web APIs for Django
+ Machine Learning scikit-learn/scikit-learn  scikit-learn: machine learning in Python
+ Deep Learning keras-team/keras  Deep Learning for humans
+ 其他 twisted/twisted  Event-driven networking engine written in Python." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/appendix/attention/" />
 <meta property="article:modified_time" content="2020-07-14T23:41:45+08:00" />
@@ -20,7 +28,7 @@ prompt-toolkit/python-prompt-toolkit  Library for building powerful interactive 
 <link rel="stylesheet" href="/study-python/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
 
 
-<script defer src="/study-python/en.search.min.bdf572f31fb39dafcfe722772c1c86d3f8dc4d61d91f571ea18aa1eb4462f16e.js" integrity="sha256-vfVy8x&#43;zna/P5yJ3LByG0/jcTWHZH1ceoYqh60Ri8W4="></script>
+<script defer src="/study-python/en.search.min.9202884cad8b52e08dd31a15485262c8244914bba4c1c0bc0bb07eb0cf15badb.js" integrity="sha256-kgKITK2LUuCN0xoVSFJiyCRJFLukwcC8C7B&#43;sM8Vuts="></script>
 
 <!--
 Made with Book Theme
@@ -618,10 +626,32 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#web">Web</a>
+      <ul>
+        <li><a href="#palletsflaskhttpsgithubcompalletsflask-github-starshttpsimgshieldsiogithubstarspalletsflasksvg"><a href="https://github.com/pallets/flask">pallets/flask</a> <img src="https://img.shields.io/github/stars/pallets/flask.svg" alt="Github stars"></a></li>
+        <li><a href="#djangodjangohttpsgithubcomdjangodjango-github-starshttpsimgshieldsiogithubstarsdjangodjangosvg"><a href="https://github.com/django/django">django/django</a> <img src="https://img.shields.io/github/stars/django/django.svg" alt="Github stars"></a></li>
+        <li><a href="#tornadowebtornadohttpsgithubcomtornadowebtornado-github-starshttpsimgshieldsiogithubstarstornadowebtornadosvg"><a href="https://github.com/tornadoweb/tornado">tornadoweb/tornado</a> <img src="https://img.shields.io/github/stars/tornadoweb/tornado.svg" alt="Github stars"></a></li>
+        <li><a href="#encodedjango-rest-frameworkhttpsgithubcomencodedjango-rest-framework-github-starshttpsimgshieldsiogithubstarsencodedjango-rest-frameworksvg"><a href="https://github.com/encode/django-rest-framework">encode/django-rest-framework</a> <img src="https://img.shields.io/github/stars/encode/django-rest-framework.svg" alt="Github stars"></a></li>
+      </ul>
+    </li>
+    <li><a href="#machine-learning">Machine Learning</a>
+      <ul>
+        <li><a href="#scikit-learnscikit-learnhttpsgithubcomscikit-learnscikit-learn-github-starshttpsimgshieldsiogithubstarsscikit-learnscikit-learnsvg"><a href="https://github.com/scikit-learn/scikit-learn">scikit-learn/scikit-learn</a> <img src="https://img.shields.io/github/stars/scikit-learn/scikit-learn.svg" alt="Github stars"></a></li>
+      </ul>
+    </li>
+    <li><a href="#deep-learning">Deep Learning</a>
+      <ul>
+        <li><a href="#keras-teamkerashttpsgithubcomkeras-teamkeras-github-starshttpsimgshieldsiogithubstarskeras-teamkerassvg"><a href="https://github.com/keras-team/keras">keras-team/keras</a> <img src="https://img.shields.io/github/stars/keras-team/keras.svg" alt="Github stars"></a></li>
+      </ul>
+    </li>
+    <li><a href="#其他">其他</a>
       <ul>
         <li><a href="#twistedtwistedhttpsgithubcomtwistedtwisted-github-starshttpsimgshieldsiogithubstarstwistedtwistedsvg"><a href="https://github.com/twisted/twisted">twisted/twisted</a> <img src="https://img.shields.io/github/stars/twisted/twisted.svg" alt="Github stars"></a></li>
         <li><a href="#geventgeventhttpsgithubcomgeventgevent-github-starshttpsimgshieldsiogithubstarsgeventgeventsvg"><a href="https://github.com/gevent/gevent">gevent/gevent</a> <img src="https://img.shields.io/github/stars/gevent/gevent.svg" alt="Github stars"></a></li>
+        <li><a href="#pythoncpythonhttpsgithubcompythoncpython-github-starshttpsimgshieldsiogithubstarspythoncpythonsvg"><a href="https://github.com/python/cpython">python/cpython</a> <img src="https://img.shields.io/github/stars/python/cpython.svg" alt="Github stars"></a></li>
+        <li><a href="#pandas-devpandashttpsgithubcompandas-devpandas-github-starshttpsimgshieldsiogithubstarspandas-devpandassvg"><a href="https://github.com/pandas-dev/pandas">pandas-dev/pandas</a> <img src="https://img.shields.io/github/stars/pandas-dev/pandas.svg" alt="Github stars"></a></li>
+        <li><a href="#scrapyscrapyhttpsgithubcomscrapyscrapy-github-starshttpsimgshieldsiogithubstarsscrapyscrapysvg"><a href="https://github.com/scrapy/scrapy">scrapy/scrapy</a> <img src="https://img.shields.io/github/stars/scrapy/scrapy.svg" alt="Github stars"></a></li>
+        <li><a href="#jakubroztocilhttpiehttpsgithubcomjakubroztocilhttpie-github-starshttpsimgshieldsiogithubstarsjakubroztocilhttpiesvg"><a href="https://github.com/jakubroztocil/httpie">jakubroztocil/httpie</a> <img src="https://img.shields.io/github/stars/jakubroztocil/httpie.svg" alt="Github stars"></a></li>
         <li><a href="#prompt-toolkitpython-prompt-toolkithttpsgithubcomprompt-toolkitpython-prompt-toolkit-github-starshttpsimgshieldsiogithubstarsprompt-toolkitpython-prompt-toolkitsvg"><a href="https://github.com/prompt-toolkit/python-prompt-toolkit">prompt-toolkit/python-prompt-toolkit</a> <img src="https://img.shields.io/github/stars/prompt-toolkit/python-prompt-toolkit.svg" alt="Github stars"></a></li>
       </ul>
     </li>
@@ -637,10 +667,35 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="关注项目">关注项目</h1>
+<h2 id="web">Web</h2>
+<h3 id="palletsflaskhttpsgithubcompalletsflask-github-starshttpsimgshieldsiogithubstarspalletsflasksvg"><a href="https://github.com/pallets/flask">pallets/flask</a> <img src="https://img.shields.io/github/stars/pallets/flask.svg" alt="Github stars" /></h3>
+<p>The Python micro framework for building web applications.</p>
+<h3 id="djangodjangohttpsgithubcomdjangodjango-github-starshttpsimgshieldsiogithubstarsdjangodjangosvg"><a href="https://github.com/django/django">django/django</a> <img src="https://img.shields.io/github/stars/django/django.svg" alt="Github stars" /></h3>
+<p>The Web framework for perfectionists with deadlines.</p>
+<h3 id="tornadowebtornadohttpsgithubcomtornadowebtornado-github-starshttpsimgshieldsiogithubstarstornadowebtornadosvg"><a href="https://github.com/tornadoweb/tornado">tornadoweb/tornado</a> <img src="https://img.shields.io/github/stars/tornadoweb/tornado.svg" alt="Github stars" /></h3>
+<p>Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.</p>
+<h3 id="encodedjango-rest-frameworkhttpsgithubcomencodedjango-rest-framework-github-starshttpsimgshieldsiogithubstarsencodedjango-rest-frameworksvg"><a href="https://github.com/encode/django-rest-framework">encode/django-rest-framework</a> <img src="https://img.shields.io/github/stars/encode/django-rest-framework.svg" alt="Github stars" /></h3>
+<p>Web APIs for Django</p>
+<hr>
+<h2 id="machine-learning">Machine Learning</h2>
+<h3 id="scikit-learnscikit-learnhttpsgithubcomscikit-learnscikit-learn-github-starshttpsimgshieldsiogithubstarsscikit-learnscikit-learnsvg"><a href="https://github.com/scikit-learn/scikit-learn">scikit-learn/scikit-learn</a> <img src="https://img.shields.io/github/stars/scikit-learn/scikit-learn.svg" alt="Github stars" /></h3>
+<p>scikit-learn: machine learning in Python</p>
+<hr>
+<h2 id="deep-learning">Deep Learning</h2>
+<h3 id="keras-teamkerashttpsgithubcomkeras-teamkeras-github-starshttpsimgshieldsiogithubstarskeras-teamkerassvg"><a href="https://github.com/keras-team/keras">keras-team/keras</a> <img src="https://img.shields.io/github/stars/keras-team/keras.svg" alt="Github stars" /></h3>
+<p>Deep Learning for humans</p>
+<hr>
+<h2 id="其他">其他</h2>
 <h3 id="twistedtwistedhttpsgithubcomtwistedtwisted-github-starshttpsimgshieldsiogithubstarstwistedtwistedsvg"><a href="https://github.com/twisted/twisted">twisted/twisted</a> <img src="https://img.shields.io/github/stars/twisted/twisted.svg" alt="Github stars" /></h3>
 <p>Event-driven networking engine written in Python. <a href="https://www.twistedmatrix.com">https://www.twistedmatrix.com</a></p>
 <h3 id="geventgeventhttpsgithubcomgeventgevent-github-starshttpsimgshieldsiogithubstarsgeventgeventsvg"><a href="https://github.com/gevent/gevent">gevent/gevent</a> <img src="https://img.shields.io/github/stars/gevent/gevent.svg" alt="Github stars" /></h3>
 <p>Coroutine-based concurrency library for Python <a href="http://gevent.org">http://gevent.org</a></p>
+<h3 id="pythoncpythonhttpsgithubcompythoncpython-github-starshttpsimgshieldsiogithubstarspythoncpythonsvg"><a href="https://github.com/python/cpython">python/cpython</a> <img src="https://img.shields.io/github/stars/python/cpython.svg" alt="Github stars" /></h3>
+<p>The Python programming language</p>
+<h3 id="pandas-devpandashttpsgithubcompandas-devpandas-github-starshttpsimgshieldsiogithubstarspandas-devpandassvg"><a href="https://github.com/pandas-dev/pandas">pandas-dev/pandas</a> <img src="https://img.shields.io/github/stars/pandas-dev/pandas.svg" alt="Github stars" /></h3>
+<h3 id="scrapyscrapyhttpsgithubcomscrapyscrapy-github-starshttpsimgshieldsiogithubstarsscrapyscrapysvg"><a href="https://github.com/scrapy/scrapy">scrapy/scrapy</a> <img src="https://img.shields.io/github/stars/scrapy/scrapy.svg" alt="Github stars" /></h3>
+<p>Scrapy, a fast high-level web crawling &amp; scraping framework for Python.</p>
+<h3 id="jakubroztocilhttpiehttpsgithubcomjakubroztocilhttpie-github-starshttpsimgshieldsiogithubstarsjakubroztocilhttpiesvg"><a href="https://github.com/jakubroztocil/httpie">jakubroztocil/httpie</a> <img src="https://img.shields.io/github/stars/jakubroztocil/httpie.svg" alt="Github stars" /></h3>
 <h3 id="prompt-toolkitpython-prompt-toolkithttpsgithubcomprompt-toolkitpython-prompt-toolkit-github-starshttpsimgshieldsiogithubstarsprompt-toolkitpython-prompt-toolkitsvg"><a href="https://github.com/prompt-toolkit/python-prompt-toolkit">prompt-toolkit/python-prompt-toolkit</a> <img src="https://img.shields.io/github/stars/prompt-toolkit/python-prompt-toolkit.svg" alt="Github stars" /></h3>
 <p>Library for building powerful interactive command line applications in Python
 <a href="https://python-prompt-toolkit.readthedocs.io/en/master/">https://python-prompt-toolkit.readthedocs.io/en/master/</a></p>
@@ -693,10 +748,32 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#web">Web</a>
+      <ul>
+        <li><a href="#palletsflaskhttpsgithubcompalletsflask-github-starshttpsimgshieldsiogithubstarspalletsflasksvg"><a href="https://github.com/pallets/flask">pallets/flask</a> <img src="https://img.shields.io/github/stars/pallets/flask.svg" alt="Github stars"></a></li>
+        <li><a href="#djangodjangohttpsgithubcomdjangodjango-github-starshttpsimgshieldsiogithubstarsdjangodjangosvg"><a href="https://github.com/django/django">django/django</a> <img src="https://img.shields.io/github/stars/django/django.svg" alt="Github stars"></a></li>
+        <li><a href="#tornadowebtornadohttpsgithubcomtornadowebtornado-github-starshttpsimgshieldsiogithubstarstornadowebtornadosvg"><a href="https://github.com/tornadoweb/tornado">tornadoweb/tornado</a> <img src="https://img.shields.io/github/stars/tornadoweb/tornado.svg" alt="Github stars"></a></li>
+        <li><a href="#encodedjango-rest-frameworkhttpsgithubcomencodedjango-rest-framework-github-starshttpsimgshieldsiogithubstarsencodedjango-rest-frameworksvg"><a href="https://github.com/encode/django-rest-framework">encode/django-rest-framework</a> <img src="https://img.shields.io/github/stars/encode/django-rest-framework.svg" alt="Github stars"></a></li>
+      </ul>
+    </li>
+    <li><a href="#machine-learning">Machine Learning</a>
+      <ul>
+        <li><a href="#scikit-learnscikit-learnhttpsgithubcomscikit-learnscikit-learn-github-starshttpsimgshieldsiogithubstarsscikit-learnscikit-learnsvg"><a href="https://github.com/scikit-learn/scikit-learn">scikit-learn/scikit-learn</a> <img src="https://img.shields.io/github/stars/scikit-learn/scikit-learn.svg" alt="Github stars"></a></li>
+      </ul>
+    </li>
+    <li><a href="#deep-learning">Deep Learning</a>
+      <ul>
+        <li><a href="#keras-teamkerashttpsgithubcomkeras-teamkeras-github-starshttpsimgshieldsiogithubstarskeras-teamkerassvg"><a href="https://github.com/keras-team/keras">keras-team/keras</a> <img src="https://img.shields.io/github/stars/keras-team/keras.svg" alt="Github stars"></a></li>
+      </ul>
+    </li>
+    <li><a href="#其他">其他</a>
       <ul>
         <li><a href="#twistedtwistedhttpsgithubcomtwistedtwisted-github-starshttpsimgshieldsiogithubstarstwistedtwistedsvg"><a href="https://github.com/twisted/twisted">twisted/twisted</a> <img src="https://img.shields.io/github/stars/twisted/twisted.svg" alt="Github stars"></a></li>
         <li><a href="#geventgeventhttpsgithubcomgeventgevent-github-starshttpsimgshieldsiogithubstarsgeventgeventsvg"><a href="https://github.com/gevent/gevent">gevent/gevent</a> <img src="https://img.shields.io/github/stars/gevent/gevent.svg" alt="Github stars"></a></li>
+        <li><a href="#pythoncpythonhttpsgithubcompythoncpython-github-starshttpsimgshieldsiogithubstarspythoncpythonsvg"><a href="https://github.com/python/cpython">python/cpython</a> <img src="https://img.shields.io/github/stars/python/cpython.svg" alt="Github stars"></a></li>
+        <li><a href="#pandas-devpandashttpsgithubcompandas-devpandas-github-starshttpsimgshieldsiogithubstarspandas-devpandassvg"><a href="https://github.com/pandas-dev/pandas">pandas-dev/pandas</a> <img src="https://img.shields.io/github/stars/pandas-dev/pandas.svg" alt="Github stars"></a></li>
+        <li><a href="#scrapyscrapyhttpsgithubcomscrapyscrapy-github-starshttpsimgshieldsiogithubstarsscrapyscrapysvg"><a href="https://github.com/scrapy/scrapy">scrapy/scrapy</a> <img src="https://img.shields.io/github/stars/scrapy/scrapy.svg" alt="Github stars"></a></li>
+        <li><a href="#jakubroztocilhttpiehttpsgithubcomjakubroztocilhttpie-github-starshttpsimgshieldsiogithubstarsjakubroztocilhttpiesvg"><a href="https://github.com/jakubroztocil/httpie">jakubroztocil/httpie</a> <img src="https://img.shields.io/github/stars/jakubroztocil/httpie.svg" alt="Github stars"></a></li>
         <li><a href="#prompt-toolkitpython-prompt-toolkithttpsgithubcomprompt-toolkitpython-prompt-toolkit-github-starshttpsimgshieldsiogithubstarsprompt-toolkitpython-prompt-toolkitsvg"><a href="https://github.com/prompt-toolkit/python-prompt-toolkit">prompt-toolkit/python-prompt-toolkit</a> <img src="https://img.shields.io/github/stars/prompt-toolkit/python-prompt-toolkit.svg" alt="Github stars"></a></li>
       </ul>
     </li>
