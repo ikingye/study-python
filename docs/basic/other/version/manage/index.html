@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
 function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
-pyenv 基础命令 pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
+pyenv 基础命令 # List all available versions pyenv install -l pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
 3.8.2 2.7.17 pyenv shell 3.8.2 2.7.17 set by PYENV_VERSION environment variable
 $ echo $PYENV_VERSION 3.8.2:2.7.17 "><meta property="og:title" content="版本管理" />
 <meta property="og:description" content="Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
 function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
-pyenv 基础命令 pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
+pyenv 基础命令 # List all available versions pyenv install -l pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
 3.8.2 2.7.17 pyenv shell 3.8.2 2.7.17 set by PYENV_VERSION environment variable
 $ echo $PYENV_VERSION 3.8.2:2.7.17 " />
 <meta property="og:type" content="article" />
@@ -24,7 +24,7 @@ $ echo $PYENV_VERSION 3.8.2:2.7.17 " />
 <link rel="stylesheet" href="/study-python/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
 
 
-<script defer src="/study-python/en.search.min.9202884cad8b52e08dd31a15485262c8244914bba4c1c0bc0bb07eb0cf15badb.js" integrity="sha256-kgKITK2LUuCN0xoVSFJiyCRJFLukwcC8C7B&#43;sM8Vuts="></script>
+<script defer src="/study-python/en.search.min.56ba703b2aa88fd5daabe83ea29f6efffaa255ed159f7c3a330c435b2d8de441.js" integrity="sha256-VrpwOyqoj9Xaq&#43;g&#43;op9u//qiVe0Vn3w6MwxDWy2N5EE="></script>
 
 <!--
 Made with Book Theme
@@ -744,7 +744,9 @@ https://github.com/alex-shpak/hugo-book
 之后即可这样安装：
 <code>pyenvinstall 3.8.2</code></p>
 <h3 id="pyenv-基础命令">pyenv 基础命令</h3>
-<h4 id="pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># List all available versions</span>
+pyenv install -l
+</code></pre></div><h4 id="pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</h4>
 <p>set by <code>~/.pyenv/version</code></p>
 <pre><code>3.8.2
 2.7.17

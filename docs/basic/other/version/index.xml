@@ -17,7 +17,7 @@
       <guid>https://ikingye.github.io/study-python/docs/basic/other/version/manage/</guid>
       <description>Python 版本管理 pyenv pyenv 加速 在 .zshrc 添加
 function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
-pyenv 基础命令 pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
+pyenv 基础命令 # List all available versions pyenv install -l pyenv global 3.8.2 2.7.17 set by ~/.pyenv/version
 3.8.2 2.7.17 pyenv shell 3.8.2 2.7.17 set by PYENV_VERSION environment variable
 $ echo $PYENV_VERSION 3.8.2:2.7.17 </description>
     </item>
