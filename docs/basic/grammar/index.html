@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="语法 range vs xrange range 是直接返回一个保存全量数据的 list, 空间复杂度是 O(n),
+<meta name="description" content="语法 #  range vs xrange #  range 是直接返回一个保存全量数据的 list, 空间复杂度是 O(n),
 而 xrange 是在遍历中不断生成的，遍历的效率更高，而且空间复杂度是 O(1)
-python3 取消了 xrange，range 就是 xrange  &lt;type &lsquo;xrange&#39;&gt;  iteritems vs viewitems &lt;type &lsquo;dict_items&#39;&gt; &lt;type &lsquo;dictionary-valueiterator&#39;&gt;  变量 全局变量 a = 3 def func(): print(a) func() 在 Python 中，a=3 定义了全局变量 a，作用域从定义处到代码结束，在 a=3 以下的函数中是可以引用全局变量 a 的。
+python3 取消了 xrange，range 就是 xrange  &lt;type &lsquo;xrange&#39;&gt; #   iteritems vs viewitems #  &lt;type &lsquo;dict_items&#39;&gt; #  &lt;type &lsquo;dictionary-valueiterator&#39;&gt; #   变量 #  全局变量 #  a = 3 def func(): print(a) func() 在 Python 中，a=3 定义了全局变量 a，作用域从定义处到代码结束，在 a=3 以下的函数中是可以引用全局变量 a 的。
 但如果要修改函数中与全局变量同名的变量，则函数中的该变量就会变成局部变量， 在修改之前对该变量的引用自然会出现未分配或未定义的错误了。
-a = 3 def func(): # 如果确定要引用并修改全局变量必须加上 global 关键字 global a print (a) a=a&#43;1 func()  尾递归 Python 解释器不支持尾递归优化
-参考："><meta property="og:title" content="1.1 语法" />
+a = 3 def func(): # 如果确定要引用并修改全局变量必须加上 global 关键字 global a print (a) a=a&#43;1 func()  尾递归 #  Python 解释器不支持尾递归优化">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="1.1 语法" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/" />
 
 <title>1.1 语法 | Python 学习笔记</title>
+<link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/study-python/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
-
-
-<script defer src="/study-python/en.search.min.8fa05b413861754c2de61bf82552ca721de426ba37f01adbc2bbef1b73991ee5.js" integrity="sha256-j6BbQThhdUwt5hv4JVLKch3kJro38BrbwrvvG3OZHuU="></script>
-
+<link rel="stylesheet" href="/study-python/book.min.d51ae1346c6c6be6d266ee675dbefadff112d8cb316f6b14f34def47903e2c63.css" integrity="sha256-1RrhNGxsa&#43;bSZu5nXb763/ES2Msxb2sU803vR5A&#43;LGM=">
+<script defer src="/study-python/en.search.min.e278411e0f1063891cd47784c4c21b0ad1169f79a81f99a94113a47ac0c4d58c.js" integrity="sha256-4nhBHg8QY4kc1HeExMIbCtEWn3moH5mpQROkesDE1Yw="></script>
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/basic/grammar/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
@@ -32,8 +28,9 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -46,7 +43,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -74,577 +71,441 @@ https://github.com/alex-shpak/hugo-book
 
   
 
-  
-  
-
-
-
-
-
- 
-  
-    
-
-
 
 
   
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
   
-  <span>第一部分 基础入门</span>
   
-
-
-    
-
-
-
-
   
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/grammar/" class="collapsed active">1.1 语法</a>
-  
-
-
-    
-
-
-
 
   
   <ul>
     
       
         <li>
-
+          
   
-  <a href="/study-python/docs/basic/grammar/builtin/" class="">内建函数</a>
-  
-
-</li>
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/grammar/function/" class="collapsed ">函数</a>
+    <span>第一部分 基础入门</span>
   
 
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        <li>
-
+          
   
-  <a href="/study-python/docs/basic/grammar/slice/" class="">切片</a>
   
-
-</li>
-      
-    
-      
-        <li>
-
   
-  <a href="/study-python/docs/basic/grammar/dict/" class="">字典</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/basic/grammar/generator/" class="">生成器</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/basic/grammar/class/" class="">类</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/std/" class="collapsed ">1.2 标准库</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/spec/" class="collapsed ">1.3 编程规范</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/other/" class="collapsed ">1.4 其他</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第二部分 进阶实战</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/pattern/" class="collapsed ">2.1 设计模式</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/algs/" class="collapsed ">2.2 算法实现</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/pkg/" class="collapsed ">2.3 常用库</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/test/" class="collapsed ">2.5 测试</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/prof/" class="collapsed ">2.6 性能</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/frame/" class="collapsed ">2.7 框架</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第三部分 源码实现</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/code/type/" class="collapsed ">3.1 数据类型</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/code/keyword/" class="collapsed ">3.2 关键字</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/code/runtime/" class="collapsed ">3.3 运行时</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第四部分 附录</span>
-  
-
-
-    
-
-
-
 
   
   <ul>
     
       
         <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/" class="collapsed active">1.1 语法</a>
+  
+
+          
+  
+  
+  
 
   
-  <a href="/study-python/docs/appendix/tutorial/" class="">4.1 教程</a>
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/builtin/" class="">内建函数</a>
   
 
-</li>
+        </li>
       
     
       
         <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/function/" class="collapsed ">函数</a>
+  
+
+          
+  
+  
+  
 
   
-  <a href="/study-python/docs/appendix/interview/" class="">4.2 面试题</a>
-  
 
-</li>
+        </li>
       
     
       
         <li>
-
+          
   
-  <a href="/study-python/docs/appendix/attention/" class="">4.3 关注项目</a>
+    <a href="/study-python/docs/basic/grammar/slice/" class="">切片</a>
   
 
-</li>
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/dict/" class="">字典</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/generator/" class="">生成器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/class/" class="">类</a>
+  
+
+        </li>
       
     
   </ul>
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/std/" class="collapsed ">1.2 标准库</a>
+  
 
+          
+  
+  
+  
 
-  </li>
+  
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/spec/" class="collapsed ">1.3 编程规范</a>
+  
 
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/other/" class="collapsed ">1.4 其他</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
       
     
   </ul>
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第二部分 进阶实战</span>
+  
 
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/pattern/" class="collapsed ">2.1 设计模式</a>
+  
+
+          
+  
+  
+  
 
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/algs/" class="collapsed ">2.2 算法实现</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/pkg/" class="collapsed ">2.3 常用库</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/test/" class="collapsed ">2.5 测试</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/prof/" class="collapsed ">2.6 性能</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/frame/" class="collapsed ">2.7 框架</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第三部分 源码实现</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/code/type/" class="collapsed ">3.1 数据类型</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/code/keyword/" class="collapsed ">3.2 关键字</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/code/runtime/" class="collapsed ">3.3 运行时</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第四部分 附录</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/appendix/tutorial/" class="">4.1 教程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/appendix/interview/" class="">4.2 面试题</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/appendix/attention/" class="">4.3 关注项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
 
 
 
@@ -688,15 +549,16 @@ https://github.com/alex-shpak/hugo-book
   <strong>1.1 语法</strong>
 
   <label for="toc-control">
+    
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   <nav id="TableOfContents">
   <ul>
     <li><a href="#range-vs-xrange">range vs xrange</a>
@@ -721,29 +583,53 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-  <article class="markdown"><h1 id="语法">语法</h1>
-<h2 id="range-vs-xrange">range vs xrange</h2>
+  <article class="markdown"><h1 id="语法">
+  语法
+  <a class="anchor" href="#%e8%af%ad%e6%b3%95">#</a>
+</h1>
+<h2 id="range-vs-xrange">
+  range vs xrange
+  <a class="anchor" href="#range-vs-xrange">#</a>
+</h2>
 <p>range 是直接返回一个保存全量数据的 list, 空间复杂度是 O(n),</p>
 <p>而 xrange 是在遍历中不断生成的，遍历的效率更高，而且空间复杂度是 O(1)</p>
 <blockquote class="book-hint warning">
   python3 取消了 xrange，range 就是 xrange
 </blockquote>
 
-<h3 id="type-xrange">&lt;type &lsquo;xrange'&gt;</h3>
+<h3 id="type-xrange">
+  &lt;type &lsquo;xrange'&gt;
+  <a class="anchor" href="#type-xrange">#</a>
+</h3>
 <hr>
-<h2 id="iteritems-vs-viewitems">iteritems vs viewitems</h2>
-<h3 id="type-dict_items">&lt;type &lsquo;dict_items'&gt;</h3>
-<h3 id="type-dictionary-valueiterator">&lt;type &lsquo;dictionary-valueiterator'&gt;</h3>
+<h2 id="iteritems-vs-viewitems">
+  iteritems vs viewitems
+  <a class="anchor" href="#iteritems-vs-viewitems">#</a>
+</h2>
+<h3 id="type-dict_items">
+  &lt;type &lsquo;dict_items'&gt;
+  <a class="anchor" href="#type-dict_items">#</a>
+</h3>
+<h3 id="type-dictionary-valueiterator">
+  &lt;type &lsquo;dictionary-valueiterator'&gt;
+  <a class="anchor" href="#type-dictionary-valueiterator">#</a>
+</h3>
 <hr>
-<h2 id="变量">变量</h2>
-<h3 id="全局变量">全局变量</h3>
+<h2 id="变量">
+  变量
+  <a class="anchor" href="#%e5%8f%98%e9%87%8f">#</a>
+</h2>
+<h3 id="全局变量">
+  全局变量
+  <a class="anchor" href="#%e5%85%a8%e5%b1%80%e5%8f%98%e9%87%8f">#</a>
+</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>():
     <span style="color:#66d9ef">print</span>(a)
@@ -759,7 +645,10 @@ func()
     a<span style="color:#f92672">=</span>a<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
 func()
 </code></pre></div><hr>
-<h2 id="尾递归">尾递归</h2>
+<h2 id="尾递归">
+  尾递归
+  <a class="anchor" href="#%e5%b0%be%e9%80%92%e5%bd%92">#</a>
+</h2>
 <p>Python 解释器不支持尾递归优化</p>
 <p>参考：</p>
 <ul>
@@ -767,7 +656,10 @@ func()
 <li><a href="https://stackoverflow.com/questions/310974/what-is-tail-call-optimization">What is tail call optimization?</a></li>
 </ul>
 <hr>
-<h2 id="参考">参考</h2>
+<h2 id="参考">
+  参考
+  <a class="anchor" href="#%e5%8f%82%e8%80%83">#</a>
+</h2>
 <ul>
 <li><a href="https://docs.python.org/zh-cn/3/reference/index.html">Python 语言参考</a></li>
 <li><a href="https://docs.python.org/zh-cn/3/library/index.html">Python 标准库</a></li>
@@ -778,13 +670,11 @@ func()
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/8633d5a203d10d4baabaeb2bb94e547b2fe5a286" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-python/commit/8633d5a203d10d4baabaeb2bb94e547b2fe5a286" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
       <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-07-14</span>
     </a>

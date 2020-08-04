@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="函数 __init__ vs __new__ __new__ 最先被调用，通常用于控制生成一个新实例的过程。 它是类级别的方法。
+<meta name="description" content="函数 #  __init__ vs __new__ #  __new__ 最先被调用，通常用于控制生成一个新实例的过程。 它是类级别的方法。
 __new__ 方法主要是当你继承一些不可变的 class 时 (比如 int, str, tuple)， 提供给你一个自定义这些类的实例化过程的途径。还有就是实现自定义的 metaclass。
 __init__ 方法通常用在初始化一个类实例的时候调用。
-class PositiveInteger(int): def __init__(self, value): super(PositiveInteger, self).__init__(self, abs(value)) i = PositiveInteger(-3) print i # -3 # 对于 int 这种 不可变的对象，我们只有重载它的 __new__ 方法才能起到自定义的作用 class PositiveInteger(int): def __new__(cls, value): return super(PositiveInteger, cls).__new__(cls, abs(value)) i = PositiveInteger(-3) print i # 3 用 __new__ 来实现单例 class Singleton(object): def __new__(cls): # 关键在于这，每一次实例化的时候，我们都只会返回这同一个instance对象 if not hasattr(cls, &#39;instance&#39;): cls."><meta property="og:title" content="函数" />
+class PositiveInteger(int): def __init__(self, value): super(PositiveInteger, self).__init__(self, abs(value)) i = PositiveInteger(-3) print i # -3 # 对于 int 这种 不可变的对象，我们只有重载它的 __new__ 方法才能起到自定义的作用 class PositiveInteger(int): def __new__(cls, value): return super(PositiveInteger, cls).__new__(cls, abs(value)) i = PositiveInteger(-3) print i # 3 用 __new__ 来实现单例 #  class Singleton(object): def __new__(cls): # 关键在于这，每一次实例化的时候，我们都只会返回这同一个instance对象 if not hasattr(cls, &#39;instance&#39;): cls.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="函数" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/function/" />
 
 <title>函数 | Python 学习笔记</title>
+<link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/study-python/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
-
-
-<script defer src="/study-python/en.search.min.8fa05b413861754c2de61bf82552ca721de426ba37f01adbc2bbef1b73991ee5.js" integrity="sha256-j6BbQThhdUwt5hv4JVLKch3kJro38BrbwrvvG3OZHuU="></script>
-
+<link rel="stylesheet" href="/study-python/book.min.d51ae1346c6c6be6d266ee675dbefadff112d8cb316f6b14f34def47903e2c63.css" integrity="sha256-1RrhNGxsa&#43;bSZu5nXb763/ES2Msxb2sU803vR5A&#43;LGM=">
+<script defer src="/study-python/en.search.min.e278411e0f1063891cd47784c4c21b0ad1169f79a81f99a94113a47ac0c4d58c.js" integrity="sha256-4nhBHg8QY4kc1HeExMIbCtEWn3moH5mpQROkesDE1Yw="></script>
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/basic/grammar/function/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
@@ -30,8 +27,9 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -44,7 +42,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -72,593 +70,455 @@ https://github.com/alex-shpak/hugo-book
 
   
 
-  
-  
-
-
-
-
-
- 
-  
-    
-
-
 
 
   
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
   
-  <span>第一部分 基础入门</span>
   
-
-
-    
-
-
-
-
   
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/grammar/" class="collapsed ">1.1 语法</a>
-  
-
-
-    
-
-
-
 
   
   <ul>
     
       
         <li>
-
+          
   
-  <a href="/study-python/docs/basic/grammar/builtin/" class="">内建函数</a>
-  
-
-</li>
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/grammar/function/" class="collapsed active">函数</a>
+    <span>第一部分 基础入门</span>
   
 
-
-    
-
-
-
+          
+  
+  
+  
 
   
   <ul>
     
       
         <li>
-
+          
   
-  <a href="/study-python/docs/basic/grammar/function/decorator/" class="">装饰器</a>
-  
-
-</li>
-      
-    
-  </ul>
+    <a href="/study-python/docs/basic/grammar/" class="collapsed ">1.1 语法</a>
   
 
-
-
-  </li>
-
-
-      
-    
-      
-        <li>
-
+          
   
-  <a href="/study-python/docs/basic/grammar/slice/" class="">切片</a>
   
-
-</li>
-      
-    
-      
-        <li>
-
   
-  <a href="/study-python/docs/basic/grammar/dict/" class="">字典</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/basic/grammar/generator/" class="">生成器</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/basic/grammar/class/" class="">类</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/std/" class="collapsed ">1.2 标准库</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/spec/" class="collapsed ">1.3 编程规范</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/other/" class="collapsed ">1.4 其他</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第二部分 进阶实战</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/pattern/" class="collapsed ">2.1 设计模式</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/algs/" class="collapsed ">2.2 算法实现</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/pkg/" class="collapsed ">2.3 常用库</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/test/" class="collapsed ">2.5 测试</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/prof/" class="collapsed ">2.6 性能</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/frame/" class="collapsed ">2.7 框架</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第三部分 源码实现</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/code/type/" class="collapsed ">3.1 数据类型</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/code/keyword/" class="collapsed ">3.2 关键字</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/code/runtime/" class="collapsed ">3.3 运行时</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第四部分 附录</span>
-  
-
-
-    
-
-
-
 
   
   <ul>
     
       
         <li>
-
+          
   
-  <a href="/study-python/docs/appendix/tutorial/" class="">4.1 教程</a>
+    <a href="/study-python/docs/basic/grammar/builtin/" class="">内建函数</a>
   
 
-</li>
+        </li>
       
     
       
         <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/function/" class="collapsed active">函数</a>
+  
+
+          
+  
+  
+  
 
   
-  <a href="/study-python/docs/appendix/interview/" class="">4.2 面试题</a>
-  
-
-</li>
-      
+  <ul>
     
       
         <li>
-
+          
   
-  <a href="/study-python/docs/appendix/attention/" class="">4.3 关注项目</a>
+    <a href="/study-python/docs/basic/grammar/function/decorator/" class="">装饰器</a>
   
 
-</li>
+        </li>
       
     
   </ul>
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/slice/" class="">切片</a>
+  
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/dict/" class="">字典</a>
+  
 
-  </li>
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/generator/" class="">生成器</a>
+  
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/class/" class="">类</a>
+  
 
+        </li>
       
     
   </ul>
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/std/" class="collapsed ">1.2 标准库</a>
+  
 
+          
+  
+  
+  
 
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/spec/" class="collapsed ">1.3 编程规范</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/other/" class="collapsed ">1.4 其他</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第二部分 进阶实战</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/pattern/" class="collapsed ">2.1 设计模式</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/algs/" class="collapsed ">2.2 算法实现</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/pkg/" class="collapsed ">2.3 常用库</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/test/" class="collapsed ">2.5 测试</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/prof/" class="collapsed ">2.6 性能</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/frame/" class="collapsed ">2.7 框架</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第三部分 源码实现</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/code/type/" class="collapsed ">3.1 数据类型</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/code/keyword/" class="collapsed ">3.2 关键字</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/code/runtime/" class="collapsed ">3.3 运行时</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第四部分 附录</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/appendix/tutorial/" class="">4.1 教程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/appendix/interview/" class="">4.2 面试题</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/appendix/attention/" class="">4.3 关注项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
 
 
 
@@ -702,15 +562,16 @@ https://github.com/alex-shpak/hugo-book
   <strong>函数</strong>
 
   <label for="toc-control">
+    
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   <nav id="TableOfContents">
   <ul>
     <li><a href="#__init__-vs-__new__"><code>__init__</code> vs <code>__new__</code></a>
@@ -728,15 +589,21 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-  <article class="markdown"><h1 id="函数">函数</h1>
-<h2 id="__init__-vs-__new__"><code>__init__</code> vs <code>__new__</code></h2>
+  <article class="markdown"><h1 id="函数">
+  函数
+  <a class="anchor" href="#%e5%87%bd%e6%95%b0">#</a>
+</h1>
+<h2 id="__init__-vs-__new__">
+  <code>__init__</code> vs <code>__new__</code>
+  <a class="anchor" href="#__init__-vs-__new__">#</a>
+</h2>
 <p><code>__new__</code> 最先被调用，通常用于控制生成一个新实例的过程。
 它是类级别的方法。</p>
 <p><code>__new__</code> 方法主要是当你继承一些不可变的 class 时 (比如 int, str, tuple)， 提供给你一个自定义这些类的实例化过程的途径。还有就是实现自定义的 metaclass。</p>
@@ -755,7 +622,10 @@ i <span style="color:#f92672">=</span> PositiveInteger(<span style="color:#f9267
 
 i <span style="color:#f92672">=</span> PositiveInteger(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>)
 <span style="color:#66d9ef">print</span> i <span style="color:#75715e"># 3</span>
-</code></pre></div><h3 id="用-__new__-来实现单例">用 <code>__new__</code> 来实现单例</h3>
+</code></pre></div><h3 id="用-__new__-来实现单例">
+  用 <code>__new__</code> 来实现单例
+  <a class="anchor" href="#%e7%94%a8-__new__-%e6%9d%a5%e5%ae%9e%e7%8e%b0%e5%8d%95%e4%be%8b">#</a>
+</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Singleton</span>(object):
     <span style="color:#66d9ef">def</span> __new__(cls):
         <span style="color:#75715e"># 关键在于这，每一次实例化的时候，我们都只会返回这同一个instance对象</span>
@@ -769,12 +639,21 @@ obj2 <span style="color:#f92672">=</span> Singleton()
 obj1<span style="color:#f92672">.</span>attr1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;value1&#39;</span>
 <span style="color:#66d9ef">print</span> obj1<span style="color:#f92672">.</span>attr1, obj2<span style="color:#f92672">.</span>attr1 <span style="color:#75715e"># value1 value1</span>
 <span style="color:#66d9ef">print</span> obj1 <span style="color:#f92672">is</span> obj2 <span style="color:#75715e"># True</span>
-</code></pre></div><h2 id="metaclass-vs-__new__">metaclass vs <code>__new__</code></h2>
+</code></pre></div><h2 id="metaclass-vs-__new__">
+  metaclass vs <code>__new__</code>
+  <a class="anchor" href="#metaclass-vs-__new__">#</a>
+</h2>
 <hr>
-<h2 id="partial-function-偏函数">Partial function 偏函数</h2>
+<h2 id="partial-function-偏函数">
+  Partial function 偏函数
+  <a class="anchor" href="#partial-function-%e5%81%8f%e5%87%bd%e6%95%b0">#</a>
+</h2>
 <p>functools.partial 的作用就是，把一个函数的某些参数给固定住（也就是设置默认值），返回一个新的函数</p>
 <p>当函数的参数个数太多，需要简化时，使用 functools.partial 可以创建一个新的函数，这个新函数可以固定住原函数的部分参数，从而在调用时更简单。</p>
-<h3 id="柯里化-currying">柯里化 Currying</h3>
+<h3 id="柯里化-currying">
+  柯里化 Currying
+  <a class="anchor" href="#%e6%9f%af%e9%87%8c%e5%8c%96-currying">#</a>
+</h3>
 <p>柯里化（Currying）是把接受多个参数的函数变换成接受一个单一参数 (最初函数的第一个参数) 的函数，并且返回接受余下的参数且返回结果的新函数</p>
 <p>柯里化（Currying）是由 Christopher Strachey 以逻辑学家 Haskell Curry 命名的，尽管它是 Moses Schnfinkel 和 Gottlob Frege 发明的。</p>
 <p>从纯粹的语义上，curry 化就是 lambda 表达式的一个糖</p>
@@ -789,13 +668,11 @@ obj1<span style="color:#f92672">.</span>attr1 <span style="color:#f92672">=</spa
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/08563efe9b70b83b0e25c90444ba27978173be2f" title='Last modified by yewang | 2020-04-28' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-python/commit/08563efe9b70b83b0e25c90444ba27978173be2f" title='Last modified by yewang | 2020-04-28' target="_blank" rel="noopener">
       <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-04-28</span>
     </a>

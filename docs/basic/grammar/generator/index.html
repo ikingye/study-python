@@ -1,31 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="生成器 iterable 可迭代的 Everything you can use &ldquo;for&hellip; in&hellip;&rdquo; on is an iterable; lists, strings, files&hellip;
+<meta name="description" content="生成器 #  iterable 可迭代的 #  Everything you can use &ldquo;for&hellip; in&hellip;&rdquo; on is an iterable; lists, strings, files&hellip;
 iterable 包括：
- list tuple string dictionary file enumerate object  iterator 迭代器  iter() 函数用来生成迭代器。 iter(object[, sentinel])  object：支持迭代的集合对象 sentinel  如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object      迭代器只能迭代一次
-a kind of iterable you can only iterate over once.
-generator Generators are iterators, a kind of iterable you can only iterate over once."><meta property="og:title" content="生成器" />
-<meta property="og:description" content="生成器 iterable 可迭代的 Everything you can use &ldquo;for&hellip; in&hellip;&rdquo; on is an iterable; lists, strings, files&hellip;
+ list tuple string dictionary file enumerate object  iterator 迭代器 #   iter() 函数用来生成迭代器。 iter(object[, sentinel])  object：支持迭代的集合对象 sentinel  如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object      迭代器只能迭代一次
+a kind of iterable you can only iterate over once.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="生成器" />
+<meta property="og:description" content="生成器 #  iterable 可迭代的 #  Everything you can use &ldquo;for&hellip; in&hellip;&rdquo; on is an iterable; lists, strings, files&hellip;
 iterable 包括：
- list tuple string dictionary file enumerate object  iterator 迭代器  iter() 函数用来生成迭代器。 iter(object[, sentinel])  object：支持迭代的集合对象 sentinel  如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object      迭代器只能迭代一次
-a kind of iterable you can only iterate over once.
-generator Generators are iterators, a kind of iterable you can only iterate over once." />
+ list tuple string dictionary file enumerate object  iterator 迭代器 #   iter() 函数用来生成迭代器。 iter(object[, sentinel])  object：支持迭代的集合对象 sentinel  如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object      迭代器只能迭代一次
+a kind of iterable you can only iterate over once." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/grammar/generator/" />
 <meta property="article:modified_time" content="2020-04-28T22:57:52+08:00" />
 <title>生成器 | Python 学习笔记</title>
+<link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/study-python/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
-
-
-<script defer src="/study-python/en.search.min.8fa05b413861754c2de61bf82552ca721de426ba37f01adbc2bbef1b73991ee5.js" integrity="sha256-j6BbQThhdUwt5hv4JVLKch3kJro38BrbwrvvG3OZHuU="></script>
-
+<link rel="stylesheet" href="/study-python/book.min.d51ae1346c6c6be6d266ee675dbefadff112d8cb316f6b14f34def47903e2c63.css" integrity="sha256-1RrhNGxsa&#43;bSZu5nXb763/ES2Msxb2sU803vR5A&#43;LGM=">
+<script defer src="/study-python/en.search.min.e278411e0f1063891cd47784c4c21b0ad1169f79a81f99a94113a47ac0c4d58c.js" integrity="sha256-4nhBHg8QY4kc1HeExMIbCtEWn3moH5mpQROkesDE1Yw="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -34,8 +29,9 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -48,7 +44,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -76,577 +72,441 @@ https://github.com/alex-shpak/hugo-book
 
   
 
-  
-  
-
-
-
-
-
- 
-  
-    
-
-
 
 
   
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
   
-  <span>第一部分 基础入门</span>
   
-
-
-    
-
-
-
-
   
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/grammar/" class="collapsed ">1.1 语法</a>
-  
-
-
-    
-
-
-
 
   
   <ul>
     
       
         <li>
-
+          
   
-  <a href="/study-python/docs/basic/grammar/builtin/" class="">内建函数</a>
-  
-
-</li>
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/grammar/function/" class="collapsed ">函数</a>
+    <span>第一部分 基础入门</span>
   
 
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        <li>
-
+          
   
-  <a href="/study-python/docs/basic/grammar/slice/" class="">切片</a>
   
-
-</li>
-      
-    
-      
-        <li>
-
   
-  <a href="/study-python/docs/basic/grammar/dict/" class="">字典</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/basic/grammar/generator/" class="active">生成器</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-python/docs/basic/grammar/class/" class="">类</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/std/" class="collapsed ">1.2 标准库</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/spec/" class="collapsed ">1.3 编程规范</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/basic/other/" class="collapsed ">1.4 其他</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第二部分 进阶实战</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/pattern/" class="collapsed ">2.1 设计模式</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/algs/" class="collapsed ">2.2 算法实现</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/pkg/" class="collapsed ">2.3 常用库</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/test/" class="collapsed ">2.5 测试</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/prof/" class="collapsed ">2.6 性能</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/advanced/frame/" class="collapsed ">2.7 框架</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第三部分 源码实现</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/code/type/" class="collapsed ">3.1 数据类型</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/code/keyword/" class="collapsed ">3.2 关键字</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-python/docs/code/runtime/" class="collapsed ">3.3 运行时</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第四部分 附录</span>
-  
-
-
-    
-
-
-
 
   
   <ul>
     
       
         <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/" class="collapsed ">1.1 语法</a>
+  
+
+          
+  
+  
+  
 
   
-  <a href="/study-python/docs/appendix/tutorial/" class="">4.1 教程</a>
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/builtin/" class="">内建函数</a>
   
 
-</li>
+        </li>
       
     
       
         <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/function/" class="collapsed ">函数</a>
+  
+
+          
+  
+  
+  
 
   
-  <a href="/study-python/docs/appendix/interview/" class="">4.2 面试题</a>
-  
 
-</li>
+        </li>
       
     
       
         <li>
-
+          
   
-  <a href="/study-python/docs/appendix/attention/" class="">4.3 关注项目</a>
+    <a href="/study-python/docs/basic/grammar/slice/" class="">切片</a>
   
 
-</li>
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/dict/" class="">字典</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/generator/" class="active">生成器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/grammar/class/" class="">类</a>
+  
+
+        </li>
       
     
   </ul>
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/std/" class="collapsed ">1.2 标准库</a>
+  
 
+          
+  
+  
+  
 
-  </li>
+  
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/spec/" class="collapsed ">1.3 编程规范</a>
+  
 
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/basic/other/" class="collapsed ">1.4 其他</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
       
     
   </ul>
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第二部分 进阶实战</span>
+  
 
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/pattern/" class="collapsed ">2.1 设计模式</a>
+  
+
+          
+  
+  
+  
 
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/algs/" class="collapsed ">2.2 算法实现</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/pkg/" class="collapsed ">2.3 常用库</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/test/" class="collapsed ">2.5 测试</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/prof/" class="collapsed ">2.6 性能</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/advanced/frame/" class="collapsed ">2.7 框架</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第三部分 源码实现</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/code/type/" class="collapsed ">3.1 数据类型</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/code/keyword/" class="collapsed ">3.2 关键字</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/code/runtime/" class="collapsed ">3.3 运行时</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第四部分 附录</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/appendix/tutorial/" class="">4.1 教程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/appendix/interview/" class="">4.2 面试题</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-python/docs/appendix/attention/" class="">4.3 关注项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
 
 
 
@@ -690,15 +550,16 @@ https://github.com/alex-shpak/hugo-book
   <strong>生成器</strong>
 
   <label for="toc-control">
+    
     <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   <nav id="TableOfContents">
   <ul>
     <li><a href="#iterable-可迭代的">iterable 可迭代的</a></li>
@@ -715,15 +576,21 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-  <article class="markdown"><h1 id="生成器">生成器</h1>
-<h2 id="iterable-可迭代的">iterable 可迭代的</h2>
+  <article class="markdown"><h1 id="生成器">
+  生成器
+  <a class="anchor" href="#%e7%94%9f%e6%88%90%e5%99%a8">#</a>
+</h1>
+<h2 id="iterable-可迭代的">
+  iterable 可迭代的
+  <a class="anchor" href="#iterable-%e5%8f%af%e8%bf%ad%e4%bb%a3%e7%9a%84">#</a>
+</h2>
 <p>Everything you can use &ldquo;for&hellip; in&hellip;&rdquo; on is an iterable; lists, strings, files&hellip;</p>
 <p>iterable 包括：</p>
 <ul>
@@ -734,7 +601,10 @@ https://github.com/alex-shpak/hugo-book
 <li>file</li>
 <li><code>enumerate object</code></li>
 </ul>
-<h2 id="iterator-迭代器">iterator 迭代器</h2>
+<h2 id="iterator-迭代器">
+  iterator 迭代器
+  <a class="anchor" href="#iterator-%e8%bf%ad%e4%bb%a3%e5%99%a8">#</a>
+</h2>
 <ul>
 <li>iter() 函数用来生成迭代器。</li>
 <li><code>iter(object[, sentinel])</code>
@@ -751,19 +621,34 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 <p>迭代器只能迭代一次</p>
 <p>a kind of iterable you can only iterate over once.</p>
-<h2 id="generator">generator</h2>
+<h2 id="generator">
+  generator
+  <a class="anchor" href="#generator">#</a>
+</h2>
 <p>Generators are iterators, a kind of iterable you can only iterate over once.
 Generators do not store all the values in memory, they generate the values on the fly.</p>
 <p>带有 yield 的函数在 Python 中被称之为 <code>generator</code>（生成器）函数</p>
-<h2 id="yield">yield</h2>
+<h2 id="yield">
+  yield
+  <a class="anchor" href="#yield">#</a>
+</h2>
 <ol>
 <li>执行带有 <code>yield</code> 的函数返回一个 <code>generator</code>（生成器）</li>
 <li><code>next(g)</code> 开始执行这个 <code>generator</code>，执行完 <code>yield</code> 语句，就返回</li>
 <li>第二次 <code>next(g)</code> 从 <code>yield</code> 语句后开始执行（比如 <code>yield</code> 语句的赋值操作），再遇到 <code>yield</code> 语句也是一样，执行完就返回</li>
 </ol>
-<h3 id="next">next</h3>
-<h3 id="send">send</h3>
-<h3 id="close">close</h3>
+<h3 id="next">
+  next
+  <a class="anchor" href="#next">#</a>
+</h3>
+<h3 id="send">
+  send
+  <a class="anchor" href="#send">#</a>
+</h3>
+<h3 id="close">
+  close
+  <a class="anchor" href="#close">#</a>
+</h3>
 <p>参考：</p>
 <ul>
 <li><a href="https://blog.csdn.net/mieleizhi0522/article/details/82142856">python 中 yield 的用法详解 —— 最简单，最清晰的解释</a></li>
@@ -776,13 +661,11 @@ Generators do not store all the values in memory, they generate the values on th
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-python/commit/08563efe9b70b83b0e25c90444ba27978173be2f" title='Last modified by yewang | 2020-04-28' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-python/commit/08563efe9b70b83b0e25c90444ba27978173be2f" title='Last modified by yewang | 2020-04-28' target="_blank" rel="noopener">
       <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-04-28</span>
     </a>

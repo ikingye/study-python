@@ -15,7 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-python/docs/basic/other/package/manage/</guid>
-      <description>Python 包管理 pip 加速 修改 ~/.pip/pip.conf
+      <description>Python 包管理 #  pip #  加速 #  修改 ~/.pip/pip.conf
 [global] index-url = https://pypi.tuna.tsinghua.edu.cn/simple [install] trusted-host = pypi.tuna.tsinghua.edu.cn </description>
     </item>
     
