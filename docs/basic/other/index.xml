@@ -25,5 +25,15 @@ gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：
 from gevent import monkey; monkey.patch_socket() import gevent def f(n): for i in range(n): print gevent.</description>
     </item>
     
+    <item>
+      <title>Anaconda</title>
+      <link>https://ikingye.github.io/study-python/docs/basic/other/anaconda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-python/docs/basic/other/anaconda/</guid>
+      <description>Anaconda #  Anaconda 是一个免费开源 的 Python 和 R 语言的发行版本，用于计算科学（数据科学、机器学习、大数据处理和预测分析），Anaconda 致力于简化包管理和部署。
+Anaconda 的包使用软件包管理系统 Conda 进行管理。</description>
+    </item>
+    
   </channel>
 </rss>

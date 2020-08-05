@@ -178,5 +178,15 @@ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18
 解读： python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。 由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &amp;ldquo;ModuleNotFoundError: No module named &amp;lsquo;_ctypes&amp;rsquo;&amp;rdquo; 的错误。</description>
     </item>
     
+    <item>
+      <title>Anaconda</title>
+      <link>https://ikingye.github.io/study-python/docs/basic/other/anaconda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-python/docs/basic/other/anaconda/</guid>
+      <description>Anaconda #  Anaconda 是一个免费开源 的 Python 和 R 语言的发行版本，用于计算科学（数据科学、机器学习、大数据处理和预测分析），Anaconda 致力于简化包管理和部署。
+Anaconda 的包使用软件包管理系统 Conda 进行管理。</description>
+    </item>
+    
   </channel>
 </rss>
