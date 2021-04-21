@@ -6,23 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Python 版本管理 #  pyenv #  pyenv 加速 #  在 .zshrc 添加
 function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
-pyenv 基础命令 #  # List all available versions pyenv install -l pyenv global 3.8.2 2.7.17 #  set by ~/.pyenv/version
-3.8.2 2.7.17 pyenv shell 3.8.2 2.7.17 #  set by PYENV_VERSION environment variable
-$ echo $PYENV_VERSION 3.8.2:2.7.17 ">
+pyenv 基础命令 #  # List all available versions pyenv install -l # 更新 pyenv update brew update &amp;&amp; brew upgrade pyenv pyenv update #  pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update pyenv update pyenv global 3.8.2 2.7.17 #  set by ~/.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="版本管理" />
 <meta property="og:description" content="Python 版本管理 #  pyenv #  pyenv 加速 #  在 .zshrc 添加
 function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
-pyenv 基础命令 #  # List all available versions pyenv install -l pyenv global 3.8.2 2.7.17 #  set by ~/.pyenv/version
-3.8.2 2.7.17 pyenv shell 3.8.2 2.7.17 #  set by PYENV_VERSION environment variable
-$ echo $PYENV_VERSION 3.8.2:2.7.17 " />
+pyenv 基础命令 #  # List all available versions pyenv install -l # 更新 pyenv update brew update &amp;&amp; brew upgrade pyenv pyenv update #  pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update pyenv update pyenv global 3.8.2 2.7.17 #  set by ~/." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-python/docs/basic/other/version/manage/" />
-<meta property="article:modified_time" content="2020-08-04T15:55:01+08:00" />
+<meta property="article:modified_time" content="2021-04-20T12:59:52+08:00" />
 <title>版本管理 | Python 学习笔记</title>
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.ce0f902f11a0f7675f61f65c2edd624054c6ccc1465f48c5761565b68b9daa75.css" integrity="sha256-zg&#43;QLxGg92dfYfZcLt1iQFTGzMFGX0jFdhVltoudqnU=">
-<script defer src="/study-python/en.search.min.089cd030477dde9a924bc8faa2bc4d994a318223982679d161e281847ce4d41f.js" integrity="sha256-CJzQMEd93pqSS8j6orxNmUoxgiOYJnnRYeKBhHzk1B8="></script>
+<script defer src="/study-python/en.search.min.056dd35262f318c1bfbbaf7ca62ef676579891255b65a6d0a054e1f69b844a3b.js" integrity="sha256-BW3TUmLzGMG/u698pi72dleYkSVbZabQoFTh9puESjs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -576,10 +572,12 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#pyenv-加速">pyenv 加速</a></li>
         <li><a href="#pyenv-基础命令">pyenv 基础命令</a>
           <ul>
+            <li><a href="#pyenv-update">pyenv update</a></li>
             <li><a href="#pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</a></li>
             <li><a href="#pyenv-shell-382-2717">pyenv shell 3.8.2 2.7.17</a></li>
           </ul>
         </li>
+        <li><a href="#pyenv-优先级">pyenv 优先级</a></li>
       </ul>
     </li>
   </ul>
@@ -619,6 +617,19 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># List all available versions</span>
 pyenv install -l
+
+<span style="color:#75715e"># 更新</span>
+pyenv update
+
+brew update <span style="color:#f92672">&amp;&amp;</span> brew upgrade pyenv
+</code></pre></div><h4 id="pyenv-update">
+  pyenv update
+  <a class="anchor" href="#pyenv-update">#</a>
+</h4>
+<p><a href="https://github.com/pyenv/pyenv-update">pyenv/pyenv-update</a> <img src="https://img.shields.io/github/stars/pyenv/pyenv-update.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/pyenv/pyenv-update.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/pyenv/pyenv-update.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/pyenv/pyenv-update.svg" alt="Last commit" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/pyenv/pyenv-update.git <span style="color:#66d9ef">$(</span>pyenv root<span style="color:#66d9ef">)</span>/plugins/pyenv-update
+
+pyenv update
 </code></pre></div><h4 id="pyenv-global-382-2717">
   pyenv global 3.8.2 2.7.17
   <a class="anchor" href="#pyenv-global-382-2717">#</a>
@@ -634,7 +645,33 @@ pyenv install -l
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo $PYENV_VERSION
 
 3.8.2:2.7.17
-</code></pre></div></article>
+</code></pre></div><hr>
+<h3 id="pyenv-优先级">
+  pyenv 优先级
+  <a class="anchor" href="#pyenv-%e4%bc%98%e5%85%88%e7%ba%a7">#</a>
+</h3>
+<ul>
+<li>pyenv shell
+<ul>
+<li><code>$PYENV_VERSION</code></li>
+</ul>
+</li>
+<li>pyenv local
+<ul>
+<li><code>.python-version</code> file</li>
+</ul>
+</li>
+<li>pyenv global
+<ul>
+<li><code>~/.pyenv/version</code></li>
+</ul>
+</li>
+<li>System Python</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20210420130013.png" alt="" /></p>
+<hr>
+<hr>
+</article>
  
       
 
@@ -644,9 +681,9 @@ pyenv install -l
 
 
 
-  <div><a class="flex align-center" href="https://github.com/ikingye/study-python/commit/8454067aeb5592354017f8199677d7dbba8129cd" title='Last modified by yewang | 2020-08-04' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-python/commit/9b106d4440e9f105b1b2372c299805850da9baff" title='Last modified by yewang | 2021-04-20' target="_blank" rel="noopener">
       <img src="/study-python/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-08-04</span>
+      <span>2021-04-20</span>
     </a>
   </div>
 
@@ -707,10 +744,12 @@ pyenv install -l
         <li><a href="#pyenv-加速">pyenv 加速</a></li>
         <li><a href="#pyenv-基础命令">pyenv 基础命令</a>
           <ul>
+            <li><a href="#pyenv-update">pyenv update</a></li>
             <li><a href="#pyenv-global-382-2717">pyenv global 3.8.2 2.7.17</a></li>
             <li><a href="#pyenv-shell-382-2717">pyenv shell 3.8.2 2.7.17</a></li>
           </ul>
         </li>
+        <li><a href="#pyenv-优先级">pyenv 优先级</a></li>
       </ul>
     </li>
   </ul>
