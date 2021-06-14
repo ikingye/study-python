@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.71.0" />
+  <meta name="generator" content="Hugo 0.83.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="语法 #  range vs xrange #  range 是直接返回一个保存全量数据的 list, 空间复杂度是 O(n),
 而 xrange 是在遍历中不断生成的，遍历的效率更高，而且空间复杂度是 O(1)
-python3 取消了 xrange，range 就是 xrange  &lt;type &lsquo;xrange&#39;&gt; #   iteritems vs viewitems #  &lt;type &lsquo;dict_items&#39;&gt; #  &lt;type &lsquo;dictionary-valueiterator&#39;&gt; #   变量 #  全局变量 #  a = 3 def func(): print(a) func() 在 Python 中，a=3 定义了全局变量 a，作用域从定义处到代码结束，在 a=3 以下的函数中是可以引用全局变量 a 的。
+python3 取消了 xrange，range 就是 xrange  &lt;type &lsquo;xrange&rsquo;&gt; #   iteritems vs viewitems #  &lt;type &lsquo;dict_items&rsquo;&gt; #  &lt;type &lsquo;dictionary-valueiterator&rsquo;&gt; #   变量 #  全局变量 #  a = 3 def func(): print(a) func() 在 Python 中，a=3 定义了全局变量 a，作用域从定义处到代码结束，在 a=3 以下的函数中是可以引用全局变量 a 的。
 但如果要修改函数中与全局变量同名的变量，则函数中的该变量就会变成局部变量， 在修改之前对该变量的引用自然会出现未分配或未定义的错误了。
 a = 3 def func(): # 如果确定要引用并修改全局变量必须加上 global 关键字 global a print (a) a=a&#43;1 func()  尾递归 #  Python 解释器不支持尾递归优化">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="1.1 语法" />
@@ -18,8 +18,8 @@ a = 3 def func(): # 如果确定要引用并修改全局变量必须加上 globa
 <title>1.1 语法 | Python 学习笔记</title>
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/study-python/book.min.5b972492ef1e328fe2af0719d3ad919f424e23d330c396f76222fbc308f724ee.css" integrity="sha256-W5ckku8eMo/irwcZ062Rn0JOI9Mww5b3YiL7wwj3JO4=">
-<script defer src="/study-python/en.search.min.fd43be2f16447b3ea6f81a6e37d9b06db768570cc1ffb201580e7fe561d5434d.js" integrity="sha256-/UO&#43;LxZEez6m&#43;BpuN9mwbbdoVwzB/7IBWA5/5WHVQ00="></script>
+<link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
+<script defer src="/study-python/en.search.min.004bf32c1726abde73d3db80a5faf8ae7bb11a15bae752e5ca4b70f99acba849.js" integrity="sha256-AEvzLBcmq95z09uApfr4rnuxGhW651Llyktw&#43;ZrLqEk="></script>
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-python/docs/basic/grammar/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
@@ -770,7 +770,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -803,13 +803,13 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#range-vs-xrange">range vs xrange</a>
       <ul>
-        <li><a href="#type-xrange">&lt;type &lsquo;xrange'&gt;</a></li>
+        <li><a href="#type-xrange">&lt;type &lsquo;xrange&rsquo;&gt;</a></li>
       </ul>
     </li>
     <li><a href="#iteritems-vs-viewitems">iteritems vs viewitems</a>
       <ul>
-        <li><a href="#type-dict_items">&lt;type &lsquo;dict_items'&gt;</a></li>
-        <li><a href="#type-dictionary-valueiterator">&lt;type &lsquo;dictionary-valueiterator'&gt;</a></li>
+        <li><a href="#type-dict_items">&lt;type &lsquo;dict_items&rsquo;&gt;</a></li>
+        <li><a href="#type-dictionary-valueiterator">&lt;type &lsquo;dictionary-valueiterator&rsquo;&gt;</a></li>
       </ul>
     </li>
     <li><a href="#变量">变量</a>
@@ -846,7 +846,7 @@ https://github.com/alex-shpak/hugo-book
 </blockquote>
 
 <h3 id="type-xrange">
-  &lt;type &lsquo;xrange'&gt;
+  &lt;type &lsquo;xrange&rsquo;&gt;
   <a class="anchor" href="#type-xrange">#</a>
 </h3>
 <hr>
@@ -855,11 +855,11 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#iteritems-vs-viewitems">#</a>
 </h2>
 <h3 id="type-dict_items">
-  &lt;type &lsquo;dict_items'&gt;
+  &lt;type &lsquo;dict_items&rsquo;&gt;
   <a class="anchor" href="#type-dict_items">#</a>
 </h3>
 <h3 id="type-dictionary-valueiterator">
-  &lt;type &lsquo;dictionary-valueiterator'&gt;
+  &lt;type &lsquo;dictionary-valueiterator&rsquo;&gt;
   <a class="anchor" href="#type-dictionary-valueiterator">#</a>
 </h3>
 <hr>
@@ -971,13 +971,13 @@ func()
   <ul>
     <li><a href="#range-vs-xrange">range vs xrange</a>
       <ul>
-        <li><a href="#type-xrange">&lt;type &lsquo;xrange'&gt;</a></li>
+        <li><a href="#type-xrange">&lt;type &lsquo;xrange&rsquo;&gt;</a></li>
       </ul>
     </li>
     <li><a href="#iteritems-vs-viewitems">iteritems vs viewitems</a>
       <ul>
-        <li><a href="#type-dict_items">&lt;type &lsquo;dict_items'&gt;</a></li>
-        <li><a href="#type-dictionary-valueiterator">&lt;type &lsquo;dictionary-valueiterator'&gt;</a></li>
+        <li><a href="#type-dict_items">&lt;type &lsquo;dict_items&rsquo;&gt;</a></li>
+        <li><a href="#type-dictionary-valueiterator">&lt;type &lsquo;dictionary-valueiterator&rsquo;&gt;</a></li>
       </ul>
     </li>
     <li><a href="#变量">变量</a>

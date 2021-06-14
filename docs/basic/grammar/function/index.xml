@@ -4,11 +4,7 @@
     <title>函数 on Python 学习笔记</title>
     <link>https://ikingye.github.io/study-python/docs/basic/grammar/function/</link>
     <description>Recent content in 函数 on Python 学习笔记</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="https://ikingye.github.io/study-python/docs/basic/grammar/function/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ikingye.github.io/study-python/docs/basic/grammar/function/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>装饰器</title>
       <link>https://ikingye.github.io/study-python/docs/basic/grammar/function/decorator/</link>
