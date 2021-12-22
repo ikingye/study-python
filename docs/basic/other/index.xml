@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1.4 其他 on Python 学习笔记</title>
-    <link>https://ikingye.github.io/study-python/docs/basic/other/</link>
+    <link>https://kingye.me/study-python/docs/basic/other/</link>
     <description>Recent content in 1.4 其他 on Python 学习笔记</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ikingye.github.io/study-python/docs/basic/other/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://kingye.me/study-python/docs/basic/other/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>协程</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/other/coroutine/</link>
+      <link>https://kingye.me/study-python/docs/basic/other/coroutine/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/basic/other/coroutine/</guid>
+      <guid>https://kingye.me/study-python/docs/basic/other/coroutine/</guid>
       <description>Python 协程 #   执行效率高  子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。 不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了    因为协程是一个线程执行，那怎么利用多核 CPU 呢？ 最简单的方法是多进程 + 协程，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。
 子程序就是协程的一种特例 #  Donald Knuth 的一句话总结协程的特点：
 “子程序就是协程的一种特例。”
@@ -23,10 +23,10 @@ from gevent import monkey; monkey.patch_socket() import gevent def f(n): for i i
     
     <item>
       <title>Anaconda</title>
-      <link>https://ikingye.github.io/study-python/docs/basic/other/anaconda/</link>
+      <link>https://kingye.me/study-python/docs/basic/other/anaconda/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-python/docs/basic/other/anaconda/</guid>
+      <guid>https://kingye.me/study-python/docs/basic/other/anaconda/</guid>
       <description>Anaconda #  Anaconda 是一个免费开源 的 Python 和 R 语言的发行版本，用于计算科学（数据科学、机器学习、大数据处理和预测分析），Anaconda 致力于简化包管理和部署。
 Anaconda 的包使用软件包管理系统 Conda 进行管理。</description>
     </item>
