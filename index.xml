@@ -22,8 +22,8 @@
       
       <guid>https://kingye.me/study-python/docs/basic/other/version/manage/</guid>
       <description>Python 版本管理 #  pyenv #  pyenv 加速 #  在 .zshrc 添加
-function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
-pyenv 基础命令 #  # List all available versions pyenv install -l # 更新 pyenv update brew update &amp;amp;&amp;amp; brew upgrade pyenv pyenv update #  pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update pyenv update pyenv global 3.8.2 2.7.17 #  set by ~/.</description>
+function pyenvinstall {  wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/  pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
+pyenv 基础命令 #  # List all available versions pyenv install -l  # 更新 pyenv update  brew update &amp;amp;&amp;amp; brew upgrade pyenv pyenv update #  pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update  pyenv update pyenv global 3.</description>
     </item>
     
     <item>
@@ -66,7 +66,7 @@ python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate
 enumerate(sequence, [start=0])
 eval #  执行一个字符串表达式，并返回表达式的值
 eval(&amp;#39;3 * x&amp;#39;) eval(&amp;#39;pow(2,2)&amp;#39;) isinstance #  判断一个对象是否是一个已知的类型
-isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])</description>
+isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类型，不考虑继承关系。  isinstance() 会认为子类是一种父类类型，考虑继承关系。  如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])</description>
     </item>
     
     <item>
@@ -75,7 +75,7 @@ isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/slice/</guid>
-      <description>切片 #  [start:end:step] 遍历 #  enumerate #  a = [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;d&amp;#34;] # index &amp;amp; value for i in xrange(len(a)): print i, a[i] # iterate with index for i, el in enumerate(a): print i, el # i 从 1 开始 for i, el in enumerate(a, 1): print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+      <description>切片 #  [start:end:step] 遍历 #  enumerate #  a = [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;d&amp;#34;]  # index &amp;amp; value for i in xrange(len(a)):  print i, a[i]  # iterate with index for i, el in enumerate(a):  print i, el  # i 从 1 开始 for i, el in enumerate(a, 1):  print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
 字符串反转 #  letter[::-1] 为什么 s[:-1:-1] 是空 #  只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：</description>
     </item>
     
@@ -92,7 +92,7 @@ gevent #  Python 通过 yield 提供了对协程的基本支持，但是不完�
 gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：
 当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。
 由于切换是在 IO 操作时自动完成，所以 gevent 需要修改 Python 自带的一些标准库，这一过程在启动时通过 monkey patch 完成：
-from gevent import monkey; monkey.patch_socket() import gevent def f(n): for i in range(n): print gevent.</description>
+from gevent import monkey; monkey.patch_socket() import gevent  def f(n):  for i in range(n):  print gevent.</description>
     </item>
     
     <item>
@@ -101,8 +101,7 @@ from gevent import monkey; monkey.patch_socket() import gevent def f(n): for i i
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/dict/</guid>
-      <description>字典 #  遍历 #  for key in d: # For Python 3.x: for key, value in d.items(): # For Python 2.x: for key, value in d.iteritems(): items #  The operation items() will work for both 2 and 3, but in 2 it will return a list of the dictionary&amp;rsquo;s (key, value) pairs, which will not reflect changes to the dict that happen after the items() call.
-If you want the 2.</description>
+      <description>字典 #  遍历 #  for key in d:  # For Python 3.x: for key, value in d.items():  # For Python 2.x: for key, value in d.iteritems(): items #  The operation items() will work for both 2 and 3, but in 2 it will return a list of the dictionary&amp;rsquo;s (key, value) pairs, which will not reflect changes to the dict that happen after the items() call.</description>
     </item>
     
     <item>
@@ -135,7 +134,7 @@ a kind of iterable you can only iterate over once.</description>
       <guid>https://kingye.me/study-python/docs/basic/grammar/function/decorator/</guid>
       <description>装饰器 #  函数参数能够接收别的函数，就是高阶函数
 decorator 就是一个返回函数的高阶函数
-import functools def log(text): def decorator(func): @functools.wraps(func) def wrapper(*argc, **kw): print(&amp;#39;%s%s()&amp;#39; % (text, func.__name)) return func(*args, **kw) return wrapper return decorator @log(&amp;#39;execute&amp;#39;) def now(): print(&amp;#39;2020-04-26&amp;#39;) </description>
+import functools  def log(text):  def decorator(func):  @functools.wraps(func)  def wrapper(*argc, **kw):  print(&amp;#39;%s%s()&amp;#39; % (text, func.__name))  return func(*args, **kw)  return wrapper  return decorator  @log(&amp;#39;execute&amp;#39;) def now():  print(&amp;#39;2020-04-26&amp;#39;) </description>
     </item>
     
     <item>

@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.87.0" />
+  <meta name="generator" content="Hugo 0.98.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Python 版本管理 #  pyenv #  pyenv 加速 #  在 .zshrc 添加
-function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
-pyenv 基础命令 #  # List all available versions pyenv install -l # 更新 pyenv update brew update &amp;&amp; brew upgrade pyenv pyenv update #  pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update pyenv update pyenv global 3.8.2 2.7.17 #  set by ~/.">
+function pyenvinstall {  wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/  pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
+pyenv 基础命令 #  # List all available versions pyenv install -l  # 更新 pyenv update  brew update &amp;&amp; brew upgrade pyenv pyenv update #  pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update  pyenv update pyenv global 3.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="版本管理" />
 <meta property="og:description" content="Python 版本管理 #  pyenv #  pyenv 加速 #  在 .zshrc 添加
-function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
-pyenv 基础命令 #  # List all available versions pyenv install -l # 更新 pyenv update brew update &amp;&amp; brew upgrade pyenv pyenv update #  pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update pyenv update pyenv global 3.8.2 2.7.17 #  set by ~/." />
+function pyenvinstall {  wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/  pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
+pyenv 基础命令 #  # List all available versions pyenv install -l  # 更新 pyenv update  brew update &amp;&amp; brew upgrade pyenv pyenv update #  pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update  pyenv update pyenv global 3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-python/docs/basic/other/version/manage/" /><meta property="article:section" content="docs" />
 
@@ -21,7 +21,7 @@ pyenv 基础命令 #  # List all available versions pyenv install -l # 更新 py
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.92e68802fae0647dbe56389db61af8bd5097cc95d410883b54754d6a846765c2.js" integrity="sha256-kuaIAvrgZH2&#43;Vjidthr4vVCXzJXUEIg7VHVNaoRnZcI="></script>
+<script defer src="/study-python/en.search.min.4a86e1eb8cf7cf2349f10c78f0a8b6e7c8a8a838bdbb31fab9f8f5d846cb2c69.js" integrity="sha256-Sobh64z3zyNJ8Qx48Ki258ioqDi9uzH6ufj12EbLLGk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -758,7 +758,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -827,48 +827,48 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#pyenv-%e5%8a%a0%e9%80%9f">#</a>
 </h3>
 <p>在 <code>.zshrc</code> 添加</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#66d9ef">function</span> pyenvinstall <span style="color:#f92672">{</span>
-    wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
-    pyenv install $@
-<span style="color:#f92672">}</span>
-</code></pre></div><p>执行 <code>zsh</code> 使配置生效，
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> pyenvinstall <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
+</span></span><span style="display:flex;"><span>    pyenv install $@
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>执行 <code>zsh</code> 使配置生效，
 之后即可这样安装：
 <code>pyenvinstall 3.8.2</code></p>
 <h3 id="pyenv-基础命令">
   pyenv 基础命令
   <a class="anchor" href="#pyenv-%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># List all available versions</span>
-pyenv install -l
-
-<span style="color:#75715e"># 更新</span>
-pyenv update
-
-brew update <span style="color:#f92672">&amp;&amp;</span> brew upgrade pyenv
-</code></pre></div><h4 id="pyenv-update">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># List all available versions</span>
+</span></span><span style="display:flex;"><span>pyenv install -l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 更新</span>
+</span></span><span style="display:flex;"><span>pyenv update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>brew update <span style="color:#f92672">&amp;&amp;</span> brew upgrade pyenv
+</span></span></code></pre></div><h4 id="pyenv-update">
   pyenv update
   <a class="anchor" href="#pyenv-update">#</a>
 </h4>
 <p><a href="https://github.com/pyenv/pyenv-update">pyenv/pyenv-update</a> <img src="https://img.shields.io/github/stars/pyenv/pyenv-update.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/pyenv/pyenv-update.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/pyenv/pyenv-update.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/pyenv/pyenv-update.svg" alt="Last commit" /></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/pyenv/pyenv-update.git <span style="color:#66d9ef">$(</span>pyenv root<span style="color:#66d9ef">)</span>/plugins/pyenv-update
-
-pyenv update
-</code></pre></div><h4 id="pyenv-global-382-2717">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/pyenv/pyenv-update.git <span style="color:#66d9ef">$(</span>pyenv root<span style="color:#66d9ef">)</span>/plugins/pyenv-update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pyenv update
+</span></span></code></pre></div><h4 id="pyenv-global-382-2717">
   pyenv global 3.8.2 2.7.17
   <a class="anchor" href="#pyenv-global-382-2717">#</a>
 </h4>
 <p>set by <code>~/.pyenv/version</code></p>
-<pre><code>3.8.2
+<pre tabindex="0"><code>3.8.2
 2.7.17
 </code></pre><h4 id="pyenv-shell-382-2717">
   pyenv shell 3.8.2 2.7.17
   <a class="anchor" href="#pyenv-shell-382-2717">#</a>
 </h4>
 <p>set by <code>PYENV_VERSION</code> environment variable</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ echo $PYENV_VERSION
-
-3.8.2:2.7.17
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ echo $PYENV_VERSION
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3.8.2:2.7.17
+</span></span></code></pre></div><hr>
 <h3 id="pyenv-优先级">
   pyenv 优先级
   <a class="anchor" href="#pyenv-%e4%bc%98%e5%85%88%e7%ba%a7">#</a>

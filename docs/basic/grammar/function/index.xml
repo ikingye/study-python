@@ -13,7 +13,7 @@
       <guid>https://kingye.me/study-python/docs/basic/grammar/function/decorator/</guid>
       <description>装饰器 #  函数参数能够接收别的函数，就是高阶函数
 decorator 就是一个返回函数的高阶函数
-import functools def log(text): def decorator(func): @functools.wraps(func) def wrapper(*argc, **kw): print(&amp;#39;%s%s()&amp;#39; % (text, func.__name)) return func(*args, **kw) return wrapper return decorator @log(&amp;#39;execute&amp;#39;) def now(): print(&amp;#39;2020-04-26&amp;#39;) </description>
+import functools  def log(text):  def decorator(func):  @functools.wraps(func)  def wrapper(*argc, **kw):  print(&amp;#39;%s%s()&amp;#39; % (text, func.__name))  return func(*args, **kw)  return wrapper  return decorator  @log(&amp;#39;execute&amp;#39;) def now():  print(&amp;#39;2020-04-26&amp;#39;) </description>
     </item>
     
   </channel>

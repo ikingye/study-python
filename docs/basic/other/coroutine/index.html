@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.87.0" />
+  <meta name="generator" content="Hugo 0.98.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Python 协程 #   执行效率高  子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。 不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了    因为协程是一个线程执行，那怎么利用多核 CPU 呢？ 最简单的方法是多进程 &#43; 协程，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。
@@ -12,7 +12,7 @@ gevent #  Python 通过 yield 提供了对协程的基本支持，但是不完�
 gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：
 当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。
 由于切换是在 IO 操作时自动完成，所以 gevent 需要修改 Python 自带的一些标准库，这一过程在启动时通过 monkey patch 完成：
-from gevent import monkey; monkey.patch_socket() import gevent def f(n): for i in range(n): print gevent.">
+from gevent import monkey; monkey.patch_socket() import gevent  def f(n):  for i in range(n):  print gevent.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="协程" />
 <meta property="og:description" content="Python 协程 #   执行效率高  子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。 不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了    因为协程是一个线程执行，那怎么利用多核 CPU 呢？ 最简单的方法是多进程 &#43; 协程，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。
 子程序就是协程的一种特例 #  Donald Knuth 的一句话总结协程的特点：
@@ -21,7 +21,7 @@ gevent #  Python 通过 yield 提供了对协程的基本支持，但是不完�
 gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：
 当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。
 由于切换是在 IO 操作时自动完成，所以 gevent 需要修改 Python 自带的一些标准库，这一过程在启动时通过 monkey patch 完成：
-from gevent import monkey; monkey.patch_socket() import gevent def f(n): for i in range(n): print gevent." />
+from gevent import monkey; monkey.patch_socket() import gevent  def f(n):  for i in range(n):  print gevent." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-python/docs/basic/other/coroutine/" /><meta property="article:section" content="docs" />
 
@@ -31,7 +31,7 @@ from gevent import monkey; monkey.patch_socket() import gevent def f(n): for i i
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.92e68802fae0647dbe56389db61af8bd5097cc95d410883b54754d6a846765c2.js" integrity="sha256-kuaIAvrgZH2&#43;Vjidthr4vVCXzJXUEIg7VHVNaoRnZcI="></script>
+<script defer src="/study-python/en.search.min.4a86e1eb8cf7cf2349f10c78f0a8b6e7c8a8a838bdbb31fab9f8f5d846cb2c69.js" integrity="sha256-Sobh64z3zyNJ8Qx48Ki258ioqDi9uzH6ufj12EbLLGk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -768,7 +768,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -833,28 +833,28 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>Donald Knuth 的一句话总结协程的特点：</p>
 <p>“子程序就是协程的一种特例。”</p>
-<a href="https://github.com/gevent/gevent">gevent</a> <h2 id="geventhttpsgithubcomgeventgevent-github-starshttpsimgshieldsiogithubstarsgeventgeventsvg">
-  <img src="https://img.shields.io/github/stars/gevent/gevent.svg" alt="Github stars" />
+<h2 id="geventhttpsgithubcomgeventgevent-github-starshttpsimgshieldsiogithubstarsgeventgeventsvg">
+  <a href="https://github.com/gevent/gevent">gevent</a> <img src="https://img.shields.io/github/stars/gevent/gevent.svg" alt="Github stars" />
   <a class="anchor" href="#geventhttpsgithubcomgeventgevent-github-starshttpsimgshieldsiogithubstarsgeventgeventsvg">#</a>
 </h2>
 <p>Python 通过 yield 提供了对协程的基本支持，但是不完全。而第三方的 gevent 为 Python 提供了比较完善的协程支持。</p>
 <p>gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：</p>
 <p>当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。</p>
 <p>由于切换是在 IO 操作时自动完成，所以 gevent 需要修改 Python 自带的一些标准库，这一过程在启动时通过 <code>monkey patch</code> 完成：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> gevent <span style="color:#f92672">import</span> monkey; monkey<span style="color:#f92672">.</span>patch_socket()
-<span style="color:#f92672">import</span> gevent
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(n):
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
-        print gevent<span style="color:#f92672">.</span>getcurrent(), i
-
-g1 <span style="color:#f92672">=</span> gevent<span style="color:#f92672">.</span>spawn(f, <span style="color:#ae81ff">5</span>)
-g2 <span style="color:#f92672">=</span> gevent<span style="color:#f92672">.</span>spawn(f, <span style="color:#ae81ff">5</span>)
-g3 <span style="color:#f92672">=</span> gevent<span style="color:#f92672">.</span>spawn(f, <span style="color:#ae81ff">5</span>)
-g1<span style="color:#f92672">.</span>join()
-g2<span style="color:#f92672">.</span>join()
-g3<span style="color:#f92672">.</span>join()
-</code></pre></div><p>参考：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> gevent <span style="color:#f92672">import</span> monkey; monkey<span style="color:#f92672">.</span>patch_socket()
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> gevent
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>        print gevent<span style="color:#f92672">.</span>getcurrent(), i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>g1 <span style="color:#f92672">=</span> gevent<span style="color:#f92672">.</span>spawn(f, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>g2 <span style="color:#f92672">=</span> gevent<span style="color:#f92672">.</span>spawn(f, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>g3 <span style="color:#f92672">=</span> gevent<span style="color:#f92672">.</span>spawn(f, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>g1<span style="color:#f92672">.</span>join()
+</span></span><span style="display:flex;"><span>g2<span style="color:#f92672">.</span>join()
+</span></span><span style="display:flex;"><span>g3<span style="color:#f92672">.</span>join()
+</span></span></code></pre></div><p>参考：</p>
 <ul>
 <li><a href="https://www.liaoxuefeng.com/wiki/897692888725344/923057403198272">Python 协程</a></li>
 </ul>

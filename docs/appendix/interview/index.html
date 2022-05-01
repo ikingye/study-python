@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.87.0" />
+  <meta name="generator" content="Hugo 0.98.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="面试题 #  参考：
@@ -27,7 +27,7 @@
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.92e68802fae0647dbe56389db61af8bd5097cc95d410883b54754d6a846765c2.js" integrity="sha256-kuaIAvrgZH2&#43;Vjidthr4vVCXzJXUEIg7VHVNaoRnZcI="></script>
+<script defer src="/study-python/en.search.min.4a86e1eb8cf7cf2349f10c78f0a8b6e7c8a8a838bdbb31fab9f8f5d846cb2c69.js" integrity="sha256-Sobh64z3zyNJ8Qx48Ki258ioqDi9uzH6ufj12EbLLGk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -764,7 +764,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -855,13 +855,13 @@ https://github.com/alex-shpak/hugo-book
 <p>tuple 的每个元素，指向永远不变。</p>
 <p>要创建一个内容也不变的 tuple 怎么做？</p>
 <p>必须保证 tuple 的每一个元素本身也不能变。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># “可变的” tuple：</span>
-&gt;&gt;&gt; t <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span><span style="color:#f92672">])</span>
-&gt;&gt;&gt; t<span style="color:#f92672">[</span>2<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;X&#39;</span>
-&gt;&gt;&gt; t<span style="color:#f92672">[</span>2<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Y&#39;</span>
-&gt;&gt;&gt; t
-<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;X&#39;</span>, <span style="color:#e6db74">&#39;Y&#39;</span><span style="color:#f92672">])</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># “可变的” tuple：</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; t <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span><span style="color:#f92672">])</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; t<span style="color:#f92672">[</span>2<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;X&#39;</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; t<span style="color:#f92672">[</span>2<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Y&#39;</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; t
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;X&#39;</span>, <span style="color:#e6db74">&#39;Y&#39;</span><span style="color:#f92672">])</span>
+</span></span></code></pre></div><hr>
 <h4 id="迭代器-vs-生成器">
   迭代器 vs 生成器
   <a class="anchor" href="#%e8%bf%ad%e4%bb%a3%e5%99%a8-vs-%e7%94%9f%e6%88%90%e5%99%a8">#</a>
@@ -871,14 +871,14 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e8%bf%ad%e4%bb%a3%e5%99%a8">#</a>
 </h5>
 <p>把一个类作为一个<strong>迭代器</strong>使用需要在类中实现两个方法 <code>__iter__()</code> 与 <code>__next__()</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;&gt;&gt; list<span style="color:#f92672">=[</span>1,2,3,4<span style="color:#f92672">]</span>
-&gt;&gt;&gt; it <span style="color:#f92672">=</span> iter<span style="color:#f92672">(</span>list<span style="color:#f92672">)</span>    <span style="color:#75715e"># 创建迭代器对象</span>
-&gt;&gt;&gt; print <span style="color:#f92672">(</span>next<span style="color:#f92672">(</span>it<span style="color:#f92672">))</span>   <span style="color:#75715e"># 输出迭代器的下一个元素</span>
-<span style="color:#ae81ff">1</span>
-&gt;&gt;&gt; print <span style="color:#f92672">(</span>next<span style="color:#f92672">(</span>it<span style="color:#f92672">))</span>
-<span style="color:#ae81ff">2</span>
-&gt;&gt;&gt;
-</code></pre></div><h5 id="生成器">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&gt;&gt;&gt; list<span style="color:#f92672">=[</span>1,2,3,4<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; it <span style="color:#f92672">=</span> iter<span style="color:#f92672">(</span>list<span style="color:#f92672">)</span>    <span style="color:#75715e"># 创建迭代器对象</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; print <span style="color:#f92672">(</span>next<span style="color:#f92672">(</span>it<span style="color:#f92672">))</span>   <span style="color:#75715e"># 输出迭代器的下一个元素</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; print <span style="color:#f92672">(</span>next<span style="color:#f92672">(</span>it<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt;
+</span></span></code></pre></div><h5 id="生成器">
   生成器
   <a class="anchor" href="#%e7%94%9f%e6%88%90%e5%99%a8">#</a>
 </h5>
@@ -886,17 +886,17 @@ https://github.com/alex-shpak/hugo-book
 <p>生成器是一个返回迭代器的函数。</p>
 <p>python 中生成器是迭代器的一种，使用 yield 返回值函数，每次调用 yield 会暂停，而可以使用 next () 函数和 send () 函数恢复生成器。</p>
 <p>要创建一个 generator，有很多种方法，第一种方法很简单，只有把一个列表生成式的 [] 中括号改为（）小括号，就创建一个 generator</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#列表生成式</span>
-lis <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>x*x <span style="color:#66d9ef">for</span> x in range<span style="color:#f92672">(</span>10<span style="color:#f92672">)]</span>
-print<span style="color:#f92672">(</span>lis<span style="color:#f92672">)</span>
-<span style="color:#75715e">#生成器</span>
-generator_ex <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>x*x <span style="color:#66d9ef">for</span> x in range<span style="color:#f92672">(</span>10<span style="color:#f92672">))</span>
-print<span style="color:#f92672">(</span>generator_ex<span style="color:#f92672">)</span>
-
-结果：
-<span style="color:#f92672">[</span>0, 1, 4, 9, 16, 25, 36, 49, 64, 81<span style="color:#f92672">]</span>
-&lt;generator object &lt;genexpr&gt; at 0x000002A4CBF9EBA0&gt;
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#列表生成式</span>
+</span></span><span style="display:flex;"><span>lis <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>x*x <span style="color:#66d9ef">for</span> x in range<span style="color:#f92672">(</span>10<span style="color:#f92672">)]</span>
+</span></span><span style="display:flex;"><span>print<span style="color:#f92672">(</span>lis<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#生成器</span>
+</span></span><span style="display:flex;"><span>generator_ex <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>x*x <span style="color:#66d9ef">for</span> x in range<span style="color:#f92672">(</span>10<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>print<span style="color:#f92672">(</span>generator_ex<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>结果：
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>0, 1, 4, 9, 16, 25, 36, 49, 64, 81<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>&lt;generator object &lt;genexpr&gt; at 0x000002A4CBF9EBA0&gt;
+</span></span></code></pre></div><hr>
 <h2 id="进阶题">
   进阶题
   <a class="anchor" href="#%e8%bf%9b%e9%98%b6%e9%a2%98">#</a>
@@ -924,16 +924,16 @@ print<span style="color:#f92672">(</span>generator_ex<span style="color:#f92672"
   ujson
   <a class="anchor" href="#ujson">#</a>
 </h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> json
-<span style="color:#f92672">import</span> ujson
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">monkey_patch_json</span>():
-    json<span style="color:#f92672">.</span>__name__ <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ujson&#39;</span>
-    json<span style="color:#f92672">.</span>dumps <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>dumps
-    json<span style="color:#f92672">.</span>loads <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads
-
-monkey_patch_json()
-</code></pre></div><p>参考：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> ujson
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">monkey_patch_json</span>():
+</span></span><span style="display:flex;"><span>    json<span style="color:#f92672">.</span>__name__ <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ujson&#39;</span>
+</span></span><span style="display:flex;"><span>    json<span style="color:#f92672">.</span>dumps <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>dumps
+</span></span><span style="display:flex;"><span>    json<span style="color:#f92672">.</span>loads <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>monkey_patch_json()
+</span></span></code></pre></div><p>参考：</p>
 <ul>
 <li><a href="https://www.jianshu.com/p/f1c1eb495f47">Python 猴子补丁</a></li>
 <li><a href="https://cloud.tencent.com/developer/article/1441252">python 面试题精讲 ——monkey patch（猴子补丁）</a></li>

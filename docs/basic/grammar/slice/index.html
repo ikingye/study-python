@@ -2,13 +2,13 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.87.0" />
+  <meta name="generator" content="Hugo 0.98.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="切片 #  [start:end:step] 遍历 #  enumerate #  a = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;] # index &amp; value for i in xrange(len(a)): print i, a[i] # iterate with index for i, el in enumerate(a): print i, el # i 从 1 开始 for i, el in enumerate(a, 1): print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+<meta name="description" content="切片 #  [start:end:step] 遍历 #  enumerate #  a = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;]  # index &amp; value for i in xrange(len(a)):  print i, a[i]  # iterate with index for i, el in enumerate(a):  print i, el  # i 从 1 开始 for i, el in enumerate(a, 1):  print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
 字符串反转 #  letter[::-1] 为什么 s[:-1:-1] 是空 #  只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="切片" />
-<meta property="og:description" content="切片 #  [start:end:step] 遍历 #  enumerate #  a = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;] # index &amp; value for i in xrange(len(a)): print i, a[i] # iterate with index for i, el in enumerate(a): print i, el # i 从 1 开始 for i, el in enumerate(a, 1): print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+<meta property="og:description" content="切片 #  [start:end:step] 遍历 #  enumerate #  a = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;]  # index &amp; value for i in xrange(len(a)):  print i, a[i]  # iterate with index for i, el in enumerate(a):  print i, el  # i 从 1 开始 for i, el in enumerate(a, 1):  print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
 字符串反转 #  letter[::-1] 为什么 s[:-1:-1] 是空 #  只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-python/docs/basic/grammar/slice/" /><meta property="article:section" content="docs" />
@@ -19,7 +19,7 @@
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.92e68802fae0647dbe56389db61af8bd5097cc95d410883b54754d6a846765c2.js" integrity="sha256-kuaIAvrgZH2&#43;Vjidthr4vVCXzJXUEIg7VHVNaoRnZcI="></script>
+<script defer src="/study-python/en.search.min.4a86e1eb8cf7cf2349f10c78f0a8b6e7c8a8a838bdbb31fab9f8f5d846cb2c69.js" integrity="sha256-Sobh64z3zyNJ8Qx48Ki258ioqDi9uzH6ufj12EbLLGk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -756,7 +756,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -815,8 +815,8 @@ https://github.com/alex-shpak/hugo-book
   切片
   <a class="anchor" href="#%e5%88%87%e7%89%87">#</a>
 </h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>start:end:step<span style="color:#f92672">]</span>
-</code></pre></div><h2 id="遍历">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>start:end:step<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h2 id="遍历">
   遍历
   <a class="anchor" href="#%e9%81%8d%e5%8e%86">#</a>
 </h2>
@@ -824,20 +824,20 @@ https://github.com/alex-shpak/hugo-book
   enumerate
   <a class="anchor" href="#enumerate">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>]
-
-<span style="color:#75715e"># index &amp; value</span>
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> xrange(len(a)):
-    print i, a[i]
-
-<span style="color:#75715e"># iterate with index</span>
-<span style="color:#66d9ef">for</span> i, el <span style="color:#f92672">in</span> enumerate(a):
-    print i, el
-
-<span style="color:#75715e"># i 从 1 开始</span>
-<span style="color:#66d9ef">for</span> i, el <span style="color:#f92672">in</span> enumerate(a, <span style="color:#ae81ff">1</span>):
-    print i, el
-</code></pre></div><h2 id="step-为负数">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># index &amp; value</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> xrange(len(a)):
+</span></span><span style="display:flex;"><span>    print i, a[i]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># iterate with index</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, el <span style="color:#f92672">in</span> enumerate(a):
+</span></span><span style="display:flex;"><span>    print i, el
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># i 从 1 开始</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, el <span style="color:#f92672">in</span> enumerate(a, <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>    print i, el
+</span></span></code></pre></div><h2 id="step-为负数">
   step 为负数
   <a class="anchor" href="#step-%e4%b8%ba%e8%b4%9f%e6%95%b0">#</a>
 </h2>
@@ -846,8 +846,8 @@ https://github.com/alex-shpak/hugo-book
   字符串反转
   <a class="anchor" href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8f%8d%e8%bd%ac">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">letter[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</code></pre></div><h3 id="为什么-s-1-1-是空">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>letter[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span></code></pre></div><h3 id="为什么-s-1-1-是空">
   为什么 s[:-1:-1] 是空
   <a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88-s-1-1-%e6%98%af%e7%a9%ba">#</a>
 </h3>
@@ -857,8 +857,8 @@ https://github.com/alex-shpak/hugo-book
 <li>倒数第二个作为 start，end 默认，step 是 -1</li>
 <li>也就是：<code>s[-2::-1]</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s[i:j:k]
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s[i:j:k]
+</span></span></code></pre></div><ul>
 <li>
 <p>If i or j is negative, the index is relative to the end of sequence s:</p>
 <ul>
@@ -949,13 +949,13 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;&gt;&gt; lists <span style="color:#f92672">=</span> <span style="color:#f92672">[[]]</span> * <span style="color:#ae81ff">3</span>
-&gt;&gt;&gt; lists
-<span style="color:#f92672">[[]</span>, <span style="color:#f92672">[]</span>, <span style="color:#f92672">[]]</span>
-&gt;&gt;&gt; lists<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.append<span style="color:#f92672">(</span>3<span style="color:#f92672">)</span>
-&gt;&gt;&gt; lists
-<span style="color:#f92672">[[</span>3<span style="color:#f92672">]</span>, <span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>, <span style="color:#f92672">[</span>3<span style="color:#f92672">]]</span>
-</code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&gt;&gt;&gt; lists <span style="color:#f92672">=</span> <span style="color:#f92672">[[]]</span> * <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; lists
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[[]</span>, <span style="color:#f92672">[]</span>, <span style="color:#f92672">[]]</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; lists<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.append<span style="color:#f92672">(</span>3<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; lists
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[[</span>3<span style="color:#f92672">]</span>, <span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>, <span style="color:#f92672">[</span>3<span style="color:#f92672">]]</span>
+</span></span></code></pre></div></article>
  
       
 

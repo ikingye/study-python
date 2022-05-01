@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.87.0" />
+  <meta name="generator" content="Hugo 0.98.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="内建函数 #  all #  判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
@@ -13,7 +13,7 @@ python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate
 enumerate(sequence, [start=0])
 eval #  执行一个字符串表达式，并返回表达式的值
 eval(&#39;3 * x&#39;) eval(&#39;pow(2,2)&#39;) isinstance #  判断一个对象是否是一个已知的类型
-isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])">
+isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类型，不考虑继承关系。  isinstance() 会认为子类是一种父类类型，考虑继承关系。  如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="内建函数" />
 <meta property="og:description" content="内建函数 #  all #  判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
 any #  判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
@@ -23,7 +23,7 @@ python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate
 enumerate(sequence, [start=0])
 eval #  执行一个字符串表达式，并返回表达式的值
 eval(&#39;3 * x&#39;) eval(&#39;pow(2,2)&#39;) isinstance #  判断一个对象是否是一个已知的类型
-isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])" />
+isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类型，不考虑继承关系。  isinstance() 会认为子类是一种父类类型，考虑继承关系。  如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-python/docs/basic/grammar/builtin/" /><meta property="article:section" content="docs" />
 
@@ -33,7 +33,7 @@ isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.92e68802fae0647dbe56389db61af8bd5097cc95d410883b54754d6a846765c2.js" integrity="sha256-kuaIAvrgZH2&#43;Vjidthr4vVCXzJXUEIg7VHVNaoRnZcI="></script>
+<script defer src="/study-python/en.search.min.4a86e1eb8cf7cf2349f10c78f0a8b6e7c8a8a838bdbb31fab9f8f5d846cb2c69.js" integrity="sha256-Sobh64z3zyNJ8Qx48Ki258ioqDi9uzH6ufj12EbLLGk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -770,7 +770,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -857,21 +857,21 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#eval">#</a>
 </h2>
 <p>执行一个字符串表达式，并返回表达式的值</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">eval(<span style="color:#e6db74">&#39;3 * x&#39;</span>)
-eval(<span style="color:#e6db74">&#39;pow(2,2)&#39;</span>)
-</code></pre></div><h2 id="isinstance">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>eval(<span style="color:#e6db74">&#39;3 * x&#39;</span>)
+</span></span><span style="display:flex;"><span>eval(<span style="color:#e6db74">&#39;pow(2,2)&#39;</span>)
+</span></span></code></pre></div><h2 id="isinstance">
   isinstance
   <a class="anchor" href="#isinstance">#</a>
 </h2>
 <p>判断一个对象是否是一个已知的类型</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">isinstance<span style="color:#f92672">()</span> 与 type<span style="color:#f92672">()</span> 区别：
-
-type<span style="color:#f92672">()</span> 不会认为子类是一种父类类型，不考虑继承关系。
-
-isinstance<span style="color:#f92672">()</span> 会认为子类是一种父类类型，考虑继承关系。
-
-如果要判断两个类型是否相同推荐使用 isinstance<span style="color:#f92672">()</span>。
-</code></pre></div><h2 id="pow">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>isinstance<span style="color:#f92672">()</span> 与 type<span style="color:#f92672">()</span> 区别：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>type<span style="color:#f92672">()</span> 不会认为子类是一种父类类型，不考虑继承关系。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>isinstance<span style="color:#f92672">()</span> 会认为子类是一种父类类型，考虑继承关系。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>如果要判断两个类型是否相同推荐使用 isinstance<span style="color:#f92672">()</span>。
+</span></span></code></pre></div><h2 id="pow">
   pow
   <a class="anchor" href="#pow">#</a>
 </h2>
@@ -889,8 +889,7 @@ isinstance<span style="color:#f92672">()</span> 会认为子类是一种父类�
 <p>以一个字符（长度为 1 的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值，</p>
 <p>如果所给的 Unicode 字符超出了你的 Python 定义范围，则会引发一个 TypeError 的异常。</p>
 <p><code>ord</code>() 函数是 <code>chr</code>() 函数（对于 8 位的 ASCII 字符串）或 <code>unichr</code>() 函数（对于 Unicode 对象）的配对函数</p>
-<pre><code>
-</code></pre></article>
+<pre tabindex="0"><code></code></pre></article>
  
       
 
