@@ -11,15 +11,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/builtin/</guid>
-      <description>内建函数 #  all #  判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
-any #  判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
+      <description>内建函数 # all # 判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
+any # 判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
 元素除了是 0、空、FALSE 外都算 TRUE。
-basestring #  isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
-python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate #  将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
+basestring # isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
+python3 已经没有 basestring 类型，用 str 代替了 basestring enumerate # 将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
 enumerate(sequence, [start=0])
-eval #  执行一个字符串表达式，并返回表达式的值
-eval(&amp;#39;3 * x&amp;#39;) eval(&amp;#39;pow(2,2)&amp;#39;) isinstance #  判断一个对象是否是一个已知的类型
-isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类型，不考虑继承关系。  isinstance() 会认为子类是一种父类类型，考虑继承关系。  如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])</description>
+eval # 执行一个字符串表达式，并返回表达式的值
+eval(&amp;#39;3 * x&amp;#39;) eval(&amp;#39;pow(2,2)&amp;#39;) isinstance # 判断一个对象是否是一个已知的类型
+isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow # pow(x, y[, z])
+等效于 pow (x, y) % z</description>
     </item>
     
     <item>
@@ -28,8 +29,8 @@ isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/slice/</guid>
-      <description>切片 #  [start:end:step] 遍历 #  enumerate #  a = [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;d&amp;#34;]  # index &amp;amp; value for i in xrange(len(a)):  print i, a[i]  # iterate with index for i, el in enumerate(a):  print i, el  # i 从 1 开始 for i, el in enumerate(a, 1):  print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
-字符串反转 #  letter[::-1] 为什么 s[:-1:-1] 是空 #  只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：</description>
+      <description>切片 # [start:end:step] 遍历 # enumerate # a = [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;d&amp;#34;] # index &amp;amp; value for i in xrange(len(a)): print i, a[i] # iterate with index for i, el in enumerate(a): print i, el # i 从 1 开始 for i, el in enumerate(a, 1): print i, el step 为负数 # 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+字符串反转 # letter[::-1] 为什么 s[:-1:-1] 是空 # 只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：</description>
     </item>
     
     <item>
@@ -38,7 +39,8 @@ isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/dict/</guid>
-      <description>字典 #  遍历 #  for key in d:  # For Python 3.x: for key, value in d.items():  # For Python 2.x: for key, value in d.iteritems(): items #  The operation items() will work for both 2 and 3, but in 2 it will return a list of the dictionary&amp;rsquo;s (key, value) pairs, which will not reflect changes to the dict that happen after the items() call.</description>
+      <description>字典 # 遍历 # for key in d: # For Python 3.x: for key, value in d.items(): # For Python 2.x: for key, value in d.iteritems(): items # The operation items() will work for both 2 and 3, but in 2 it will return a list of the dictionary&amp;rsquo;s (key, value) pairs, which will not reflect changes to the dict that happen after the items() call.
+If you want the 2.</description>
     </item>
     
     <item>
@@ -47,10 +49,11 @@ isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/generator/</guid>
-      <description>生成器 #  iterable 可迭代的 #  Everything you can use &amp;ldquo;for&amp;hellip; in&amp;hellip;&amp;rdquo; on is an iterable; lists, strings, files&amp;hellip;
+      <description>生成器 # iterable 可迭代的 # Everything you can use &amp;ldquo;for&amp;hellip; in&amp;hellip;&amp;rdquo; on is an iterable; lists, strings, files&amp;hellip;
 iterable 包括：
- list tuple string dictionary file enumerate object  iterator 迭代器 #   iter() 函数用来生成迭代器。 iter(object[, sentinel])  object：支持迭代的集合对象 sentinel  如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object      迭代器只能迭代一次
-a kind of iterable you can only iterate over once.</description>
+list tuple string dictionary file enumerate object iterator 迭代器 # iter() 函数用来生成迭代器。 iter(object[, sentinel]) object：支持迭代的集合对象 sentinel 如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object 迭代器只能迭代一次
+a kind of iterable you can only iterate over once.
+generator # Generators are iterators, a kind of iterable you can only iterate over once.</description>
     </item>
     
     <item>
@@ -59,8 +62,8 @@ a kind of iterable you can only iterate over once.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/class/</guid>
-      <description>类 #  问答 #  class 后面加不加 object 的区别 #  python 3 中已经默认就帮你加载了 object 了（即便你没有写上 object）
-   python 2.x python 2.x python 3.x python 3.x     不含 object 含 object 不含 object 含 object   __doc__ __doc__ __doc__ __doc__   __module__ __module__ __module__ __module__    __class__ __class__ __class__    __delattr__ __delattr__ __delattr__    __dict__ __dict__ __dict__    __format__ __format__ __format__    __getattribute__ __getattribute__ __getattribute__    __hash__ __hash__ __hash__    __init__ __init__ __init__    __new__ __new__ __new__    __reduce__ __reduce__ __reduce__    __reduce_ex__ __reduce_ex__ __reduce_ex__    __repr__ __repr__ __repr__    __setattr__ __setattr__ __setattr__    __sizeof__ __sizeof__ __sizeof__    __str__ __str__ __str__    __subclasshook__ __subclasshook__ __subclasshook__    __weakref__ __weakref__ __weakref__     __dir__ __dir__     __eq__ __eq__     __ge__ __ge__     __gt__ __gt__     __le__ __le__     __lt__ __lt__     __ne__ __ne__     __init_subclass__ __init_subclass__    init_subclass #  类方法 __init_subclass__ 从 3.</description>
+      <description>类 # 问答 # class 后面加不加 object 的区别 # python 3 中已经默认就帮你加载了 object 了（即便你没有写上 object）
+python 2.x python 2.x python 3.x python 3.x 不含 object 含 object 不含 object 含 object __doc__ __doc__ __doc__ __doc__ __module__ __module__ __module__ __module__ __class__ __class__ __class__ __delattr__ __delattr__ __delattr__ __dict__ __dict__ __dict__ __format__ __format__ __format__ __getattribute__ __getattribute__ __getattribute__ __hash__ __hash__ __hash__ __init__ __init__ __init__ __new__ __new__ __new__ __reduce__ __reduce__ __reduce__ __reduce_ex__ __reduce_ex__ __reduce_ex__ __repr__ __repr__ __repr__ __setattr__ __setattr__ __setattr__ __sizeof__ __sizeof__ __sizeof__ __str__ __str__ __str__ __subclasshook__ __subclasshook__ __subclasshook__ __weakref__ __weakref__ __weakref__ __dir__ __dir__ __eq__ __eq__ __ge__ __ge__ __gt__ __gt__ __le__ __le__ __lt__ __lt__ __ne__ __ne__ __init_subclass__ __init_subclass__ init_subclass # 类方法 __init_subclass__ 从 3.</description>
     </item>
     
   </channel>

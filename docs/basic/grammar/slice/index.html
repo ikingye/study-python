@@ -2,14 +2,14 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.98.0" />
+  <meta name="generator" content="Hugo 0.104.2" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="切片 #  [start:end:step] 遍历 #  enumerate #  a = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;]  # index &amp; value for i in xrange(len(a)):  print i, a[i]  # iterate with index for i, el in enumerate(a):  print i, el  # i 从 1 开始 for i, el in enumerate(a, 1):  print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
-字符串反转 #  letter[::-1] 为什么 s[:-1:-1] 是空 #  只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：">
+<meta name="description" content="切片 # [start:end:step] 遍历 # enumerate # a = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;] # index &amp; value for i in xrange(len(a)): print i, a[i] # iterate with index for i, el in enumerate(a): print i, el # i 从 1 开始 for i, el in enumerate(a, 1): print i, el step 为负数 # 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+字符串反转 # letter[::-1] 为什么 s[:-1:-1] 是空 # 只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="切片" />
-<meta property="og:description" content="切片 #  [start:end:step] 遍历 #  enumerate #  a = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;]  # index &amp; value for i in xrange(len(a)):  print i, a[i]  # iterate with index for i, el in enumerate(a):  print i, el  # i 从 1 开始 for i, el in enumerate(a, 1):  print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
-字符串反转 #  letter[::-1] 为什么 s[:-1:-1] 是空 #  只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：" />
+<meta property="og:description" content="切片 # [start:end:step] 遍历 # enumerate # a = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;] # index &amp; value for i in xrange(len(a)): print i, a[i] # iterate with index for i, el in enumerate(a): print i, el # i 从 1 开始 for i, el in enumerate(a, 1): print i, el step 为负数 # 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+字符串反转 # letter[::-1] 为什么 s[:-1:-1] 是空 # 只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-python/docs/basic/grammar/slice/" /><meta property="article:section" content="docs" />
 
@@ -19,7 +19,7 @@
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.4a86e1eb8cf7cf2349f10c78f0a8b6e7c8a8a838bdbb31fab9f8f5d846cb2c69.js" integrity="sha256-Sobh64z3zyNJ8Qx48Ki258ioqDi9uzH6ufj12EbLLGk="></script>
+<script defer src="/study-python/en.search.min.9174d99ccffd51fe0cc5e3418ee4d6e0b3aac2a0aa859e79a305a99ca5f3391b.js" integrity="sha256-kXTZnM/9Uf4MxeNBjuTW4LOqwqCqhZ55owWpnKXzORs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book

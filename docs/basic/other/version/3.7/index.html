@@ -2,15 +2,15 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.98.0" />
+  <meta name="generator" content="Hugo 0.104.2" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Python 3.7 #  安装 #  依赖 #  sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel #  3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
+<meta name="description" content="Python 3.7 # 安装 # 依赖 # sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel # 3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
 sudo yum install libffi-devel -y make install 若在安装前移除了 /usr/bin 下 python 的文件链接依赖，此时 yum 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm 安装完成后重新进行 make install，结束后再次配置相关文件的软连接即可。
 解读： python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。 由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &ldquo;ModuleNotFoundError: No module named &lsquo;_ctypes&rsquo;&rdquo; 的错误。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="3.7" />
-<meta property="og:description" content="Python 3.7 #  安装 #  依赖 #  sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel #  3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
+<meta property="og:description" content="Python 3.7 # 安装 # 依赖 # sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel # 3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
 sudo yum install libffi-devel -y make install 若在安装前移除了 /usr/bin 下 python 的文件链接依赖，此时 yum 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm 安装完成后重新进行 make install，结束后再次配置相关文件的软连接即可。
 解读： python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。 由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &ldquo;ModuleNotFoundError: No module named &lsquo;_ctypes&rsquo;&rdquo; 的错误。" />
@@ -23,7 +23,7 @@ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.4a86e1eb8cf7cf2349f10c78f0a8b6e7c8a8a838bdbb31fab9f8f5d846cb2c69.js" integrity="sha256-Sobh64z3zyNJ8Qx48Ki258ioqDi9uzH6ufj12EbLLGk="></script>
+<script defer src="/study-python/en.search.min.9174d99ccffd51fe0cc5e3418ee4d6e0b3aac2a0aa859e79a305a99ca5f3391b.js" integrity="sha256-kXTZnM/9Uf4MxeNBjuTW4LOqwqCqhZ55owWpnKXzORs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book

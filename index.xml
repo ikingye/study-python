@@ -11,7 +11,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/other/package/manage/</guid>
-      <description>Python 包管理 #  pip #  加速 #  修改 ~/.pip/pip.conf
+      <description> Python 包管理 # pip # 加速 # 修改 ~/.pip/pip.conf
 [global] index-url = https://pypi.tuna.tsinghua.edu.cn/simple [install] trusted-host = pypi.tuna.tsinghua.edu.cn </description>
     </item>
     
@@ -21,9 +21,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/other/version/manage/</guid>
-      <description>Python 版本管理 #  pyenv #  pyenv 加速 #  在 .zshrc 添加
-function pyenvinstall {  wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/  pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
-pyenv 基础命令 #  # List all available versions pyenv install -l  # 更新 pyenv update  brew update &amp;amp;&amp;amp; brew upgrade pyenv pyenv update #  pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update  pyenv update pyenv global 3.</description>
+      <description>Python 版本管理 # pyenv # pyenv 加速 # 在 .zshrc 添加
+function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2
+pyenv 基础命令 # # List all available versions pyenv install -l # 更新 pyenv update brew update &amp;amp;&amp;amp; brew upgrade pyenv pyenv update # pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update pyenv update pyenv global 3.8.2 2.7.17 # set by ~/.pyenv/version</description>
     </item>
     
     <item>
@@ -32,10 +32,10 @@ pyenv 基础命令 #  # List all available versions pyenv install -l  # 更新 p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/appendix/tutorial/</guid>
-      <description>教程 #  基础 #  satwikkansal/wtfpython #  leisurelicht/wtfpython-cn 一些有趣且鲜为人知的 Python 特性
-gto76/python-cheatsheet #  Comprehensive Python Cheatsheet
- (book)yidao620c/python3-cookbook #  《Python Cookbook》 3rd Edition 翻译
-  进阶 #  jakevdp/PythonDataScienceHandbook #  Python Data Science Handbook: full text in Jupyter Notebooks</description>
+      <description>教程 # 基础 # satwikkansal/wtfpython # leisurelicht/wtfpython-cn 一些有趣且鲜为人知的 Python 特性
+gto76/python-cheatsheet # Comprehensive Python Cheatsheet
+(book)yidao620c/python3-cookbook # 《Python Cookbook》 3rd Edition 翻译
+进阶 # jakevdp/PythonDataScienceHandbook # Python Data Science Handbook: full text in Jupyter Notebooks</description>
     </item>
     
     <item>
@@ -44,12 +44,12 @@ gto76/python-cheatsheet #  Comprehensive Python Cheatsheet
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/appendix/interview/</guid>
-      <description>面试题 #  参考：
- 如何面试 Python 后端工程师？  基础题 #  数据结构 #  元组是不是真的不可变？ #  tuple 的每个元素，指向永远不变。
+      <description>面试题 # 参考：
+如何面试 Python 后端工程师？ 基础题 # 数据结构 # 元组是不是真的不可变？ # tuple 的每个元素，指向永远不变。
 要创建一个内容也不变的 tuple 怎么做？
 必须保证 tuple 的每一个元素本身也不能变。
-# “可变的” tuple： &amp;gt;&amp;gt;&amp;gt; t = (&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, [&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;]) &amp;gt;&amp;gt;&amp;gt; t[2][0] = &amp;#39;X&amp;#39; &amp;gt;&amp;gt;&amp;gt; t[2][1] = &amp;#39;Y&amp;#39; &amp;gt;&amp;gt;&amp;gt; t (&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, [&amp;#39;X&amp;#39;, &amp;#39;Y&amp;#39;])  迭代器 vs 生成器 #  迭代器 #  把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__()
-&amp;gt;&amp;gt;&amp;gt; list=[1,2,3,4] &amp;gt;&amp;gt;&amp;gt; it = iter(list) # 创建迭代器对象 &amp;gt;&amp;gt;&amp;gt; print (next(it)) # 输出迭代器的下一个元素 1 &amp;gt;&amp;gt;&amp;gt; print (next(it)) 2 &amp;gt;&amp;gt;&amp;gt; 生成器 #  在 Python 中，使用了 yield 的函数被称为生成器（generator）。</description>
+# “可变的” tuple： &amp;gt;&amp;gt;&amp;gt; t = (&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, [&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;]) &amp;gt;&amp;gt;&amp;gt; t[2][0] = &amp;#39;X&amp;#39; &amp;gt;&amp;gt;&amp;gt; t[2][1] = &amp;#39;Y&amp;#39; &amp;gt;&amp;gt;&amp;gt; t (&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, [&amp;#39;X&amp;#39;, &amp;#39;Y&amp;#39;]) 迭代器 vs 生成器 # 迭代器 # 把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__()
+&amp;gt;&amp;gt;&amp;gt; list=[1,2,3,4] &amp;gt;&amp;gt;&amp;gt; it = iter(list) # 创建迭代器对象 &amp;gt;&amp;gt;&amp;gt; print (next(it)) # 输出迭代器的下一个元素 1 &amp;gt;&amp;gt;&amp;gt; print (next(it)) 2 &amp;gt;&amp;gt;&amp;gt; 生成器 # 在 Python 中，使用了 yield 的函数被称为生成器（generator）。</description>
     </item>
     
     <item>
@@ -58,15 +58,16 @@ gto76/python-cheatsheet #  Comprehensive Python Cheatsheet
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/builtin/</guid>
-      <description>内建函数 #  all #  判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
-any #  判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
+      <description>内建函数 # all # 判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
+any # 判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
 元素除了是 0、空、FALSE 外都算 TRUE。
-basestring #  isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
-python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate #  将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
+basestring # isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
+python3 已经没有 basestring 类型，用 str 代替了 basestring enumerate # 将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
 enumerate(sequence, [start=0])
-eval #  执行一个字符串表达式，并返回表达式的值
-eval(&amp;#39;3 * x&amp;#39;) eval(&amp;#39;pow(2,2)&amp;#39;) isinstance #  判断一个对象是否是一个已知的类型
-isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类型，不考虑继承关系。  isinstance() 会认为子类是一种父类类型，考虑继承关系。  如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])</description>
+eval # 执行一个字符串表达式，并返回表达式的值
+eval(&amp;#39;3 * x&amp;#39;) eval(&amp;#39;pow(2,2)&amp;#39;) isinstance # 判断一个对象是否是一个已知的类型
+isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow # pow(x, y[, z])
+等效于 pow (x, y) % z</description>
     </item>
     
     <item>
@@ -75,8 +76,8 @@ isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/slice/</guid>
-      <description>切片 #  [start:end:step] 遍历 #  enumerate #  a = [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;d&amp;#34;]  # index &amp;amp; value for i in xrange(len(a)):  print i, a[i]  # iterate with index for i, el in enumerate(a):  print i, el  # i 从 1 开始 for i, el in enumerate(a, 1):  print i, el step 为负数 #  最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
-字符串反转 #  letter[::-1] 为什么 s[:-1:-1] 是空 #  只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：</description>
+      <description>切片 # [start:end:step] 遍历 # enumerate # a = [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;, &amp;#34;d&amp;#34;] # index &amp;amp; value for i in xrange(len(a)): print i, a[i] # iterate with index for i, el in enumerate(a): print i, el # i 从 1 开始 for i, el in enumerate(a, 1): print i, el step 为负数 # 最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5
+字符串反转 # letter[::-1] 为什么 s[:-1:-1] 是空 # 只需要记住，s[start:end:step] 就行，包括 start，不包括 end， 所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：</description>
     </item>
     
     <item>
@@ -85,14 +86,14 @@ isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/other/coroutine/</guid>
-      <description>Python 协程 #   执行效率高  子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。 不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了    因为协程是一个线程执行，那怎么利用多核 CPU 呢？ 最简单的方法是多进程 + 协程，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。
-子程序就是协程的一种特例 #  Donald Knuth 的一句话总结协程的特点：
+      <description>Python 协程 # 执行效率高 子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。 不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了 因为协程是一个线程执行，那怎么利用多核 CPU 呢？ 最简单的方法是多进程 + 协程，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。
+子程序就是协程的一种特例 # Donald Knuth 的一句话总结协程的特点：
 “子程序就是协程的一种特例。”
-gevent #  Python 通过 yield 提供了对协程的基本支持，但是不完全。而第三方的 gevent 为 Python 提供了比较完善的协程支持。
+gevent # Python 通过 yield 提供了对协程的基本支持，但是不完全。而第三方的 gevent 为 Python 提供了比较完善的协程支持。
 gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：
 当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。
 由于切换是在 IO 操作时自动完成，所以 gevent 需要修改 Python 自带的一些标准库，这一过程在启动时通过 monkey patch 完成：
-from gevent import monkey; monkey.patch_socket() import gevent  def f(n):  for i in range(n):  print gevent.</description>
+from gevent import monkey; monkey.patch_socket() import gevent def f(n): for i in range(n): print gevent.</description>
     </item>
     
     <item>
@@ -101,7 +102,8 @@ from gevent import monkey; monkey.patch_socket() import gevent  def f(n):  for i
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/dict/</guid>
-      <description>字典 #  遍历 #  for key in d:  # For Python 3.x: for key, value in d.items():  # For Python 2.x: for key, value in d.iteritems(): items #  The operation items() will work for both 2 and 3, but in 2 it will return a list of the dictionary&amp;rsquo;s (key, value) pairs, which will not reflect changes to the dict that happen after the items() call.</description>
+      <description>字典 # 遍历 # for key in d: # For Python 3.x: for key, value in d.items(): # For Python 2.x: for key, value in d.iteritems(): items # The operation items() will work for both 2 and 3, but in 2 it will return a list of the dictionary&amp;rsquo;s (key, value) pairs, which will not reflect changes to the dict that happen after the items() call.
+If you want the 2.</description>
     </item>
     
     <item>
@@ -110,10 +112,11 @@ from gevent import monkey; monkey.patch_socket() import gevent  def f(n):  for i
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/generator/</guid>
-      <description>生成器 #  iterable 可迭代的 #  Everything you can use &amp;ldquo;for&amp;hellip; in&amp;hellip;&amp;rdquo; on is an iterable; lists, strings, files&amp;hellip;
+      <description>生成器 # iterable 可迭代的 # Everything you can use &amp;ldquo;for&amp;hellip; in&amp;hellip;&amp;rdquo; on is an iterable; lists, strings, files&amp;hellip;
 iterable 包括：
- list tuple string dictionary file enumerate object  iterator 迭代器 #   iter() 函数用来生成迭代器。 iter(object[, sentinel])  object：支持迭代的集合对象 sentinel  如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object      迭代器只能迭代一次
-a kind of iterable you can only iterate over once.</description>
+list tuple string dictionary file enumerate object iterator 迭代器 # iter() 函数用来生成迭代器。 iter(object[, sentinel]) object：支持迭代的集合对象 sentinel 如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象 每次调用这个迭代器对象的 __next__() 方法时，都会调用 object 迭代器只能迭代一次
+a kind of iterable you can only iterate over once.
+generator # Generators are iterators, a kind of iterable you can only iterate over once.</description>
     </item>
     
     <item>
@@ -122,8 +125,8 @@ a kind of iterable you can only iterate over once.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/class/</guid>
-      <description>类 #  问答 #  class 后面加不加 object 的区别 #  python 3 中已经默认就帮你加载了 object 了（即便你没有写上 object）
-   python 2.x python 2.x python 3.x python 3.x     不含 object 含 object 不含 object 含 object   __doc__ __doc__ __doc__ __doc__   __module__ __module__ __module__ __module__    __class__ __class__ __class__    __delattr__ __delattr__ __delattr__    __dict__ __dict__ __dict__    __format__ __format__ __format__    __getattribute__ __getattribute__ __getattribute__    __hash__ __hash__ __hash__    __init__ __init__ __init__    __new__ __new__ __new__    __reduce__ __reduce__ __reduce__    __reduce_ex__ __reduce_ex__ __reduce_ex__    __repr__ __repr__ __repr__    __setattr__ __setattr__ __setattr__    __sizeof__ __sizeof__ __sizeof__    __str__ __str__ __str__    __subclasshook__ __subclasshook__ __subclasshook__    __weakref__ __weakref__ __weakref__     __dir__ __dir__     __eq__ __eq__     __ge__ __ge__     __gt__ __gt__     __le__ __le__     __lt__ __lt__     __ne__ __ne__     __init_subclass__ __init_subclass__    init_subclass #  类方法 __init_subclass__ 从 3.</description>
+      <description>类 # 问答 # class 后面加不加 object 的区别 # python 3 中已经默认就帮你加载了 object 了（即便你没有写上 object）
+python 2.x python 2.x python 3.x python 3.x 不含 object 含 object 不含 object 含 object __doc__ __doc__ __doc__ __doc__ __module__ __module__ __module__ __module__ __class__ __class__ __class__ __delattr__ __delattr__ __delattr__ __dict__ __dict__ __dict__ __format__ __format__ __format__ __getattribute__ __getattribute__ __getattribute__ __hash__ __hash__ __hash__ __init__ __init__ __init__ __new__ __new__ __new__ __reduce__ __reduce__ __reduce__ __reduce_ex__ __reduce_ex__ __reduce_ex__ __repr__ __repr__ __repr__ __setattr__ __setattr__ __setattr__ __sizeof__ __sizeof__ __sizeof__ __str__ __str__ __str__ __subclasshook__ __subclasshook__ __subclasshook__ __weakref__ __weakref__ __weakref__ __dir__ __dir__ __eq__ __eq__ __ge__ __ge__ __gt__ __gt__ __le__ __le__ __lt__ __lt__ __ne__ __ne__ __init_subclass__ __init_subclass__ init_subclass # 类方法 __init_subclass__ 从 3.</description>
     </item>
     
     <item>
@@ -132,9 +135,9 @@ a kind of iterable you can only iterate over once.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/grammar/function/decorator/</guid>
-      <description>装饰器 #  函数参数能够接收别的函数，就是高阶函数
+      <description> 装饰器 # 函数参数能够接收别的函数，就是高阶函数
 decorator 就是一个返回函数的高阶函数
-import functools  def log(text):  def decorator(func):  @functools.wraps(func)  def wrapper(*argc, **kw):  print(&amp;#39;%s%s()&amp;#39; % (text, func.__name))  return func(*args, **kw)  return wrapper  return decorator  @log(&amp;#39;execute&amp;#39;) def now():  print(&amp;#39;2020-04-26&amp;#39;) </description>
+import functools def log(text): def decorator(func): @functools.wraps(func) def wrapper(*argc, **kw): print(&amp;#39;%s %s()&amp;#39; % (text, func.__name)) return func(*args, **kw) return wrapper return decorator @log(&amp;#39;execute&amp;#39;) def now(): print(&amp;#39;2020-04-26&amp;#39;) </description>
     </item>
     
     <item>
@@ -143,12 +146,13 @@ import functools  def log(text):  def decorator(func):  @functools.wraps(func)  
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/appendix/attention/</guid>
-      <description>关注项目 #  Web #  pallets/flask #  The Python micro framework for building web applications.
-django/django #  The Web framework for perfectionists with deadlines.
-tornadoweb/tornado #  Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.
-encode/django-rest-framework #  Web APIs for Django
- Machine Learning #  scikit-learn/scikit-learn #  scikit-learn: machine learning in Python
- Deep Learning #  keras-team/keras #  Deep Learning for humans</description>
+      <description>关注项目 # Web # pallets/flask # The Python micro framework for building web applications.
+django/django # The Web framework for perfectionists with deadlines.
+tornadoweb/tornado # Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.
+encode/django-rest-framework # Web APIs for Django
+Machine Learning # scikit-learn/scikit-learn # scikit-learn: machine learning in Python
+Deep Learning # keras-team/keras # Deep Learning for humans
+其他 # twisted/twisted # Event-driven networking engine written in Python.</description>
     </item>
     
     <item>
@@ -157,7 +161,7 @@ encode/django-rest-framework #  Web APIs for Django
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/other/version/3.7/</guid>
-      <description>Python 3.7 #  安装 #  依赖 #  sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel #  3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
+      <description>Python 3.7 # 安装 # 依赖 # sudo yum install readline readline-devel readline-static -y sudo yum install openssl openssl-devel openssl-static -y sudo yum install sqlite-devel -y sudo yum install bzip2-devel bzip2-libs -y libffi-devel # 3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。
 sudo yum install libffi-devel -y make install 若在安装前移除了 /usr/bin 下 python 的文件链接依赖，此时 yum 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm 安装完成后重新进行 make install，结束后再次配置相关文件的软连接即可。
 解读： python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。 由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &amp;ldquo;ModuleNotFoundError: No module named &amp;lsquo;_ctypes&amp;rsquo;&amp;rdquo; 的错误。</description>
@@ -169,7 +173,7 @@ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kingye.me/study-python/docs/basic/other/anaconda/</guid>
-      <description>Anaconda #  Anaconda 是一个免费开源 的 Python 和 R 语言的发行版本，用于计算科学（数据科学、机器学习、大数据处理和预测分析），Anaconda 致力于简化包管理和部署。
+      <description>Anaconda # Anaconda 是一个免费开源 的 Python 和 R 语言的发行版本，用于计算科学（数据科学、机器学习、大数据处理和预测分析），Anaconda 致力于简化包管理和部署。
 Anaconda 的包使用软件包管理系统 Conda 进行管理。</description>
     </item>
     
