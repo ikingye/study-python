@@ -2,30 +2,28 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.104.2" />
+  <meta name="generator" content="Hugo 0.99.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="内建函数 # all # 判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
-any # 判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
+<meta name="description" content="内建函数 #  all #  判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
+any #  判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
 元素除了是 0、空、FALSE 外都算 TRUE。
-basestring # isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
-python3 已经没有 basestring 类型，用 str 代替了 basestring enumerate # 将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
+basestring #  isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
+python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate #  将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
 enumerate(sequence, [start=0])
-eval # 执行一个字符串表达式，并返回表达式的值
-eval(&#39;3 * x&#39;) eval(&#39;pow(2,2)&#39;) isinstance # 判断一个对象是否是一个已知的类型
-isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow # pow(x, y[, z])
-等效于 pow (x, y) % z">
+eval #  执行一个字符串表达式，并返回表达式的值
+eval(&#39;3 * x&#39;) eval(&#39;pow(2,2)&#39;) isinstance #  判断一个对象是否是一个已知的类型
+isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类型，不考虑继承关系。  isinstance() 会认为子类是一种父类类型，考虑继承关系。  如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="内建函数" />
-<meta property="og:description" content="内建函数 # all # 判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
-any # 判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
+<meta property="og:description" content="内建函数 #  all #  判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE
+any #  判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True
 元素除了是 0、空、FALSE 外都算 TRUE。
-basestring # isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
-python3 已经没有 basestring 类型，用 str 代替了 basestring enumerate # 将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
+basestring #  isinstance(obj, basestring) 等价于 isinstance(obj, (str, unicode))
+python3 已经没有 basestring 类型，用 str 代替了 basestring  enumerate #  将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标
 enumerate(sequence, [start=0])
-eval # 执行一个字符串表达式，并返回表达式的值
-eval(&#39;3 * x&#39;) eval(&#39;pow(2,2)&#39;) isinstance # 判断一个对象是否是一个已知的类型
-isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型，不考虑继承关系。 isinstance() 会认为子类是一种父类类型，考虑继承关系。 如果要判断两个类型是否相同推荐使用 isinstance()。 pow # pow(x, y[, z])
-等效于 pow (x, y) % z" />
+eval #  执行一个字符串表达式，并返回表达式的值
+eval(&#39;3 * x&#39;) eval(&#39;pow(2,2)&#39;) isinstance #  判断一个对象是否是一个已知的类型
+isinstance() 与 type() 区别：  type() 不会认为子类是一种父类类型，不考虑继承关系。  isinstance() 会认为子类是一种父类类型，考虑继承关系。  如果要判断两个类型是否相同推荐使用 isinstance()。 pow #  pow(x, y[, z])" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-python/docs/basic/grammar/builtin/" /><meta property="article:section" content="docs" />
 
@@ -35,7 +33,7 @@ isinstance() 与 type() 区别： type() 不会认为子类是一种父类类型
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.9174d99ccffd51fe0cc5e3418ee4d6e0b3aac2a0aa859e79a305a99ca5f3391b.js" integrity="sha256-kXTZnM/9Uf4MxeNBjuTW4LOqwqCqhZ55owWpnKXzORs="></script>
+<script defer src="/study-python/en.search.min.4a86e1eb8cf7cf2349f10c78f0a8b6e7c8a8a838bdbb31fab9f8f5d846cb2c69.js" integrity="sha256-Sobh64z3zyNJ8Qx48Ki258ioqDi9uzH6ufj12EbLLGk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
