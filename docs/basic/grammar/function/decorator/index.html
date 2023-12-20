@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.99.1" />
+  <meta name="generator" content="Hugo 0.121.1">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="装饰器 #  函数参数能够接收别的函数，就是高阶函数
+<meta name="description" content=" 装饰器 # 函数参数能够接收别的函数，就是高阶函数
 decorator 就是一个返回函数的高阶函数
-import functools  def log(text):  def decorator(func):  @functools.wraps(func)  def wrapper(*argc, **kw):  print(&#39;%s%s()&#39; % (text, func.__name))  return func(*args, **kw)  return wrapper  return decorator  @log(&#39;execute&#39;) def now():  print(&#39;2020-04-26&#39;) ">
+import functools def log(text): def decorator(func): @functools.wraps(func) def wrapper(*argc, **kw): print(&#39;%s %s()&#39; % (text, func.__name)) return func(*args, **kw) return wrapper return decorator @log(&#39;execute&#39;) def now(): print(&#39;2020-04-26&#39;) ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="装饰器" />
-<meta property="og:description" content="装饰器 #  函数参数能够接收别的函数，就是高阶函数
+<meta property="og:description" content=" 装饰器 # 函数参数能够接收别的函数，就是高阶函数
 decorator 就是一个返回函数的高阶函数
-import functools  def log(text):  def decorator(func):  @functools.wraps(func)  def wrapper(*argc, **kw):  print(&#39;%s%s()&#39; % (text, func.__name))  return func(*args, **kw)  return wrapper  return decorator  @log(&#39;execute&#39;) def now():  print(&#39;2020-04-26&#39;) " />
+import functools def log(text): def decorator(func): @functools.wraps(func) def wrapper(*argc, **kw): print(&#39;%s %s()&#39; % (text, func.__name)) return func(*args, **kw) return wrapper return decorator @log(&#39;execute&#39;) def now(): print(&#39;2020-04-26&#39;) " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kingye.me/study-python/docs/basic/grammar/function/decorator/" /><meta property="article:section" content="docs" />
 
@@ -21,7 +21,7 @@ import functools  def log(text):  def decorator(func):  @functools.wraps(func)  
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.fe0fbf6c2dfce509ffe95369daebf74c4c57ef640816acb55eb59e761b031a67.js" integrity="sha256-/g&#43;/bC385Qn/6VNp2uv3TExX72QIFqy1XrWedhsDGmc="></script>
+<script defer src="/study-python/en.search.min.c1d4f174d50965647e15e3bb255677b0dc2473470799873a811c5ee58428cfcb.js" integrity="sha256-wdTxdNUJZWR&#43;FeO7JVZ3sNwkc0cHmYc6gRxe5YQoz8s="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -808,7 +808,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">log</span>(text):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decorator</span>(func):
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">@functools</span><span style="color:#f92672">.</span>wraps(func)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">@functools.wraps</span>(func)
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>argc, <span style="color:#f92672">**</span>kw):
 </span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">()&#39;</span> <span style="color:#f92672">%</span> (text, func<span style="color:#f92672">.</span>__name))
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kw)
