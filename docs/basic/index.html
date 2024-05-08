@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Python 工具最佳实践 # pipx &#43; pyenv &#43; poetry
-pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos pyenv: python 版本管理 pyenv/pyenv poetry: python 项目管理/虚拟环境管理 # 先安装 pipx brew update brew install pipx # 再安装 poetry pipx install poetry # 安装 pyenv brew install pyenv # 从镜像下载 cat &lt;&lt; &#39;EOF&#39; &gt;&gt; ~/.zshrc function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } EOF zsh # 更新 pyenv 缓存 pyenv update # 列出可选的版本 pyenv install -l # 安装需要的 python 版本 pyenvinstall 3.">
+pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos pypa/pipx pyenv: python 版本管理 pyenv/pyenv poetry: python 项目管理/虚拟环境管理 python-poetry/poetry 安装 # # 先安装 pipx brew update brew install pipx # 再安装 poetry pipx install poetry # 安装 pyenv brew install pyenv # 从镜像下载 cat &lt;&lt; &#39;EOF&#39; &gt;&gt; ~/.zshrc function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } EOF zsh # 更新 pyenv 缓存 pyenv update # 列出可选的版本 pyenv install -l # 安装需要的 python 版本 pyenvinstall 3.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="第一部分 基础入门" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -16,7 +16,7 @@ pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.98d33a67c79c3970bceb5ab9f3cc899d7f3a14cf625184f5404c74c343be7c78.js" integrity="sha256-mNM6Z8ecOXC861q588yJnX86FM9iUYT1QEx0w0O&#43;fHg="></script>
+<script defer src="/study-python/en.search.min.386bff45fbdd9fab487f07e8e6db5b467508e2179fcf120b36317634d532be1c.js" integrity="sha256-OGv/Rfvdn6tIfwfo5ttbRnUI4hefzxILNjF2NNUyvhw="></script>
 <link rel="alternate" type="application/rss+xml" href="https://kingye.me/study-python/docs/basic/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
@@ -785,7 +785,12 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#python-工具最佳实践">Python 工具最佳实践</a></li>
+    <li><a href="#python-工具最佳实践">Python 工具最佳实践</a>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#使用">使用</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -804,14 +809,26 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>pipx + pyenv + poetry</p>
 <ul>
-<li>pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos</li>
+<li>pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos
+<ul>
+<li><a href="https://github.com/pypa/pipx">pypa/pipx</a> <img src="https://img.shields.io/github/stars/pypa/pipx.svg" alt="Github stars" /> <img src="https://img.shields.io/github/forks/pypa/pipx.svg" alt="Github forks" /> <img src="https://img.shields.io/github/languages/top/pypa/pipx.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/pypa/pipx.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/pypa/pipx.svg" alt="Last commit" /></li>
+</ul>
+</li>
 <li>pyenv: python 版本管理
 <ul>
 <li><a href="https://github.com/pyenv/pyenv">pyenv/pyenv</a> <img src="https://img.shields.io/github/stars/pyenv/pyenv.svg" alt="Github stars" /> <img src="https://img.shields.io/github/forks/pyenv/pyenv.svg" alt="Github forks" /> <img src="https://img.shields.io/github/languages/top/pyenv/pyenv.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/pyenv/pyenv.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/pyenv/pyenv.svg" alt="Last commit" /></li>
 </ul>
 </li>
-<li>poetry: python 项目管理/虚拟环境管理</li>
+<li>poetry: python 项目管理/虚拟环境管理
+<ul>
+<li><a href="https://github.com/python-poetry/poetry">python-poetry/poetry</a> <img src="https://img.shields.io/github/stars/python-poetry/poetry.svg" alt="Github stars" /> <img src="https://img.shields.io/github/forks/python-poetry/poetry.svg" alt="Github forks" /> <img src="https://img.shields.io/github/languages/top/python-poetry/poetry.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/python-poetry/poetry.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/python-poetry/poetry.svg" alt="Last commit" /></li>
 </ul>
+</li>
+</ul>
+<h3 id="安装">
+  安装
+  <a class="anchor" href="#%e5%ae%89%e8%a3%85">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 先安装 pipx</span>
 </span></span><span style="display:flex;"><span>brew update
 </span></span><span style="display:flex;"><span>brew install pipx
@@ -840,7 +857,11 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 安装需要的 python 版本</span>
 </span></span><span style="display:flex;"><span>pyenvinstall 3.12.3
-</span></span></code></pre></div></article>
+</span></span></code></pre></div><h3 id="使用">
+  使用
+  <a class="anchor" href="#%e4%bd%bf%e7%94%a8">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"></code></pre></div></article>
  
       
 
@@ -907,7 +928,12 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#python-工具最佳实践">Python 工具最佳实践</a></li>
+    <li><a href="#python-工具最佳实践">Python 工具最佳实践</a>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#使用">使用</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
