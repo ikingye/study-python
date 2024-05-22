@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Python 工具最佳实践 # pipx &#43; pyenv &#43; poetry
-pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos pypa/pipx pyenv: python 版本管理 pyenv/pyenv poetry: python 项目管理/虚拟环境管理 python-poetry/poetry 安装 # # 先安装 pipx brew update brew install pipx # 再安装 poetry pipx install poetry # 安装 pyenv brew install pyenv # 从镜像下载 cat &lt;&lt; &#39;EOF&#39; &gt;&gt; ~/.zshrc function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } EOF zsh # 更新 pyenv 缓存 pyenv update # 列出可选的版本 pyenv install -l # 安装需要的 python 版本 pyenvinstall 3.">
+pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos pypa/pipx pyenv: python 版本管理 pyenv/pyenv poetry: python 项目管理/虚拟环境管理 python-poetry/poetry 安装 # MacOS # # 先安装 pipx brew update brew install pipx # 再安装 poetry pipx install poetry # 安装 pyenv brew install pyenv # 从镜像下载 cat &lt;&lt; &#39;EOF&#39; &gt;&gt; ~/.zshrc function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } EOF zsh # 更新 pyenv 缓存 pyenv update # 列出可选的版本 pyenv install -l # 安装需要的 python 版本 pyenvinstall 3.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="第一部分 基础入门" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -16,7 +16,7 @@ pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.386bff45fbdd9fab487f07e8e6db5b467508e2179fcf120b36317634d532be1c.js" integrity="sha256-OGv/Rfvdn6tIfwfo5ttbRnUI4hefzxILNjF2NNUyvhw="></script>
+<script defer src="/study-python/en.search.min.08e970cca1c5df9daf10973931c9f170d38b885552bea99728d3850ec387dfbc.js" integrity="sha256-COlwzKHF352vEJc5McnxcNOLiFVSvqmXKNOFDsOH37w="></script>
 <link rel="alternate" type="application/rss+xml" href="https://kingye.me/study-python/docs/basic/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
@@ -787,7 +787,12 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#python-工具最佳实践">Python 工具最佳实践</a>
       <ul>
-        <li><a href="#安装">安装</a></li>
+        <li><a href="#安装">安装</a>
+          <ul>
+            <li><a href="#macos">MacOS</a></li>
+            <li><a href="#centos">CentOS</a></li>
+          </ul>
+        </li>
         <li><a href="#使用">使用</a></li>
       </ul>
     </li>
@@ -829,6 +834,10 @@ https://github.com/alex-shpak/hugo-book
   安装
   <a class="anchor" href="#%e5%ae%89%e8%a3%85">#</a>
 </h3>
+<h4 id="macos">
+  MacOS
+  <a class="anchor" href="#macos">#</a>
+</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 先安装 pipx</span>
 </span></span><span style="display:flex;"><span>brew update
 </span></span><span style="display:flex;"><span>brew install pipx
@@ -857,6 +866,19 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 安装需要的 python 版本</span>
 </span></span><span style="display:flex;"><span>pyenvinstall 3.12.3
+</span></span></code></pre></div><h4 id="centos">
+  CentOS
+  <a class="anchor" href="#centos">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 安装 pipx</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sudo yum install -y python3</span>
+</span></span><span style="display:flex;"><span>python3 -m pip install --user pipx
+</span></span><span style="display:flex;"><span>python3 -m pipx ensurepath
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 升级</span>
+</span></span><span style="display:flex;"><span>python3 -m pip install --user --upgrade pipx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 安装 pyenv</span>
+</span></span><span style="display:flex;"><span>curl https://pyenv.run | bash
 </span></span></code></pre></div><h3 id="使用">
   使用
   <a class="anchor" href="#%e4%bd%bf%e7%94%a8">#</a>
@@ -930,7 +952,12 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#python-工具最佳实践">Python 工具最佳实践</a>
       <ul>
-        <li><a href="#安装">安装</a></li>
+        <li><a href="#安装">安装</a>
+          <ul>
+            <li><a href="#macos">MacOS</a></li>
+            <li><a href="#centos">CentOS</a></li>
+          </ul>
+        </li>
         <li><a href="#使用">使用</a></li>
       </ul>
     </li>
