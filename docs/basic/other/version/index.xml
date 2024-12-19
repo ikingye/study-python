@@ -12,7 +12,7 @@
       <link>https://kingye.me/study-python/docs/basic/other/version/manage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://kingye.me/study-python/docs/basic/other/version/manage/</guid>
-      <description>Python 版本管理 # pyenv # pyenv 加速 # 在 .zshrc 添加&#xA;function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2&#xA;pyenv 基础命令 # # List all available versions pyenv install -l # 更新 pyenv update brew update &amp;amp;&amp;amp; brew upgrade pyenv pyenv update # pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update pyenv update pyenv global 3.8.2 2.7.17 # set by ~/.pyenv/version</description>
+      <description>Python 版本管理 # pyenv # pyenv 加速 # 在 .zshrc 添加&#xA;function pyenvinstall { wget -c https://registry.npmmirror.com/-/binary/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } 执行 zsh 使配置生效， 之后即可这样安装： pyenvinstall 3.8.2&#xA;pyenv 基础命令 # # List all available versions pyenv install -l # 更新 pyenv update brew update &amp;amp;&amp;amp; brew upgrade pyenv pyenv update # pyenv/pyenv-update git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update pyenv update pyenv global 3.8.2 2.7.17 # set by ~/.pyenv/version</description>
     </item>
     <item>
       <title>3.7</title>

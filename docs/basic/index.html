@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Python 工具最佳实践 # pipx &#43; pyenv &#43; poetry
-pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos pypa/pipx pyenv: python 版本管理 pyenv/pyenv poetry: python 项目管理/虚拟环境管理 python-poetry/poetry 安装 # MacOS # # 先安装 pipx brew update brew install pipx # 再安装 poetry pipx install poetry # 安装 pyenv brew install pyenv # 从镜像下载 cat &lt;&lt; &#39;EOF&#39; &gt;&gt; ~/.zshrc function pyenvinstall { wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } EOF zsh # 更新 pyenv 缓存 pyenv update # 列出可选的版本 pyenv install -l # 安装需要的 python 版本 pyenvinstall 3.">
+pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos pypa/pipx pyenv: python 版本管理 pyenv/pyenv poetry: python 项目管理/虚拟环境管理 python-poetry/poetry 安装 # MacOS # # 先安装 pipx brew update brew install pipx # 再安装 poetry pipx install poetry # 安装 pyenv brew install pyenv # 从镜像下载 cat &lt;&lt; &#39;EOF&#39; &gt;&gt; ~/.zshrc function pyenvinstall { wget -c https://registry.npmmirror.com/-/binary/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/ pyenv install $@ } EOF zsh # 更新 pyenv 缓存 pyenv update # 列出可选的版本 pyenv install -l # 安装需要的 python 版本 pyenvinstall 3.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="第一部分 基础入门" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -16,7 +16,7 @@ pipx: python 命令行应用管理，类似 brew/macos，apt/ubuntu，yum/centos
 <link rel="manifest" href="/study-python/manifest.json">
 <link rel="icon" href="/study-python/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-python/book.min.289092a4e215f25702e57047968cffa1607cbc5be7ee9edae265692e8451d5cb.css" integrity="sha256-KJCSpOIV8lcC5XBHloz/oWB8vFvn7p7a4mVpLoRR1cs=">
-<script defer src="/study-python/en.search.min.08e970cca1c5df9daf10973931c9f170d38b885552bea99728d3850ec387dfbc.js" integrity="sha256-COlwzKHF352vEJc5McnxcNOLiFVSvqmXKNOFDsOH37w="></script>
+<script defer src="/study-python/en.search.min.9304797b90b1cd6a21fb530ccc9126663207f3d1072fb6cb4289eda0610b1cb8.js" integrity="sha256-kwR5e5CxzWoh&#43;1MMzJEmZjIH89EHL7bLQontoGELHLg="></script>
 <link rel="alternate" type="application/rss+xml" href="https://kingye.me/study-python/docs/basic/index.xml" title="Python 学习笔记" />
 <!--
 Made with Book Theme
@@ -852,7 +852,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; &#39;EOF&#39; &gt;&gt; ~/.zshrc
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">function pyenvinstall {
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    wget -c https://npm.taobao.org/mirrors/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    wget -c https://registry.npmmirror.com/-/binary/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    pyenv install $@
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
@@ -865,7 +865,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>pyenv install -l
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 安装需要的 python 版本</span>
-</span></span><span style="display:flex;"><span>pyenvinstall 3.12.3
+</span></span><span style="display:flex;"><span>pyenvinstall 3.13.1
 </span></span></code></pre></div><h4 id="centos">
   CentOS
   <a class="anchor" href="#centos">#</a>
