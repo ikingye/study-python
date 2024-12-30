@@ -1,25 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>版本 on Python 学习笔记</title>
-    <link>https://kingye.me/study-python/docs/basic/other/version/</link>
-    <description>Recent content in 版本 on Python 学习笔记</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <atom:link href="https://kingye.me/study-python/docs/basic/other/version/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>版本管理</title>
-      <link>https://kingye.me/study-python/docs/basic/other/version/manage/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kingye.me/study-python/docs/basic/other/version/manage/</guid>
-      <description>&lt;h1 id=&#34;python-版本管理&#34;&gt;&#xA;  Python 版本管理&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#python-%e7%89%88%e6%9c%ac%e7%ae%a1%e7%90%86&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;pyenv&#34;&gt;&#xA;  pyenv&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#pyenv&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;pyenv-加速&#34;&gt;&#xA;  pyenv 加速&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#pyenv-%e5%8a%a0%e9%80%9f&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;在 &lt;code&gt;.zshrc&lt;/code&gt; 添加&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; pyenvinstall &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    wget -c https://registry.npmmirror.com/-/binary/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    pyenv install $@&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行 &lt;code&gt;zsh&lt;/code&gt; 使配置生效，&#xA;之后即可这样安装：&#xA;&lt;code&gt;pyenvinstall 3.8.2&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;pyenv-基础命令&#34;&gt;&#xA;  pyenv 基础命令&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#pyenv-%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# List all available versions&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pyenv install -l&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 更新&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pyenv update&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; brew upgrade pyenv&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;pyenv-update&#34;&gt;&#xA;  pyenv update&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#pyenv-update&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/pyenv/pyenv-update&#34;&gt;pyenv/pyenv-update&lt;/a&gt; &lt;img src=&#34;https://img.shields.io/github/stars/pyenv/pyenv-update.svg&#34; alt=&#34;Github stars&#34; /&gt; &lt;img src=&#34;https://img.shields.io/github/languages/top/pyenv/pyenv-update.svg&#34; alt=&#34;Language&#34; /&gt; &lt;img src=&#34;https://img.shields.io/github/v/tag/pyenv/pyenv-update.svg?sort=semver&#34; alt=&#34;Last Tag&#34; /&gt; &lt;img src=&#34;https://img.shields.io/github/last-commit/pyenv/pyenv-update.svg&#34; alt=&#34;Last commit&#34; /&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/pyenv/pyenv-update.git &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;pyenv root&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/plugins/pyenv-update&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pyenv update&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;pyenv-global-382-2717&#34;&gt;&#xA;  pyenv global 3.8.2 2.7.17&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#pyenv-global-382-2717&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;p&gt;set by &lt;code&gt;~/.pyenv/version&lt;/code&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>3.7</title>
-      <link>https://kingye.me/study-python/docs/basic/other/version/3.7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kingye.me/study-python/docs/basic/other/version/3.7/</guid>
-      <description>&lt;h1 id=&#34;python-37&#34;&gt;&#xA;  Python 3.7&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#python-37&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;安装&#34;&gt;&#xA;  安装&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%e5%ae%89%e8%a3%85&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;依赖&#34;&gt;&#xA;  依赖&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%e4%be%9d%e8%b5%96&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum install readline readline-devel readline-static -y&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum install openssl openssl-devel openssl-static -y&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum install sqlite-devel -y&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum install bzip2-devel bzip2-libs -y&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;libffi-devel&#34;&gt;&#xA;  libffi-devel&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#libffi-devel&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;p&gt;3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum install libffi-devel -y&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make install&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;若在安装前移除了 &lt;code&gt;/usr/bin&lt;/code&gt; 下 python 的文件链接依赖，此时 &lt;code&gt;yum&lt;/code&gt; 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后重新进行 &lt;code&gt;make install&lt;/code&gt;，结束后再次配置相关文件的软连接即可。&lt;/p&gt;&#xA;&lt;p&gt;解读：&#xA;python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。&#xA;由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &amp;ldquo;ModuleNotFoundError: No module named &amp;lsquo;_ctypes&amp;rsquo;&amp;rdquo; 的错误。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>版本 on Python 学习笔记</title><link>https://kingye.me/study-python/docs/basic/other/version/</link><description>Recent content in 版本 on Python 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-python/docs/basic/other/version/index.xml" rel="self" type="application/rss+xml"/><item><title>版本管理</title><link>https://kingye.me/study-python/docs/basic/other/version/manage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/version/manage/</guid><description>&lt;h1 id="python-版本管理">
+ Python 版本管理
+ &lt;a class="anchor" href="#python-%e7%89%88%e6%9c%ac%e7%ae%a1%e7%90%86">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="pyenv">
+ pyenv
+ &lt;a class="anchor" href="#pyenv">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="pyenv-加速">
+ pyenv 加速
+ &lt;a class="anchor" href="#pyenv-%e5%8a%a0%e9%80%9f">#&lt;/a>
+&lt;/h3>
+&lt;p>在 &lt;code>.zshrc&lt;/code> 添加&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">function&lt;/span> pyenvinstall &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> wget -c https://registry.npmmirror.com/-/binary/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pyenv install $@
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行 &lt;code>zsh&lt;/code> 使配置生效，
+之后即可这样安装：
+&lt;code>pyenvinstall 3.8.2&lt;/code>&lt;/p>
+&lt;h3 id="pyenv-基础命令">
+ pyenv 基础命令
+ &lt;a class="anchor" href="#pyenv-%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># List all available versions&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pyenv install -l
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 更新&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pyenv update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew update &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> brew upgrade pyenv
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="pyenv-update">
+ pyenv update
+ &lt;a class="anchor" href="#pyenv-update">#&lt;/a>
+&lt;/h4>
+&lt;p>&lt;a href="https://github.com/pyenv/pyenv-update">pyenv/pyenv-update&lt;/a> &lt;img src="https://img.shields.io/github/stars/pyenv/pyenv-update.svg" alt="Github stars" /> &lt;img src="https://img.shields.io/github/languages/top/pyenv/pyenv-update.svg" alt="Language" /> &lt;img src="https://img.shields.io/github/v/tag/pyenv/pyenv-update.svg?sort=semver" alt="Last Tag" /> &lt;img src="https://img.shields.io/github/last-commit/pyenv/pyenv-update.svg" alt="Last commit" />&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>git clone https://github.com/pyenv/pyenv-update.git &lt;span style="color:#66d9ef">$(&lt;/span>pyenv root&lt;span style="color:#66d9ef">)&lt;/span>/plugins/pyenv-update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pyenv update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="pyenv-global-382-2717">
+ pyenv global 3.8.2 2.7.17
+ &lt;a class="anchor" href="#pyenv-global-382-2717">#&lt;/a>
+&lt;/h4>
+&lt;p>set by &lt;code>~/.pyenv/version&lt;/code>&lt;/p></description></item><item><title>3.7</title><link>https://kingye.me/study-python/docs/basic/other/version/3.7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/version/3.7/</guid><description>&lt;h1 id="python-37">
+ Python 3.7
+ &lt;a class="anchor" href="#python-37">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="安装">
+ 安装
+ &lt;a class="anchor" href="#%e5%ae%89%e8%a3%85">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="依赖">
+ 依赖
+ &lt;a class="anchor" href="#%e4%be%9d%e8%b5%96">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sudo yum install readline readline-devel readline-static -y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo yum install openssl openssl-devel openssl-static -y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo yum install sqlite-devel -y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo yum install bzip2-devel bzip2-libs -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="libffi-devel">
+ libffi-devel
+ &lt;a class="anchor" href="#libffi-devel">#&lt;/a>
+&lt;/h4>
+&lt;p>3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sudo yum install libffi-devel -y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>若在安装前移除了 &lt;code>/usr/bin&lt;/code> 下 python 的文件链接依赖，此时 &lt;code>yum&lt;/code> 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装完成后重新进行 &lt;code>make install&lt;/code>，结束后再次配置相关文件的软连接即可。&lt;/p>
+&lt;p>解读：
+python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。
+由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &amp;ldquo;ModuleNotFoundError: No module named &amp;lsquo;_ctypes&amp;rsquo;&amp;rdquo; 的错误。&lt;/p></description></item></channel></rss>
