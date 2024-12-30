@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.140.1">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  面试题
+  #
+
+参考：
+
+如何面试 Python 后端工程师？
+
+
+  基础题
+  #
+
+
+  数据结构
+  #
+
+
+  元组是不是真的不可变？
+  #
+
+tuple 的每个元素，指向永远不变。
+要创建一个内容也不变的 tuple 怎么做？
+必须保证 tuple 的每一个元素本身也不能变。
+# “可变的” tuple：
+&gt;&gt;&gt; t = (&#39;a&#39;, &#39;b&#39;, [&#39;A&#39;, &#39;B&#39;])
+&gt;&gt;&gt; t[2][0] = &#39;X&#39;
+&gt;&gt;&gt; t[2][1] = &#39;Y&#39;
+&gt;&gt;&gt; t
+(&#39;a&#39;, &#39;b&#39;, [&#39;X&#39;, &#39;Y&#39;])
+
+
+  迭代器 vs 生成器
+  #
+
+
+  迭代器
+  #
+
+把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__()
+&gt;&gt;&gt; list=[1,2,3,4]
+&gt;&gt;&gt; it = iter(list)    # 创建迭代器对象
+&gt;&gt;&gt; print (next(it))   # 输出迭代器的下一个元素
+1
+&gt;&gt;&gt; print (next(it))
+2
+&gt;&gt;&gt;
+
+  生成器
+  #
+
+在 Python 中，使用了 yield 的函数被称为生成器（generator）。">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://kingye.me/study-python/docs/appendix/interview/">
+  <meta property="og:site_name" content="Python 学习笔记">
+  <meta property="og:title" content="4.2 面试题">
+  <meta property="og:description" content="面试题 # 参考：
+如何面试 Python 后端工程师？ 基础题 # 数据结构 # 元组是不是真的不可变？ # tuple 的每个元素，指向永远不变。
+要创建一个内容也不变的 tuple 怎么做？
+必须保证 tuple 的每一个元素本身也不能变。
+# “可变的” tuple： &gt;&gt;&gt; t = (&#39;a&#39;, &#39;b&#39;, [&#39;A&#39;, &#39;B&#39;]) &gt;&gt;&gt; t[2][0] = &#39;X&#39; &gt;&gt;&gt; t[2][1] = &#39;Y&#39; &gt;&gt;&gt; t (&#39;a&#39;, &#39;b&#39;, [&#39;X&#39;, &#39;Y&#39;]) 迭代器 vs 生成器 # 迭代器 # 把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__()
+&gt;&gt;&gt; list=[1,2,3,4] &gt;&gt;&gt; it = iter(list) # 创建迭代器对象 &gt;&gt;&gt; print (next(it)) # 输出迭代器的下一个元素 1 &gt;&gt;&gt; print (next(it)) 2 &gt;&gt;&gt; 生成器 # 在 Python 中，使用了 yield 的函数被称为生成器（generator）。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2020-07-16T20:40:13+08:00">
+<title>4.2 面试题 | Python 学习笔记</title>
+<link rel="manifest" href="/study-python/manifest.json">
+<link rel="icon" href="/study-python/favicon.png" >
+<link rel="canonical" href="https://kingye.me/study-python/docs/appendix/interview/">
+<link rel="stylesheet" href="/study-python/book.min.b8f76d52919a6c36c4b10ecbc8e6b1374010bed31cb26386a9d7949cc2f16173.css" integrity="sha256-uPdtUpGabDbEsQ7LyOaxN0AQvtMcsmOGqdeUnMLxYXM=" crossorigin="anonymous">
+  <script defer src="/study-python/fuse.min.js"></script>
+  <script defer src="/study-python/en.search.min.902b06f72211bdaf097e7acd2d2fc8f88fec0e1c20be098acdb326e6cf260232.js" integrity="sha256-kCsG9yIRva8JfnrNLS/I&#43;I/sDhwgvgmKzbMm5s8mAjI=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/study-python/"><span>Python 学习笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+<ul>
+  <li><a href="https://kingye.me" target="_blank" rel="noopener noreferrer">博客</a></li>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417021727.png" target="_blank" rel="noopener noreferrer">公众号</a></li>
+  <li><a href="https://github.com/ikingye" target="_blank" rel="noopener noreferrer">Github</a></li>
+  <li><a href="https://weibo.com/kingyip15215" target="_blank" rel="noopener noreferrer">微博</a></li>
+  <li><a href="https://www.zhihu.com/people/wutongyip" target="_blank" rel="noopener noreferrer">知乎</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-python/docs/basic/" class="">第一部分 基础入门</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8a0c760423a81111973e03f1fe33d5d6" class="toggle"  />
+    <label for="section-8a0c760423a81111973e03f1fe33d5d6" class="flex justify-between">
+      <a href="/study-python/docs/basic/grammar/" class="">1.1 语法</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ff86a4d593fab58332a76b2e1db90225" class="toggle"  />
+    <label for="section-ff86a4d593fab58332a76b2e1db90225" class="flex justify-between">
+      <a href="/study-python/docs/basic/grammar/builtin/" class="">内建函数</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aa4b7a756e71eddc07c837297f1e8234" class="toggle"  />
+    <label for="section-aa4b7a756e71eddc07c837297f1e8234" class="flex justify-between">
+      <a href="/study-python/docs/basic/grammar/function/" class="">函数</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-05afcec8e13d772c9504f1d2d61622c6" class="toggle"  />
+    <label for="section-05afcec8e13d772c9504f1d2d61622c6" class="flex justify-between">
+      <a href="/study-python/docs/basic/grammar/function/decorator/" class="">装饰器</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-python/docs/basic/grammar/slice/" class="">切片</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-python/docs/basic/grammar/dict/" class="">字典</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-03204ad4f1031fd72c70f565dc143689" class="toggle"  />
+    <label for="section-03204ad4f1031fd72c70f565dc143689" class="flex justify-between">
+      <a href="/study-python/docs/basic/grammar/generator/" class="">生成器</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-python/docs/basic/grammar/class/" class="">类</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b4b6516160865dc2225a2f1917bc6db6" class="toggle"  />
+    <label for="section-b4b6516160865dc2225a2f1917bc6db6" class="flex justify-between">
+      <a href="/study-python/docs/basic/std/" class="">1.2 标准库</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-824951873da8c6182406693422996b07" class="toggle"  />
+    <label for="section-824951873da8c6182406693422996b07" class="flex justify-between">
+      <a href="/study-python/docs/basic/spec/" class="">1.3 编程规范</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bac0f376e3b63b2edb0121b57372ef8d" class="toggle"  />
+    <label for="section-bac0f376e3b63b2edb0121b57372ef8d" class="flex justify-between">
+      <a href="/study-python/docs/basic/other/" class="">1.4 其他</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-35e5a6c859568a5f67934d28ff3584f3" class="toggle"  />
+    <label for="section-35e5a6c859568a5f67934d28ff3584f3" class="flex justify-between">
+      <a href="/study-python/docs/basic/other/coroutine/" class="">协程</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b57170e5412bea147c3faf2162b79b07" class="toggle"  />
+    <label for="section-b57170e5412bea147c3faf2162b79b07" class="flex justify-between">
+      <a href="/study-python/docs/basic/other/version/" class="">版本</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-python/docs/basic/other/version/manage/" class="">版本管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-python/docs/basic/other/version/3.7/" class="">3.7</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7ec81bd2a5280a26ea80b0ec1d62adea" class="toggle"  />
+    <label for="section-7ec81bd2a5280a26ea80b0ec1d62adea" class="flex justify-between">
+      <a href="/study-python/docs/basic/other/package/" class="">Package</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/study-python/docs/basic/other/package/manage/" class="">包管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-20153418a7eb04bb8732953afd0ffa3d" class="toggle"  />
+    <label for="section-20153418a7eb04bb8732953afd0ffa3d" class="flex justify-between">
+      <a href="/study-python/docs/basic/other/package/common/" class="">常用</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b01d9bb5c968f814cf56feacd58dd055" class="toggle"  />
+    <label for="section-b01d9bb5c968f814cf56feacd58dd055" class="flex justify-between">
+      <a href="/study-python/docs/basic/other/anaconda/" class="">Anaconda</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第二部分 进阶实战</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ed234512dd4296e38c96b4c45bef0c56" class="toggle"  />
+    <label for="section-ed234512dd4296e38c96b4c45bef0c56" class="flex justify-between">
+      <a href="/study-python/docs/advanced/pattern/" class="">2.1 设计模式</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f15592c2c94a67b400e3f2fe2727d80e" class="toggle"  />
+    <label for="section-f15592c2c94a67b400e3f2fe2727d80e" class="flex justify-between">
+      <a href="/study-python/docs/advanced/algs/" class="">2.2 算法实现</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e4ab46d9f593e2121a7f06a271c329e8" class="toggle"  />
+    <label for="section-e4ab46d9f593e2121a7f06a271c329e8" class="flex justify-between">
+      <a href="/study-python/docs/advanced/pkg/" class="">2.3 常用库</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-772aa207c5db294d43a235d96d9f5eef" class="toggle"  />
+    <label for="section-772aa207c5db294d43a235d96d9f5eef" class="flex justify-between">
+      <a href="/study-python/docs/advanced/snippet/" class="">2.4 代码片段</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-10eb8135b7e82215218bf83d082ed439" class="toggle"  />
+    <label for="section-10eb8135b7e82215218bf83d082ed439" class="flex justify-between">
+      <a href="/study-python/docs/advanced/test/" class="">2.5 测试</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fea726899d96e895041c941ead45a293" class="toggle"  />
+    <label for="section-fea726899d96e895041c941ead45a293" class="flex justify-between">
+      <a href="/study-python/docs/advanced/prof/" class="">2.6 性能</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5709e11a5a1bc87724c4e669d489dc6" class="toggle"  />
+    <label for="section-d5709e11a5a1bc87724c4e669d489dc6" class="flex justify-between">
+      <a href="/study-python/docs/advanced/frame/" class="">2.7 框架</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第三部分 源码实现</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ae5f046954ee0090a11e609b4139f8ec" class="toggle"  />
+    <label for="section-ae5f046954ee0090a11e609b4139f8ec" class="flex justify-between">
+      <a href="/study-python/docs/code/type/" class="">3.1 数据类型</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48ebeeaeed410c88c66a6d15b3f64aff" class="toggle"  />
+    <label for="section-48ebeeaeed410c88c66a6d15b3f64aff" class="flex justify-between">
+      <a href="/study-python/docs/code/keyword/" class="">3.2 关键字</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1ca652ee2f690f759f33b024b147f499" class="toggle"  />
+    <label for="section-1ca652ee2f690f759f33b024b147f499" class="flex justify-between">
+      <a href="/study-python/docs/code/runtime/" class="">3.3 运行时</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第四部分 附录</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-17292997f866ccaaabe8f9cbc503dee0" class="toggle"  />
+    <label for="section-17292997f866ccaaabe8f9cbc503dee0" class="flex justify-between">
+      <a href="/study-python/docs/appendix/tutorial/" class="">4.1 教程</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3be1a7925df7de223b1b66df4938f6c6" class="toggle" checked />
+    <label for="section-3be1a7925df7de223b1b66df4938f6c6" class="flex justify-between">
+      <a href="/study-python/docs/appendix/interview/" class="active">4.2 面试题</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-41b523e5f6c259f83abf7dd5fa2e2b6c" class="toggle"  />
+    <label for="section-41b523e5f6c259f83abf7dd5fa2e2b6c" class="flex justify-between">
+      <a href="/study-python/docs/appendix/attention/" class="">4.3 关注项目</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+<ul>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417022040.png" target="_blank" rel="noopener noreferrer">微信</a></li>
+  <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=EUhzg0UwUksxpQnwEmPngRLezlC6qrnn&jump_from=webapi" target="_blank" rel="noopener noreferrer"><img src="//pub.idqqimg.com/wpa/images/group.png"></a></li>
+</ul>
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/study-python/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>4.2 面试题</strong>
+
+  <label for="toc-control">
+    
+    <img src="/study-python/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#基础题">基础题</a>
+      <ul>
+        <li><a href="#数据结构">数据结构</a>
+          <ul>
+            <li><a href="#元组是不是真的不可变">元组是不是真的不可变？</a></li>
+            <li><a href="#迭代器-vs-生成器">迭代器 vs 生成器</a>
+              <ul>
+                <li><a href="#迭代器">迭代器</a></li>
+                <li><a href="#生成器">生成器</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#进阶题">进阶题</a>
+      <ul>
+        <li><a href="#猴子补丁">猴子补丁</a>
+          <ul>
+            <li><a href="#为什么叫猴子补丁">为什么叫猴子补丁</a></li>
+            <li><a href="#ujson">ujson</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article id="article" class="markdown"><h1 id="面试题">
+  面试题
+  <a class="anchor" href="#%e9%9d%a2%e8%af%95%e9%a2%98">#</a>
+</h1>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/33398583">如何面试 Python 后端工程师？</a></li>
+</ul>
+<h2 id="基础题">
+  基础题
+  <a class="anchor" href="#%e5%9f%ba%e7%a1%80%e9%a2%98">#</a>
+</h2>
+<h3 id="数据结构">
+  数据结构
+  <a class="anchor" href="#%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84">#</a>
+</h3>
+<h4 id="元组是不是真的不可变">
+  元组是不是真的不可变？
+  <a class="anchor" href="#%e5%85%83%e7%bb%84%e6%98%af%e4%b8%8d%e6%98%af%e7%9c%9f%e7%9a%84%e4%b8%8d%e5%8f%af%e5%8f%98">#</a>
+</h4>
+<p>tuple 的每个元素，指向永远不变。</p>
+<p>要创建一个内容也不变的 tuple 怎么做？</p>
+<p>必须保证 tuple 的每一个元素本身也不能变。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># “可变的” tuple：</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; t <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span><span style="color:#f92672">])</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; t<span style="color:#f92672">[</span>2<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;X&#39;</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; t<span style="color:#f92672">[</span>2<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Y&#39;</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; t
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;X&#39;</span>, <span style="color:#e6db74">&#39;Y&#39;</span><span style="color:#f92672">])</span>
+</span></span></code></pre></div><hr>
+<h4 id="迭代器-vs-生成器">
+  迭代器 vs 生成器
+  <a class="anchor" href="#%e8%bf%ad%e4%bb%a3%e5%99%a8-vs-%e7%94%9f%e6%88%90%e5%99%a8">#</a>
+</h4>
+<h5 id="迭代器">
+  迭代器
+  <a class="anchor" href="#%e8%bf%ad%e4%bb%a3%e5%99%a8">#</a>
+</h5>
+<p>把一个类作为一个<strong>迭代器</strong>使用需要在类中实现两个方法 <code>__iter__()</code> 与 <code>__next__()</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&gt;&gt;&gt; list<span style="color:#f92672">=[</span>1,2,3,4<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; it <span style="color:#f92672">=</span> iter<span style="color:#f92672">(</span>list<span style="color:#f92672">)</span>    <span style="color:#75715e"># 创建迭代器对象</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; print <span style="color:#f92672">(</span>next<span style="color:#f92672">(</span>it<span style="color:#f92672">))</span>   <span style="color:#75715e"># 输出迭代器的下一个元素</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; print <span style="color:#f92672">(</span>next<span style="color:#f92672">(</span>it<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt;
+</span></span></code></pre></div><h5 id="生成器">
+  生成器
+  <a class="anchor" href="#%e7%94%9f%e6%88%90%e5%99%a8">#</a>
+</h5>
+<p>在 Python 中，使用了 yield 的函数被称为生成器（generator）。</p>
+<p>生成器是一个返回迭代器的函数。</p>
+<p>python 中生成器是迭代器的一种，使用 yield 返回值函数，每次调用 yield 会暂停，而可以使用 next () 函数和 send () 函数恢复生成器。</p>
+<p>要创建一个 generator，有很多种方法，第一种方法很简单，只有把一个列表生成式的 [] 中括号改为（）小括号，就创建一个 generator</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#列表生成式</span>
+</span></span><span style="display:flex;"><span>lis <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>x*x <span style="color:#66d9ef">for</span> x in range<span style="color:#f92672">(</span>10<span style="color:#f92672">)]</span>
+</span></span><span style="display:flex;"><span>print<span style="color:#f92672">(</span>lis<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#生成器</span>
+</span></span><span style="display:flex;"><span>generator_ex <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>x*x <span style="color:#66d9ef">for</span> x in range<span style="color:#f92672">(</span>10<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>print<span style="color:#f92672">(</span>generator_ex<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>结果：
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>0, 1, 4, 9, 16, 25, 36, 49, 64, 81<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>&lt;generator object &lt;genexpr&gt; at 0x000002A4CBF9EBA0&gt;
+</span></span></code></pre></div><hr>
+<h2 id="进阶题">
+  进阶题
+  <a class="anchor" href="#%e8%bf%9b%e9%98%b6%e9%a2%98">#</a>
+</h2>
+<h3 id="猴子补丁">
+  猴子补丁
+  <a class="anchor" href="#%e7%8c%b4%e5%ad%90%e8%a1%a5%e4%b8%81">#</a>
+</h3>
+<p>属性在运行时的动态替换，叫做猴子补丁（Monkey Patch）。</p>
+<h4 id="为什么叫猴子补丁">
+  为什么叫猴子补丁
+  <a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%8f%ab%e7%8c%b4%e5%ad%90%e8%a1%a5%e4%b8%81">#</a>
+</h4>
+<p>属性的运行时替换和猴子也没什么关系，关于猴子补丁的由来网上查到两种说法：</p>
+<ol>
+<li>
+<p>这个词原来为 Guerrilla Patch，杂牌军、游击队，说明这部分不是原装的，在英文里 guerilla 发音和 gorllia (猩猩) 相似，再后来就写了 monkey (猴子)。</p>
+</li>
+<li>
+<p>还有一种解释是说由于这种方式将原来的代码弄乱了 (messing with it)，在英文里叫 monkeying about (顽皮的)，所以叫做 Monkey Patch。</p>
+</li>
+</ol>
+<p>猴子补丁的叫法有些莫名其妙，只要和 “模块运行时替换的功能” 对应就行了。</p>
+<h4 id="ujson">
+  ujson
+  <a class="anchor" href="#ujson">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> ujson
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">monkey_patch_json</span>():
+</span></span><span style="display:flex;"><span>    json<span style="color:#f92672">.</span>__name__ <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ujson&#39;</span>
+</span></span><span style="display:flex;"><span>    json<span style="color:#f92672">.</span>dumps <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>dumps
+</span></span><span style="display:flex;"><span>    json<span style="color:#f92672">.</span>loads <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>monkey_patch_json()
+</span></span></code></pre></div><p>参考：</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/f1c1eb495f47">Python 猴子补丁</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1441252">python 面试题精讲 ——monkey patch（猴子补丁）</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        <div>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <p><span id="busuanzi_container_page_pv">本文访问量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次</span></p>
+    <p><span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span> 次</span></p>
+    <p><span id="busuanzi_container_site_uv">本站总访客数 <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> 人</span></p>
+</div>
+
+
+
+
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<script src="https://utteranc.es/client.js"
+  repo="ikingye/study-python"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+<div id="footer">
+  <p>
+    <a href="https://kingye.me">叶王</a> &copy; 2013-2024
+    版权所有。如果本文档对你有所帮助，可以<a
+      href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200428110046.png"
+      target="_blank"
+      rel="noopener noreferrer"
+      >请作者喝饮料</a
+    >。
+  </p>
+</div>
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#基础题">基础题</a>
+      <ul>
+        <li><a href="#数据结构">数据结构</a>
+          <ul>
+            <li><a href="#元组是不是真的不可变">元组是不是真的不可变？</a></li>
+            <li><a href="#迭代器-vs-生成器">迭代器 vs 生成器</a>
+              <ul>
+                <li><a href="#迭代器">迭代器</a></li>
+                <li><a href="#生成器">生成器</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#进阶题">进阶题</a>
+      <ul>
+        <li><a href="#猴子补丁">猴子补丁</a>
+          <ul>
+            <li><a href="#为什么叫猴子补丁">为什么叫猴子补丁</a></li>
+            <li><a href="#ujson">ujson</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
