@@ -266,7 +266,7 @@
 &lt;p>gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：&lt;/p>
 &lt;p>当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。&lt;/p>
 &lt;p>由于切换是在 IO 操作时自动完成，所以 gevent 需要修改 Python 自带的一些标准库，这一过程在启动时通过 &lt;code>monkey patch&lt;/code> 完成：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> gevent &lt;span style="color:#f92672">import&lt;/span> monkey; monkey&lt;span style="color:#f92672">.&lt;/span>patch_socket()
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> gevent &lt;span style="color:#f92672">import&lt;/span> monkey; &lt;span style="color:#960050;background-color:#1e0010">m&lt;/span>onkey&lt;span style="color:#f92672">.&lt;/span>patch_socket()
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> gevent
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">f&lt;/span>(n):
