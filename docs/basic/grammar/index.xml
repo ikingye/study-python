@@ -19,7 +19,9 @@
 &lt;/h2>
 &lt;p>&lt;code>isinstance(obj, basestring)&lt;/code> 等价于 &lt;code>isinstance(obj, (str, unicode))&lt;/code>&lt;/p>
 &lt;blockquote class="book-hint warning">
- python3 已经没有 basestring 类型，用 str 代替了 basestring
+ 
+python3 已经没有 basestring 类型，用 str 代替了 basestring
+
 &lt;/blockquote>
 
 &lt;h2 id="enumerate">
