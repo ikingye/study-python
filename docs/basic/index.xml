@@ -8,16 +8,39 @@
 &lt;/h2>
 &lt;p>当你启动 Python 时，它会构造一个列表 &lt;code>sys.path&lt;/code>，按从左到右顺序查找模块/包：&lt;/p>
 &lt;ol>
-&lt;li>脚本所在目录（或空字符串 &amp;rsquo;&amp;rsquo; 代表“当前工作目录”——用于 python -c / 交互式 / -m 场景）&lt;/li>
+&lt;li>脚本所在目录
+&lt;ol>
+&lt;li>或空字符串 &lt;code>''&lt;/code> 代表“当前工作目录”
+&lt;ol>
+&lt;li>当你用 python -c &amp;ldquo;&amp;hellip;&amp;rdquo; 执行命令时&lt;/li>
+&lt;li>或者用 python -m modulename 模块方式运行&lt;/li>
+&lt;li>或者在交互式解释器里直接执行时&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
 &lt;li>PYTHONPATH 环境变量里声明的路径（如果有）&lt;/li>
 &lt;li>标准库路径&lt;/li>
 &lt;li>虚拟环境的 site-packages（&amp;hellip;/.venv/lib/pythonX.Y/site-packages）&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">(&lt;/span>vllm&lt;span style="color:#f92672">)&lt;/span> root@lts-4090:/mnt/data1/yewang/study# python -c &lt;span style="color:#e6db74">&amp;#34;import sys; print(sys.path)&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#e6db74">&amp;#39;&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python312.zip&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12/lib-dynload&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/mnt/data1/yewang/study/vllm/.venv/lib/python3.12/site-packages&amp;#39;&lt;/span>&lt;span style="color:#f92672">]&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">(&lt;/span>vllm&lt;span style="color:#f92672">)&lt;/span> root@lts-4090:/mnt/data1/yewang/study/vllm# cat test.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>import sys
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print&lt;span style="color:#f92672">(&lt;/span>sys.path&lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">(&lt;/span>vllm&lt;span style="color:#f92672">)&lt;/span> root@lts-4090:/mnt/data1/yewang/study/vllm# python test.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#e6db74">&amp;#39;/mnt/data1/yewang/study/vllm&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python312.zip&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12/lib-dynload&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/mnt/data1/yewang/study/vllm/.venv/lib/python3.12/site-packages&amp;#39;&lt;/span>&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">(&lt;/span>vllm&lt;span style="color:#f92672">)&lt;/span> root@lts-4090:/mnt/data1/yewang/study/vllm# cd ..
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">(&lt;/span>vllm&lt;span style="color:#f92672">)&lt;/span> root@lts-4090:/mnt/data1/yewang/study# python vllm/test.py
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#e6db74">&amp;#39;/mnt/data1/yewang/study/vllm&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python312.zip&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12/lib-dynload&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/mnt/data1/yewang/study/vllm/.venv/lib/python3.12/site-packages&amp;#39;&lt;/span>&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">(&lt;/span>vllm&lt;span style="color:#f92672">)&lt;/span> root@lts-4090:/mnt/data1/yewang/study/vllm# python -c &lt;span style="color:#e6db74">&amp;#34;import sys; print(sys.path)&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#e6db74">&amp;#39;&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python312.zip&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12/lib-dynload&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/mnt/data1/yewang/study/vllm/.venv/lib/python3.12/site-packages&amp;#39;&lt;/span>&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">(&lt;/span>vllm&lt;span style="color:#f92672">)&lt;/span> root@lts-4090:/mnt/data1/yewang/study/vllm# cd ..
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">(&lt;/span>vllm&lt;span style="color:#f92672">)&lt;/span> root@lts-4090:/mnt/data1/yewang/study# python -c &lt;span style="color:#e6db74">&amp;#34;import sys; print(sys.path)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>&lt;span style="color:#e6db74">&amp;#39;&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python312.zip&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/root/.local/share/uv/python/cpython-3.12.9-linux-x86_64-gnu/lib/python3.12/lib-dynload&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;/mnt/data1/yewang/study/vllm/.venv/lib/python3.12/site-packages&amp;#39;&lt;/span>&lt;span style="color:#f92672">]&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>你在仓库根目录 /mnt/data1/yewang/study/vllm 下用 python -c &amp;hellip; 测试时，sys.path[0] == &amp;lsquo;&amp;rsquo;（当前工作目录），第一个被查找的就是仓库根目录，这里恰好有个顶层目录 vllm/（源码包），于是就命中了源码版本，而不是 site-packages 里的已安装版本。&lt;/li>
-&lt;li>跑 examples/offline_inference/basic/basic.py 时，你又是在仓库里运行。多数情况下 sys.path[0] 会是 脚本所在目录（&amp;hellip;/examples/offline_inference/basic）。如果环境里 PYTHONPATH 含仓库根、或示例脚本/启动器做了路径注入（把仓库根加进 sys.path），仓库根就会进入前几位，仍然会先命中本地 vllm/。&lt;/li>
+&lt;li>&lt;code>python -c &amp;quot;import vllm; print(vllm.**file**)&amp;quot;&lt;/code>&lt;/li>
+&lt;li>你在仓库根目录 /mnt/data1/yewang/study/vllm 下用 python -c &amp;hellip; 测试时，&lt;code>sys.path[0] == ''&lt;/code>（当前工作目录），第一个被查找的就是仓库根目录，这里恰好有个顶层目录 vllm/（源码包），于是就命中了源码版本，而不是 site-packages 里的已安装版本。&lt;/li>
+&lt;li>跑 &lt;code>examples/offline_inference/basic/basic.py&lt;/code> 时，你又是在仓库里运行。多数情况下 sys.path[0] 会是 脚本所在目录（&amp;hellip;/examples/offline_inference/basic）。如果环境里 PYTHONPATH 含仓库根、或示例脚本/启动器做了路径注入（把仓库根加进 sys.path），仓库根就会进入前几位，仍然会先命中本地 vllm/。&lt;/li>
 &lt;/ul></description></item></channel></rss>
