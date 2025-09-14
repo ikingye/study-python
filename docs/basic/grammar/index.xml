@@ -1,353 +1,403 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1.1 语法 on Python 学习笔记</title><link>https://kingye.me/study-python/docs/basic/grammar/</link><description>Recent content in 1.1 语法 on Python 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-python/docs/basic/grammar/index.xml" rel="self" type="application/rss+xml"/><item><title>内建函数</title><link>https://kingye.me/study-python/docs/basic/grammar/builtin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/builtin/</guid><description>&lt;h1 id="内建函数">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1.1 语法 on Python 学习笔记</title><link>https://kingye.me/study-python/docs/basic/grammar/</link><description>Recent content in 1.1 语法 on Python 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-python/docs/basic/grammar/index.xml" rel="self" type="application/rss+xml"/><item><title>内建函数</title><link>https://kingye.me/study-python/docs/basic/grammar/builtin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/builtin/</guid><description>&lt;h1 id="内建函数"&gt;
  内建函数
- &lt;a class="anchor" href="#%e5%86%85%e5%bb%ba%e5%87%bd%e6%95%b0">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="all">
+ 
+ &lt;a class="anchor" href="#%e5%86%85%e5%bb%ba%e5%87%bd%e6%95%b0"&gt;#&lt;/a&gt;
+ 
+&lt;/h1&gt;
+&lt;h2 id="all"&gt;
  all
- &lt;a class="anchor" href="#all">#&lt;/a>
-&lt;/h2>
-&lt;p>判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE&lt;/p>
-&lt;h2 id="any">
+ 
+ &lt;a class="anchor" href="#all"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;判断给定的可迭代参数 iterable 中的所有元素是否都为 TRUE&lt;/p&gt;
+&lt;h2 id="any"&gt;
  any
- &lt;a class="anchor" href="#any">#&lt;/a>
-&lt;/h2>
-&lt;p>判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True&lt;/p>
-&lt;p>元素除了是 0、空、FALSE 外都算 TRUE。&lt;/p>
-&lt;h2 id="basestring">
+ 
+ &lt;a class="anchor" href="#any"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;判断给定的可迭代参数 iterable 全为 False，则返回 False，如果有一个为 True，则返回 True&lt;/p&gt;
+&lt;p&gt;元素除了是 0、空、FALSE 外都算 TRUE。&lt;/p&gt;
+&lt;h2 id="basestring"&gt;
  basestring
- &lt;a class="anchor" href="#basestring">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;code>isinstance(obj, basestring)&lt;/code> 等价于 &lt;code>isinstance(obj, (str, unicode))&lt;/code>&lt;/p>
-&lt;blockquote class="book-hint warning">
+ 
+ &lt;a class="anchor" href="#basestring"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;isinstance(obj, basestring)&lt;/code&gt; 等价于 &lt;code&gt;isinstance(obj, (str, unicode))&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote class="book-hint warning"&gt;
  
 python3 已经没有 basestring 类型，用 str 代替了 basestring
 
-&lt;/blockquote>
+&lt;/blockquote&gt;
 
-&lt;h2 id="enumerate">
+&lt;h2 id="enumerate"&gt;
  enumerate
- &lt;a class="anchor" href="#enumerate">#&lt;/a>
-&lt;/h2>
-&lt;p>将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标&lt;/p>
-&lt;p>&lt;code>enumerate(sequence, [start=0])&lt;/code>&lt;/p>
-&lt;h2 id="eval">
+ 
+ &lt;a class="anchor" href="#enumerate"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;将一个可遍历的数据对象 (如列表、元组或字符串) 组合为一个索引序列，同时列出数据和数据下标&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;enumerate(sequence, [start=0])&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="eval"&gt;
  eval
- &lt;a class="anchor" href="#eval">#&lt;/a>
-&lt;/h2>
-&lt;p>执行一个字符串表达式，并返回表达式的值&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>eval(&lt;span style="color:#e6db74">&amp;#39;3 * x&amp;#39;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>eval(&lt;span style="color:#e6db74">&amp;#39;pow(2,2)&amp;#39;&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="isinstance">
+ 
+ &lt;a class="anchor" href="#eval"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;执行一个字符串表达式，并返回表达式的值&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;eval(&lt;span style="color:#e6db74"&gt;&amp;#39;3 * x&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;eval(&lt;span style="color:#e6db74"&gt;&amp;#39;pow(2,2)&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="isinstance"&gt;
  isinstance
- &lt;a class="anchor" href="#isinstance">#&lt;/a>
-&lt;/h2>
-&lt;p>判断一个对象是否是一个已知的类型&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>isinstance&lt;span style="color:#f92672">()&lt;/span> 与 type&lt;span style="color:#f92672">()&lt;/span> 区别：
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>type&lt;span style="color:#f92672">()&lt;/span> 不会认为子类是一种父类类型，不考虑继承关系。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>isinstance&lt;span style="color:#f92672">()&lt;/span> 会认为子类是一种父类类型，考虑继承关系。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>如果要判断两个类型是否相同推荐使用 isinstance&lt;span style="color:#f92672">()&lt;/span>。
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="pow">
+ 
+ &lt;a class="anchor" href="#isinstance"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;判断一个对象是否是一个已知的类型&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;isinstance&lt;span style="color:#f92672"&gt;()&lt;/span&gt; 与 type&lt;span style="color:#f92672"&gt;()&lt;/span&gt; 区别：
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;type&lt;span style="color:#f92672"&gt;()&lt;/span&gt; 不会认为子类是一种父类类型，不考虑继承关系。
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;isinstance&lt;span style="color:#f92672"&gt;()&lt;/span&gt; 会认为子类是一种父类类型，考虑继承关系。
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;如果要判断两个类型是否相同推荐使用 isinstance&lt;span style="color:#f92672"&gt;()&lt;/span&gt;。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="pow"&gt;
  pow
- &lt;a class="anchor" href="#pow">#&lt;/a>
-&lt;/h2>
-&lt;p>&lt;code>pow(x, y[, z])&lt;/code>&lt;/p></description></item><item><title>切片</title><link>https://kingye.me/study-python/docs/basic/grammar/slice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/slice/</guid><description>&lt;h1 id="切片">
+ 
+ &lt;a class="anchor" href="#pow"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;pow(x, y[, z])&lt;/code&gt;&lt;/p&gt;</description></item><item><title>切片</title><link>https://kingye.me/study-python/docs/basic/grammar/slice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/slice/</guid><description>&lt;h1 id="切片"&gt;
  切片
- &lt;a class="anchor" href="#%e5%88%87%e7%89%87">#&lt;/a>
-&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>start:end:step&lt;span style="color:#f92672">]&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="遍历">
+ 
+ &lt;a class="anchor" href="#%e5%88%87%e7%89%87"&gt;#&lt;/a&gt;
+ 
+&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;start:end:step&lt;span style="color:#f92672"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="遍历"&gt;
  遍历
- &lt;a class="anchor" href="#%e9%81%8d%e5%8e%86">#&lt;/a>
-&lt;/h2>
-&lt;h3 id="enumerate">
+ 
+ &lt;a class="anchor" href="#%e9%81%8d%e5%8e%86"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;h3 id="enumerate"&gt;
  enumerate
- &lt;a class="anchor" href="#enumerate">#&lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>a &lt;span style="color:#f92672">=&lt;/span> [&lt;span style="color:#e6db74">&amp;#34;a&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;b&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;c&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;d&amp;#34;&lt;/span>]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># index &amp;amp; value&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> i &lt;span style="color:#f92672">in&lt;/span> xrange(len(a)):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print i, a[i]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># iterate with index&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> i, el &lt;span style="color:#f92672">in&lt;/span> enumerate(a):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print i, el
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># i 从 1 开始&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> i, el &lt;span style="color:#f92672">in&lt;/span> enumerate(a, &lt;span style="color:#ae81ff">1&lt;/span>):
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print i, el
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="step-为负数">
+ 
+ &lt;a class="anchor" href="#enumerate"&gt;#&lt;/a&gt;
+ 
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;a &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [&lt;span style="color:#e6db74"&gt;&amp;#34;a&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;b&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;c&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;d&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# index &amp;amp; value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; i &lt;span style="color:#f92672"&gt;in&lt;/span&gt; xrange(len(a)):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print i, a[i]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# iterate with index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; i, el &lt;span style="color:#f92672"&gt;in&lt;/span&gt; enumerate(a):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print i, el
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# i 从 1 开始&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; i, el &lt;span style="color:#f92672"&gt;in&lt;/span&gt; enumerate(a, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print i, el
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="step-为负数"&gt;
  step 为负数
- &lt;a class="anchor" href="#step-%e4%b8%ba%e8%b4%9f%e6%95%b0">#&lt;/a>
-&lt;/h2>
-&lt;p>最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5&lt;/p>
-&lt;h3 id="字符串反转">
+ 
+ &lt;a class="anchor" href="#step-%e4%b8%ba%e8%b4%9f%e6%95%b0"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;最后一个字符到下标是 -1，即从右到左，是从 -1 开始，然后 -1、-2、-3、-4、-5&lt;/p&gt;
+&lt;h3 id="字符串反转"&gt;
  字符串反转
- &lt;a class="anchor" href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8f%8d%e8%bd%ac">#&lt;/a>
-&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>letter[::&lt;span style="color:#f92672">-&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span>]
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="为什么-s-1-1-是空">
+ 
+ &lt;a class="anchor" href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8f%8d%e8%bd%ac"&gt;#&lt;/a&gt;
+ 
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;letter[::&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="为什么-s-1-1-是空"&gt;
  为什么 s[:-1:-1] 是空
- &lt;a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88-s-1-1-%e6%98%af%e7%a9%ba">#&lt;/a>
-&lt;/h3>
-&lt;p>只需要记住，s[start:end:step] 就行，包括 start，不包括 end，
-所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：&lt;/p></description></item><item><title>字典</title><link>https://kingye.me/study-python/docs/basic/grammar/dict/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/dict/</guid><description>&lt;h1 id="字典">
+ 
+ &lt;a class="anchor" href="#%e4%b8%ba%e4%bb%80%e4%b9%88-s-1-1-%e6%98%af%e7%a9%ba"&gt;#&lt;/a&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;只需要记住，s[start:end:step] 就行，包括 start，不包括 end，
+所以，如果要实现：去掉最后一个元素，然后再倒序，应该是：&lt;/p&gt;</description></item><item><title>字典</title><link>https://kingye.me/study-python/docs/basic/grammar/dict/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/dict/</guid><description>&lt;h1 id="字典"&gt;
  字典
- &lt;a class="anchor" href="#%e5%ad%97%e5%85%b8">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="遍历">
+ 
+ &lt;a class="anchor" href="#%e5%ad%97%e5%85%b8"&gt;#&lt;/a&gt;
+ 
+&lt;/h1&gt;
+&lt;h2 id="遍历"&gt;
  遍历
- &lt;a class="anchor" href="#%e9%81%8d%e5%8e%86">#&lt;/a>
-&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> key &lt;span style="color:#f92672">in&lt;/span> d:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># For Python 3.x:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> key, value &lt;span style="color:#f92672">in&lt;/span> d&lt;span style="color:#f92672">.&lt;/span>items():
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># For Python 2.x:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> key, value &lt;span style="color:#f92672">in&lt;/span> d&lt;span style="color:#f92672">.&lt;/span>iteritems():
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="items">
+ 
+ &lt;a class="anchor" href="#%e9%81%8d%e5%8e%86"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; key &lt;span style="color:#f92672"&gt;in&lt;/span&gt; d:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# For Python 3.x:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; key, value &lt;span style="color:#f92672"&gt;in&lt;/span&gt; d&lt;span style="color:#f92672"&gt;.&lt;/span&gt;items():
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# For Python 2.x:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; key, value &lt;span style="color:#f92672"&gt;in&lt;/span&gt; d&lt;span style="color:#f92672"&gt;.&lt;/span&gt;iteritems():
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="items"&gt;
  items
- &lt;a class="anchor" href="#items">#&lt;/a>
-&lt;/h3>
-&lt;p>The operation items() will work for both 2 and 3,
+ 
+ &lt;a class="anchor" href="#items"&gt;#&lt;/a&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;The operation items() will work for both 2 and 3,
 but in 2 it will return a list of the dictionary&amp;rsquo;s (key, value) pairs,
-which will &lt;strong>not&lt;/strong> reflect changes to the dict that happen after the items() call.&lt;/p>
-&lt;p>If you want the 2.x behavior in 3.x, you can call &lt;code>list(d.items())&lt;/code>&lt;/p></description></item><item><title>生成器</title><link>https://kingye.me/study-python/docs/basic/grammar/generator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/generator/</guid><description>&lt;h1 id="生成器">
+which will &lt;strong&gt;not&lt;/strong&gt; reflect changes to the dict that happen after the items() call.&lt;/p&gt;
+&lt;p&gt;If you want the 2.x behavior in 3.x, you can call &lt;code&gt;list(d.items())&lt;/code&gt;&lt;/p&gt;</description></item><item><title>生成器</title><link>https://kingye.me/study-python/docs/basic/grammar/generator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/generator/</guid><description>&lt;h1 id="生成器"&gt;
  生成器
- &lt;a class="anchor" href="#%e7%94%9f%e6%88%90%e5%99%a8">#&lt;/a>
-&lt;/h1>
-&lt;h2 id="iterable-可迭代的">
+ 
+ &lt;a class="anchor" href="#%e7%94%9f%e6%88%90%e5%99%a8"&gt;#&lt;/a&gt;
+ 
+&lt;/h1&gt;
+&lt;h2 id="iterable-可迭代的"&gt;
  iterable 可迭代的
- &lt;a class="anchor" href="#iterable-%e5%8f%af%e8%bf%ad%e4%bb%a3%e7%9a%84">#&lt;/a>
-&lt;/h2>
-&lt;p>Everything you can use &amp;ldquo;for&amp;hellip; in&amp;hellip;&amp;rdquo; on is an iterable; lists, strings, files&amp;hellip;&lt;/p>
-&lt;p>iterable 包括：&lt;/p>
-&lt;ul>
-&lt;li>list&lt;/li>
-&lt;li>tuple&lt;/li>
-&lt;li>string&lt;/li>
-&lt;li>dictionary&lt;/li>
-&lt;li>file&lt;/li>
-&lt;li>&lt;code>enumerate object&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="iterator-迭代器">
+ 
+ &lt;a class="anchor" href="#iterable-%e5%8f%af%e8%bf%ad%e4%bb%a3%e7%9a%84"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Everything you can use &amp;ldquo;for&amp;hellip; in&amp;hellip;&amp;rdquo; on is an iterable; lists, strings, files&amp;hellip;&lt;/p&gt;
+&lt;p&gt;iterable 包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;list&lt;/li&gt;
+&lt;li&gt;tuple&lt;/li&gt;
+&lt;li&gt;string&lt;/li&gt;
+&lt;li&gt;dictionary&lt;/li&gt;
+&lt;li&gt;file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;enumerate object&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="iterator-迭代器"&gt;
  iterator 迭代器
- &lt;a class="anchor" href="#iterator-%e8%bf%ad%e4%bb%a3%e5%99%a8">#&lt;/a>
-&lt;/h2>
-&lt;ul>
-&lt;li>iter() 函数用来生成迭代器。&lt;/li>
-&lt;li>&lt;code>iter(object[, sentinel])&lt;/code>
-&lt;ul>
-&lt;li>object：支持迭代的集合对象&lt;/li>
-&lt;li>sentinel
-&lt;ul>
-&lt;li>如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象&lt;/li>
-&lt;li>每次调用这个迭代器对象的 &lt;code>__next__()&lt;/code> 方法时，都会调用 object&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>迭代器只能迭代一次&lt;/p>
-&lt;p>a kind of iterable you can only iterate over once.&lt;/p>
-&lt;h2 id="generator">
+ 
+ &lt;a class="anchor" href="#iterator-%e8%bf%ad%e4%bb%a3%e5%99%a8"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;iter() 函数用来生成迭代器。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;iter(object[, sentinel])&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;object：支持迭代的集合对象&lt;/li&gt;
+&lt;li&gt;sentinel
+&lt;ul&gt;
+&lt;li&gt;如果传递了 sentinel，则 object 必须是一个可调用的对象（如函数），此时 iter 创建了一个迭代器对象&lt;/li&gt;
+&lt;li&gt;每次调用这个迭代器对象的 &lt;code&gt;__next__()&lt;/code&gt; 方法时，都会调用 object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;迭代器只能迭代一次&lt;/p&gt;
+&lt;p&gt;a kind of iterable you can only iterate over once.&lt;/p&gt;
+&lt;h2 id="generator"&gt;
  generator
- &lt;a class="anchor" href="#generator">#&lt;/a>
-&lt;/h2>
-&lt;p>Generators are iterators, a kind of iterable you can only iterate over once.
-Generators do not store all the values in memory, they generate the values on the fly.&lt;/p></description></item><item><title>类</title><link>https://kingye.me/study-python/docs/basic/grammar/class/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/class/</guid><description>&lt;h1 id="类">
+ 
+ &lt;a class="anchor" href="#generator"&gt;#&lt;/a&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Generators are iterators, a kind of iterable you can only iterate over once.
+Generators do not store all the values in memory, they generate the values on the fly.&lt;/p&gt;</description></item><item><title>类</title><link>https://kingye.me/study-python/docs/basic/grammar/class/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/grammar/class/</guid><description>&lt;h1 id="类"&gt;
  类
- &lt;a class="anchor" href="#%e7%b1%bb">#&lt;/a>
-&lt;/h1>
-&lt;h3 id="问答">
+ 
+ &lt;a class="anchor" href="#%e7%b1%bb"&gt;#&lt;/a&gt;
+ 
+&lt;/h1&gt;
+&lt;h3 id="问答"&gt;
  问答
- &lt;a class="anchor" href="#%e9%97%ae%e7%ad%94">#&lt;/a>
-&lt;/h3>
-&lt;h4 id="class-后面加不加-object-的区别">
+ 
+ &lt;a class="anchor" href="#%e9%97%ae%e7%ad%94"&gt;#&lt;/a&gt;
+ 
+&lt;/h3&gt;
+&lt;h4 id="class-后面加不加-object-的区别"&gt;
  class 后面加不加 object 的区别
- &lt;a class="anchor" href="#class-%e5%90%8e%e9%9d%a2%e5%8a%a0%e4%b8%8d%e5%8a%a0-object-%e7%9a%84%e5%8c%ba%e5%88%ab">#&lt;/a>
-&lt;/h4>
-&lt;p>python 3 中已经默认就帮你加载了 object 了（即便你没有写上 object）&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>python 2.x&lt;/th>
- &lt;th>python 2.x&lt;/th>
- &lt;th>python 3.x&lt;/th>
- &lt;th>python 3.x&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>不含 object&lt;/td>
- &lt;td>含 object&lt;/td>
- &lt;td>不含 object&lt;/td>
- &lt;td>含 object&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;code>__doc__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__doc__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__doc__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__doc__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;code>__module__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__module__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__module__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__module__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__class__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__class__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__class__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__delattr__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__delattr__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__delattr__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__dict__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__dict__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__dict__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__format__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__format__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__format__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__getattribute__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__getattribute__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__getattribute__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__hash__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__hash__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__hash__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__init__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__init__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__init__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__new__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__new__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__new__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__reduce__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__reduce__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__reduce__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__reduce_ex__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__reduce_ex__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__reduce_ex__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__repr__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__repr__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__repr__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__setattr__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__setattr__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__setattr__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__sizeof__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__sizeof__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__sizeof__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__str__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__str__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__str__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__subclasshook__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__subclasshook__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__subclasshook__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__weakref__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__weakref__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__weakref__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__dir__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__dir__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__eq__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__eq__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__ge__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__ge__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__gt__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__gt__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__le__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__le__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__lt__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__lt__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__ne__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__ne__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;code>__init_subclass__&lt;/code>&lt;/td>
- &lt;td>&lt;code>__init_subclass__&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h5 id="init_subclass">
- &lt;strong>init_subclass&lt;/strong>
- &lt;a class="anchor" href="#init_subclass">#&lt;/a>
-&lt;/h5>
-&lt;p>类方法  &lt;code>__init_subclass__&lt;/code>  从  &lt;code>3.6&lt;/code> （&lt;a href="https://docs.python.org/3.6/whatsnew/3.6.html#pep-487-simpler-customization-of-class-creation">whatsnew3.6&lt;/a>） 引入，作用是可以在不使用元类的情况下改变子类的行为。严格来说它不属于元类编程，但也能达到编辑其他类的一种手段。&lt;/p></description></item></channel></rss>
+ 
+ &lt;a class="anchor" href="#class-%e5%90%8e%e9%9d%a2%e5%8a%a0%e4%b8%8d%e5%8a%a0-object-%e7%9a%84%e5%8c%ba%e5%88%ab"&gt;#&lt;/a&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;python 3 中已经默认就帮你加载了 object 了（即便你没有写上 object）&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;python 2.x&lt;/th&gt;
+ &lt;th&gt;python 2.x&lt;/th&gt;
+ &lt;th&gt;python 3.x&lt;/th&gt;
+ &lt;th&gt;python 3.x&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;不含 object&lt;/td&gt;
+ &lt;td&gt;含 object&lt;/td&gt;
+ &lt;td&gt;不含 object&lt;/td&gt;
+ &lt;td&gt;含 object&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;__doc__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__doc__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__doc__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__doc__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;__module__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__module__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__module__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__module__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__class__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__class__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__class__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__delattr__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__delattr__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__delattr__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__dict__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__dict__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__dict__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__format__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__format__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__format__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__getattribute__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__getattribute__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__getattribute__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__hash__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__hash__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__hash__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__init__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__init__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__init__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__new__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__new__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__new__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__reduce__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__reduce__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__reduce__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__reduce_ex__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__reduce_ex__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__reduce_ex__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__repr__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__repr__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__repr__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__setattr__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__setattr__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__setattr__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__sizeof__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__sizeof__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__sizeof__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__str__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__str__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__str__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__subclasshook__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__subclasshook__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__subclasshook__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__weakref__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__weakref__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__weakref__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__dir__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__dir__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__eq__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__eq__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__ge__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__ge__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__gt__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__gt__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__le__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__le__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__lt__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__lt__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__ne__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__ne__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__init_subclass__&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;__init_subclass__&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id="init_"&gt;
+ &lt;strong&gt;init_subclass&lt;/strong&gt;
+ 
+ &lt;a class="anchor" href="#init_"&gt;#&lt;/a&gt;
+ 
+&lt;/h5&gt;
+&lt;p&gt;类方法  &lt;code&gt;__init_subclass__&lt;/code&gt;  从  &lt;code&gt;3.6&lt;/code&gt; （&lt;a href="https://docs.python.org/3.6/whatsnew/3.6.html#pep-487-simpler-customization-of-class-creation"&gt;whatsnew3.6&lt;/a&gt;） 引入，作用是可以在不使用元类的情况下改变子类的行为。严格来说它不属于元类编程，但也能达到编辑其他类的一种手段。&lt;/p&gt;</description></item></channel></rss>
