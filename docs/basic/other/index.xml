@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1.4 其他 on Python 学习笔记</title><link>https://kingye.me/study-python/docs/basic/other/</link><description>Recent content in 1.4 其他 on Python 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-python/docs/basic/other/index.xml" rel="self" type="application/rss+xml"/><item><title>协程</title><link>https://kingye.me/study-python/docs/basic/other/coroutine/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/coroutine/</guid><description>&lt;h1 id="python-协程"&gt;
- Python 协程
- 
- &lt;a class="anchor" href="#python-%e5%8d%8f%e7%a8%8b"&gt;#&lt;/a&gt;
- 
-&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1.4 其他 on Python 学习笔记</title><link>https://kingye.me/study-python/docs/basic/other/</link><description>Recent content in 1.4 其他 on Python 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-python/docs/basic/other/index.xml" rel="self" type="application/rss+xml"/><item><title>协程</title><link>https://kingye.me/study-python/docs/basic/other/coroutine/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/coroutine/</guid><description>&lt;h1 id="python-协程"&gt;Python 协程&lt;a class="anchor" href="#python-%e5%8d%8f%e7%a8%8b"&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;执行效率高
 &lt;ul&gt;
@@ -14,20 +9,10 @@
 &lt;/ul&gt;
 &lt;p&gt;因为协程是一个线程执行，那怎么利用多核 CPU 呢？
 最简单的方法是&lt;strong&gt;多进程 + 协程&lt;/strong&gt;，既充分利用多核，又充分发挥协程的高效率，可获得极高的性能。&lt;/p&gt;
-&lt;h2 id="子程序就是协程的一种特例"&gt;
- 子程序就是协程的一种特例
- 
- &lt;a class="anchor" href="#%e5%ad%90%e7%a8%8b%e5%ba%8f%e5%b0%b1%e6%98%af%e5%8d%8f%e7%a8%8b%e7%9a%84%e4%b8%80%e7%a7%8d%e7%89%b9%e4%be%8b"&gt;#&lt;/a&gt;
- 
-&lt;/h2&gt;
+&lt;h2 id="子程序就是协程的一种特例"&gt;子程序就是协程的一种特例&lt;a class="anchor" href="#%e5%ad%90%e7%a8%8b%e5%ba%8f%e5%b0%b1%e6%98%af%e5%8d%8f%e7%a8%8b%e7%9a%84%e4%b8%80%e7%a7%8d%e7%89%b9%e4%be%8b"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Donald Knuth 的一句话总结协程的特点：&lt;/p&gt;
 &lt;p&gt;“子程序就是协程的一种特例。”&lt;/p&gt;
-&lt;h2 id="gevent-github-stars"&gt;
- &lt;a href="https://github.com/gevent/gevent"&gt;gevent&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/gevent/gevent.svg" alt="Github stars" /&gt;
- 
- &lt;a class="anchor" href="#gevent-github-stars"&gt;#&lt;/a&gt;
- 
-&lt;/h2&gt;
+&lt;h2 id="gevent-github-stars"&gt;&lt;a href="https://github.com/gevent/gevent"&gt;gevent&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/gevent/gevent.svg" alt="Github stars" /&gt;&lt;a class="anchor" href="#gevent-github-stars"&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Python 通过 yield 提供了对协程的基本支持，但是不完全。而第三方的 gevent 为 Python 提供了比较完善的协程支持。&lt;/p&gt;
 &lt;p&gt;gevent 是第三方库，通过 greenlet 实现协程，其基本思想是：&lt;/p&gt;
 &lt;p&gt;当一个 greenlet 遇到 IO 操作时，比如访问网络，就自动切换到其他的 greenlet，等到 IO 操作完成，再在适当的时候切换回来继续执行。由于 IO 操作非常耗时，经常使程序处于等待状态，有了 gevent 为我们自动切换协程，就保证总有 greenlet 在运行，而不是等待 IO。&lt;/p&gt;
@@ -44,12 +29,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;g3 &lt;span style="color:#f92672"&gt;=&lt;/span&gt; gevent&lt;span style="color:#f92672"&gt;.&lt;/span&gt;spawn(f, &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;g1&lt;span style="color:#f92672"&gt;.&lt;/span&gt;join()
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;g2&lt;span style="color:#f92672"&gt;.&lt;/span&gt;join()
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;g3&lt;span style="color:#f92672"&gt;.&lt;/span&gt;join()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考：&lt;/p&gt;</description></item><item><title>Anaconda</title><link>https://kingye.me/study-python/docs/basic/other/anaconda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/anaconda/</guid><description>&lt;h1 id="anaconda"&gt;
- Anaconda
- 
- &lt;a class="anchor" href="#anaconda"&gt;#&lt;/a&gt;
- 
-&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;g3&lt;span style="color:#f92672"&gt;.&lt;/span&gt;join()&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考：&lt;/p&gt;</description></item><item><title>Anaconda</title><link>https://kingye.me/study-python/docs/basic/other/anaconda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/anaconda/</guid><description>&lt;h1 id="anaconda"&gt;Anaconda&lt;a class="anchor" href="#anaconda"&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Anaconda 是一个&lt;a href="https://www.wikiwand.com/zh-cn/%E5%85%8D%E8%B4%B9"&gt;免费&lt;/a&gt;&lt;a href="https://www.wikiwand.com/zh-cn/%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81"&gt;开源&lt;/a&gt; 的  &lt;a href="https://www.wikiwand.com/zh-cn/Python"&gt;Python&lt;/a&gt; 和  &lt;a href="https://www.wikiwand.com/zh-cn/R%E8%AF%AD%E8%A8%80"&gt;R 语言&lt;/a&gt;的发行版本，用于&lt;a href="https://www.wikiwand.com/zh-cn/%E8%AE%A1%E7%AE%97%E7%A7%91%E5%AD%A6"&gt;计算科学&lt;/a&gt;（&lt;a href="https://www.wikiwand.com/zh-cn/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6" title="数据科学"&gt;数据科学&lt;/a&gt;、&lt;a href="https://www.wikiwand.com/zh-cn/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" title="机器学习"&gt;机器学习&lt;/a&gt;、&lt;a href="https://www.wikiwand.com/zh-cn/%E5%A4%A7%E6%95%B8%E6%93%9A" title="大数据"&gt;大数据处理&lt;/a&gt;和&lt;a href="https://www.wikiwand.com/zh-cn/%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90"&gt;预测分析&lt;/a&gt;），Anaconda 致力于简化&lt;a href="https://www.wikiwand.com/zh-cn/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"&gt;包管理&lt;/a&gt;和部署。&lt;/p&gt;
 &lt;p&gt;Anaconda 的包使用&lt;a href="https://www.wikiwand.com/zh-cn/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"&gt;软件包管理系统&lt;/a&gt; &lt;a href="https://www.wikiwand.com/zh-cn/Conda" title="Conda"&gt;Conda&lt;/a&gt; 进行管理。&lt;/p&gt;</description></item></channel></rss>

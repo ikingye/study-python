@@ -1,93 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>版本 on Python 学习笔记</title><link>https://kingye.me/study-python/docs/basic/other/version/</link><description>Recent content in 版本 on Python 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-python/docs/basic/other/version/index.xml" rel="self" type="application/rss+xml"/><item><title>版本管理</title><link>https://kingye.me/study-python/docs/basic/other/version/manage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/version/manage/</guid><description>&lt;h1 id="python-版本管理"&gt;
- Python 版本管理
- 
- &lt;a class="anchor" href="#python-%e7%89%88%e6%9c%ac%e7%ae%a1%e7%90%86"&gt;#&lt;/a&gt;
- 
-&lt;/h1&gt;
-&lt;h2 id="pyenv"&gt;
- pyenv
- 
- &lt;a class="anchor" href="#pyenv"&gt;#&lt;/a&gt;
- 
-&lt;/h2&gt;
-&lt;h3 id="pyenv-加速"&gt;
- pyenv 加速
- 
- &lt;a class="anchor" href="#pyenv-%e5%8a%a0%e9%80%9f"&gt;#&lt;/a&gt;
- 
-&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>版本 on Python 学习笔记</title><link>https://kingye.me/study-python/docs/basic/other/version/</link><description>Recent content in 版本 on Python 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-python/docs/basic/other/version/index.xml" rel="self" type="application/rss+xml"/><item><title>版本管理</title><link>https://kingye.me/study-python/docs/basic/other/version/manage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/version/manage/</guid><description>&lt;h1 id="python-版本管理"&gt;Python 版本管理&lt;a class="anchor" href="#python-%e7%89%88%e6%9c%ac%e7%ae%a1%e7%90%86"&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="pyenv"&gt;pyenv&lt;a class="anchor" href="#pyenv"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="pyenv-加速"&gt;pyenv 加速&lt;a class="anchor" href="#pyenv-%e5%8a%a0%e9%80%9f"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;在 &lt;code&gt;.zshrc&lt;/code&gt; 添加&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; pyenvinstall &lt;span style="color:#f92672"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; wget -c https://registry.npmmirror.com/-/binary/python/$@/Python-$@.tar.xz -P ~/.pyenv/cache/
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pyenv install $@
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行 &lt;code&gt;zsh&lt;/code&gt; 使配置生效，
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行 &lt;code&gt;zsh&lt;/code&gt; 使配置生效，
 之后即可这样安装：
 &lt;code&gt;pyenvinstall 3.8.2&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id="pyenv-基础命令"&gt;
- pyenv 基础命令
- 
- &lt;a class="anchor" href="#pyenv-%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4"&gt;#&lt;/a&gt;
- 
-&lt;/h3&gt;
+&lt;h3 id="pyenv-基础命令"&gt;pyenv 基础命令&lt;a class="anchor" href="#pyenv-%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# List all available versions&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pyenv install -l
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 更新&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pyenv update
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew update &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; brew upgrade pyenv
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="pyenv-update"&gt;
- pyenv update
- 
- &lt;a class="anchor" href="#pyenv-update"&gt;#&lt;/a&gt;
- 
-&lt;/h4&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew update &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; brew upgrade pyenv&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="pyenv-update"&gt;pyenv update&lt;a class="anchor" href="#pyenv-update"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a href="https://github.com/pyenv/pyenv-update"&gt;pyenv/pyenv-update&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/pyenv/pyenv-update.svg" alt="Github stars" /&gt; &lt;img src="https://img.shields.io/github/languages/top/pyenv/pyenv-update.svg" alt="Language" /&gt; &lt;img src="https://img.shields.io/github/v/tag/pyenv/pyenv-update.svg?sort=semver" alt="Last Tag" /&gt; &lt;img src="https://img.shields.io/github/last-commit/pyenv/pyenv-update.svg" alt="Last commit" /&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git clone https://github.com/pyenv/pyenv-update.git &lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;pyenv root&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;/plugins/pyenv-update
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pyenv update
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="pyenv-global-382-2717"&gt;
- pyenv global 3.8.2 2.7.17
- 
- &lt;a class="anchor" href="#pyenv-global-382-2717"&gt;#&lt;/a&gt;
- 
-&lt;/h4&gt;
-&lt;p&gt;set by &lt;code&gt;~/.pyenv/version&lt;/code&gt;&lt;/p&gt;</description></item><item><title>3.7</title><link>https://kingye.me/study-python/docs/basic/other/version/3.7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/version/3.7/</guid><description>&lt;h1 id="python-37"&gt;
- Python 3.7
- 
- &lt;a class="anchor" href="#python-37"&gt;#&lt;/a&gt;
- 
-&lt;/h1&gt;
-&lt;h2 id="安装"&gt;
- 安装
- 
- &lt;a class="anchor" href="#%e5%ae%89%e8%a3%85"&gt;#&lt;/a&gt;
- 
-&lt;/h2&gt;
-&lt;h3 id="依赖"&gt;
- 依赖
- 
- &lt;a class="anchor" href="#%e4%be%9d%e8%b5%96"&gt;#&lt;/a&gt;
- 
-&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pyenv update&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="pyenv-global-382-2717"&gt;pyenv global 3.8.2 2.7.17&lt;a class="anchor" href="#pyenv-global-382-2717"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;set by &lt;code&gt;~/.pyenv/version&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;3.8.2
+2.7.17&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="pyenv-shell-382-2717"&gt;pyenv shell 3.8.2 2.7.17&lt;a class="anchor" href="#pyenv-shell-382-2717"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;set by &lt;code&gt;PYENV_VERSION&lt;/code&gt; environment variable&lt;/p&gt;</description></item><item><title>3.7</title><link>https://kingye.me/study-python/docs/basic/other/version/3.7/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-python/docs/basic/other/version/3.7/</guid><description>&lt;h1 id="python-37"&gt;Python 3.7&lt;a class="anchor" href="#python-37"&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="安装"&gt;安装&lt;a class="anchor" href="#%e5%ae%89%e8%a3%85"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="依赖"&gt;依赖&lt;a class="anchor" href="#%e4%be%9d%e8%b5%96"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo yum install readline readline-devel readline-static -y
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo yum install openssl openssl-devel openssl-static -y
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo yum install sqlite-devel -y
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo yum install bzip2-devel bzip2-libs -y
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="libffi-devel"&gt;
- libffi-devel
- 
- &lt;a class="anchor" href="#libffi-devel"&gt;#&lt;/a&gt;
- 
-&lt;/h4&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo yum install bzip2-devel bzip2-libs -y&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="libffi-devel"&gt;libffi-devel&lt;a class="anchor" href="#libffi-devel"&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;3.7 版本需要一个新的包 libffi-devel，安装此包之后再次进行编译安装即可。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo yum install libffi-devel -y
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make install
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;若在安装前移除了 &lt;code&gt;/usr/bin&lt;/code&gt; 下 python 的文件链接依赖，此时 &lt;code&gt;yum&lt;/code&gt; 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make install&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;若在安装前移除了 &lt;code&gt;/usr/bin&lt;/code&gt; 下 python 的文件链接依赖，此时 &lt;code&gt;yum&lt;/code&gt; 无法正常使用，需要自己下载相关软件包安装，为节省读者时间，放上链接&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libffi-devel-3.0.13-18.el7.x86_64.rpm
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后重新进行 &lt;code&gt;make install&lt;/code&gt;，结束后再次配置相关文件的软连接即可。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rpm -ivh libffi-devel-3.0.13-18.el7.x86_64.rpm&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后重新进行 &lt;code&gt;make install&lt;/code&gt;，结束后再次配置相关文件的软连接即可。&lt;/p&gt;
 &lt;p&gt;解读：
 python3 中有个内置模块叫 ctypes，它是 python3 的外部函数库模块，提供了兼容 C 语言的数据类型，并通过它调用 Linux 系统下的共享库 (Shared library)，此模块需要使用 centos7 系统中外部函数库 (Foreign function library) 的开发链接库 (头文件和链接库)。
 由于在 centos7 系统中没有安装外部函数库 (libffi) 的开发链接库软件包，所以在安装 pip 的时候就报了 &amp;ldquo;ModuleNotFoundError: No module named &amp;lsquo;_ctypes&amp;rsquo;&amp;rdquo; 的错误。&lt;/p&gt;</description></item></channel></rss>
